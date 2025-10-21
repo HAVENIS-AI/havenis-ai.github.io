@@ -1,171 +1,110 @@
 <!DOCTYPE html>
-<html lang="de" data-lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAVENIS AI™ – Kontaktlose KI-Wahrnehmung</title>
-  <meta name="description" content="HAVENIS AI™ – Wi-Fi-Sensing-Technologie für kontaktlose Vitalerfassung, Präsenz- und Bewegungsanalyse – kamera-frei und DSGVO-konform.">
-  <link rel="icon" href="favicon.ico">
-  <style>
-    :root {
-      --primary: #005dff;
-      --secondary: #0a1128;
-      --bg: #f9fbff;
-      --text: #1c1c1c;
-      --light-gray: #f5f5f5;
-    }
-
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif;scroll-behavior:smooth;}
-
-    body{background:var(--bg);color:var(--text);line-height:1.6;}
-
-    header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(6px);box-shadow:0 2px 10px rgba(0,0,0,0.05);z-index:50;}
-
-    nav{max-width:1200px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
-    nav a{text-decoration:none;color:var(--text);margin-left:1.5rem;font-weight:500;transition:color 0.2s;}
-    nav a:hover{color:var(--primary);}
-    .menu-toggle{display:none;cursor:pointer;font-size:1.8rem;}
-
-    @media(max-width:768px){
-      nav div.links{display:none;flex-direction:column;gap:1rem;margin-top:1rem;}
-      nav div.links.active{display:flex;}
-      .menu-toggle{display:block;}
-    }
-
-    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 2rem 6rem;background:linear-gradient(180deg,#eaf1ff 0%,#ffffff 100%);}
-    .hero h1{font-size:2.8rem;font-weight:700;max-width:800px;}
-    .hero p{margin-top:1rem;font-size:1.2rem;color:#444;}
-    .btn{margin-top:2rem;padding:0.9rem 2rem;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:1.1rem;cursor:pointer;transition:all 0.25s;}
-    .btn:hover{background:#003eb3;transform:translateY(-2px);}
-
-    section{max-width:1200px;margin:0 auto;padding:6rem 2rem;}
-    h2{font-size:2rem;margin-bottom:2rem;text-align:center;color:var(--secondary);}
-
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
-    .feature{background:white;padding:2rem;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,0.05);text-align:center;transition:transform 0.3s;}
-    .feature:hover{transform:translateY(-6px);}
-    .feature img{width:80px;height:80px;margin-bottom:1rem;object-fit:contain;}
-
-    .highlight-dsgvo{border:2px solid var(--primary);padding:1.5rem;border-radius:16px;animation:pulse 3s infinite alternate;}
-    @keyframes pulse{from{box-shadow:0 0 0 rgba(0,93,255,0);}to{box-shadow:0 0 25px rgba(0,93,255,0.25);}}
-
-    .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;text-align:center;}
-    .member{background:white;padding:2.5rem;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,0.05);transition:transform 0.3s;overflow:hidden;}
-    .member:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,93,255,0.15);}
-    .member-photo{width:100%;height:280px;border-radius:16px;object-fit:cover;margin-bottom:1.5rem;background:var(--light-gray);}
-    .member h3{margin:1rem 0 0.3rem;font-size:1.4rem;color:var(--secondary);}
-    .member .role{color:var(--primary);font-weight:600;font-size:1rem;margin-bottom:1rem;}
-    .member .function{background:var(--light-gray);padding:1rem;border-radius:12px;margin:1rem 0;text-align:left;font-size:0.95rem;line-height:1.5;}
-    .member .experience{text-align:left;font-size:0.9rem;color:#666;line-height:1.6;}
-
-    .tech{text-align:center;}
-    .tech img{max-width:100%;height:auto;margin-top:2rem;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
-
-    .cta{text-align:center;background:linear-gradient(135deg,var(--primary),#4a9eff);color:white;padding:4rem 2rem;border-radius:20px;margin-top:3rem;}
-    .cta h2{color:white;}
-
-    footer{text-align:center;padding:2rem;font-size:0.9rem;color:#777;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HAVENIS AI™ – Contactless AI Sensing</title>
+<meta name="description" content="HAVENIS AI™ – Wi-Fi Sensing for contactless vital monitoring, presence & motion detection – camera-free and GDPR-compliant.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <nav>
-    <div><strong>HAVENIS AI™</strong></div>
+    <div class="logo"><strong>HAVENIS AI™</strong></div>
     <div class="menu-toggle" onclick="document.querySelector('.links').classList.toggle('active')">☰</div>
     <div class="links">
-      <a href="#features">Features</a>
-      <a href="#team">Team</a>
-      <a href="#tech">Technologie</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#features" data-en="Features" data-de="Funktionen">Features</a>
+      <a href="#team" data-en="Team" data-de="Team">Team</a>
+      <a href="#tech" data-en="Technology" data-de="Technologie">Technology</a>
+      <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+      <button id="lang-toggle">DE/EN</button>
     </div>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</h1>
-  <p>Erkennt Vitalzeichen, Bewegung und Präsenz – ohne Kamera, ohne Wearable.</p>
-  <button class="btn">Demo anfragen</button>
+  <h1 data-en="Contactless AI Sensing with Wi-Fi" data-de="Kontaktlose KI-Wahrnehmung durch Wi-Fi">Contactless AI Sensing with Wi-Fi</h1>
+  <p data-en="Detects vital signs, movement & presence – without camera or wearable." data-de="Erkennt Vitalzeichen, Bewegung und Präsenz – ohne Kamera oder Wearable.">Detects vital signs, movement & presence – without camera or wearable.</p>
+  <div class="hero-dsgvo">
+    <span data-en="100% GDPR Compliant" data-de="100% DSGVO-konform">100% GDPR Compliant</span>
+  </div>
+  <button class="btn" data-en="Request Demo" data-de="Demo anfragen">Request Demo</button>
 </section>
 
 <section id="features">
-  <h2>Unsere Kerntechnologien</h2>
+  <h2 data-en="Core Technologies" data-de="Unsere Kerntechnologien">Core Technologies</h2>
   <div class="features">
     <div class="feature">
       <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/bfc3a1c433ea47f6880d0f00b610e572" alt="Wi-Fi Sensing Icon">
-      <h3>Wi-Fi Sensing</h3>
-      <p>Erkennt Bewegungen, Atmung und Herzrhythmus durch Funkwellen – komplett kontaktlos.</p>
+      <h3 data-en="Wi-Fi Sensing" data-de="Wi-Fi Sensing">Wi-Fi Sensing</h3>
+      <p data-en="Detects movement, breathing, and heart rate through radio waves – fully contactless." data-de="Erkennt Bewegungen, Atmung und Herzrhythmus durch Funkwellen – komplett kontaktlos.">Detects movement, breathing, and heart rate through radio waves – fully contactless.</p>
     </div>
     <div class="feature">
       <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/52bec82f675e9f576d1000579dbeccc0" alt="Vitalmonitor Icon">
-      <h3>Biometrischer Vitalmonitor</h3>
-      <p>Erfasst Herzfrequenzvariabilität, Schlafmuster und Stressindikatoren in Echtzeit.</p>
+      <h3 data-en="Biometric Vital Monitor" data-de="Biometrischer Vitalmonitor">Biometric Vital Monitor</h3>
+      <p data-en="Measures HRV, sleep patterns & stress indicators in real time." data-de="Erfasst Herzfrequenzvariabilität, Schlafmuster und Stressindikatoren in Echtzeit.">Measures HRV, sleep patterns & stress indicators in real time.</p>
     </div>
     <div class="feature highlight-dsgvo">
       <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/daff2942fa0de6dea9f17830df13fb67" alt="Privacy Icon">
-      <h3>100 % DSGVO-konform</h3>
-      <p>Sensible Gesundheitsdaten bleiben geschützt – unsere Technologie arbeitet anonym und kamera-frei.</p>
+      <h3 data-en="100% GDPR Compliant" data-de="100% DSGVO-konform">100% GDPR Compliant</h3>
+      <p data-en="Sensitive health data remains protected – our tech is anonymous and camera-free." data-de="Sensible Gesundheitsdaten bleiben geschützt – unsere Technologie arbeitet anonym und kamera-frei.">Sensitive health data remains protected – our tech is anonymous and camera-free.</p>
     </div>
   </div>
 </section>
 
 <section id="team">
-  <h2>Unser Gründer-Team</h2>
+  <h2 data-en="Our Founder Team" data-de="Unser Gründer-Team">Our Founder Team</h2>
   <div class="team">
     <div class="member">
-      <img src="images/danilo-kuss-ceo.jpg" alt="Danilo Kuss - CEO" class="member-photo">
+      <img src="images/danilo-kuss-ceo.jpg" alt="Danilo Kuss - CEO">
       <h3>Danilo Kuss</h3>
-      <p class="role">CEO & Co-Founder</p>
-      <div class="function">
-        <strong>Funktion:</strong> Geschäftsführung, Technische Leitung & Produktentwicklung
-      </div>
-      <div class="experience">
-        <strong>Erfahrung:</strong> Spezialist für Sensorfusion, Wi-Fi Sensing und AI-Edge-Computing mit über 12 Jahren Erfahrung in IoT-Architektur und Machine-Learning-Deployment. Leitete zuvor F&E-Projekte bei Bosch.
-      </div>
+      <p class="role" data-en="CEO & Co-Founder" data-de="CEO & Co-Gründer">CEO & Co-Founder</p>
+      <div class="function" data-en="Leadership, Technical Direction & Product Development" data-de="Geschäftsführung, Technische Leitung & Produktentwicklung">Leadership, Technical Direction & Product Development</div>
     </div>
-
     <div class="member">
-      <img src="images/lara-nguyen-coo.jpg" alt="Lara Nguyen - COO" class="member-photo">
-      <h3>Lara Nguyen</h3>
-      <p class="role">COO (Chief Operating Officer)</p>
-      <div class="function">
-        <strong>Funktion:</strong> Operations, Partnernetzwerk & Skalierung
-      </div>
-      <div class="experience">
-        <strong>Erfahrung:</strong> Betriebswirtin mit Schwerpunkt Tech-Operations (TU München), Ex-Projektmanagerin bei Siemens Healthineers. Verantwortlich für Skalierungsprozesse, Budgetkontrolle und operative Exzellenz.
-      </div>
-    </div>
-
-    <div class="member">
-      <img src="images/elias-kern-cto.jpeg" alt="Dr. Elias Kern - CTO" class="member-photo">
+      <img src="images/elias-kern-cto.jpeg" alt="Dr. Elias Kern - CTO">
       <h3>Dr. Elias Kern</h3>
-      <p class="role">CTO & Co-Founder</p>
-      <div class="function">
-        <strong>Funktion:</strong> Strategische Vision, Investor Relations & KI-Systemarchitektur
-      </div>
-      <div class="experience">
-        <strong>Erfahrung:</strong> 10+ Jahre im Bereich KI-Systemarchitektur, promovierter Neuroinformatiker (ETH Zürich), ehemals bei DeepMind Research tätig. Verantwortlich für die Unternehmensstrategie, wissenschaftliche Ausrichtung und Investor Relations.
-      </div>
+      <p class="role" data-en="CTO & Co-Founder" data-de="CTO & Co-Gründer">CTO & Co-Founder</p>
+      <div class="function" data-en="Strategic Vision & Investor Relations" data-de="Strategische Vision & Investor Relations">Strategic Vision & Investor Relations</div>
+    </div>
+    <div class="member">
+      <img src="images/lara-nguyen-coo.jpg" alt="Lara Nguyen - COO">
+      <h3>Lara Nguyen</h3>
+      <p class="role" data-en="COO" data-de="COO">COO</p>
+      <div class="function" data-en="Operations & Scaling" data-de="Operations & Skalierung">Operations & Scaling</div>
     </div>
   </div>
 </section>
 
 <section id="tech" class="tech">
-  <h2>Wie unsere Technologie funktioniert</h2>
-  <p>HAVENIS AI™ nutzt Reflexionen von Wi-Fi-Signalen, um Bewegungsmuster, Atmung und Herzschläge zu erfassen.  
-  KI-Modelle wandeln diese Signale in präzise Vitalparameter um – in Echtzeit und kamera-frei.</p>
-  <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/375b44e16cef836e8373695da0eecca4" alt="Technikdiagramm - HAVENIS AI System Architecture">
+  <h2 data-en="How Our Technology Works" data-de="Wie unsere Technologie funktioniert">How Our Technology Works</h2>
+  <p data-en="HAVENIS AI uses Wi-Fi signal reflections to detect movement, breathing & heartbeats. AI models convert this into precise vital parameters – in real time, camera-free." data-de="HAVENIS AI™ nutzt Reflexionen von Wi-Fi-Signalen, um Bewegungsmuster, Atmung und Herzschläge zu erfassen. KI-Modelle wandeln diese Signale in präzise Vitalparameter um – in Echtzeit, kamera-frei.">HAVENIS AI uses Wi-Fi signal reflections to detect movement, breathing & heartbeats. AI models convert this into precise vital parameters – in real time, camera-free.</p>
+  <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/375b44e16cef836e8373695da0eecca4" alt="Technology Diagram">
 </section>
 
-<section id="kontakt" class="cta">
-  <h2>Bereit für kontaktlose Vitalwahrnehmung?</h2>
-  <p>Bring Leben in Räume – mit KI, die Menschen spürt, nicht filmt.</p>
-  <button class="btn" style="background:white;color:#005dff;">Demo anfragen</button>
+<section id="contact" class="cta">
+  <h2 data-en="Ready for Contactless Vital Monitoring?" data-de="Bereit für kontaktlose Vitalwahrnehmung?">Ready for Contactless Vital Monitoring?</h2>
+  <p data-en="Bring spaces to life – with AI that senses people, not cameras." data-de="Bring Leben in Räume – mit KI, die Menschen spürt, nicht filmt.">Bring spaces to life – with AI that senses people, not cameras.</p>
+  <button class="btn" data-en="Request Demo" data-de="Demo anfragen">Request Demo</button>
 </section>
 
 <footer>
-  <p>© 2025 HAVENIS AI™ | Datenschutz | Impressum</p>
+  <p>© 2025 HAVENIS AI™ | <span data-en="Privacy" data-de="Datenschutz">Privacy</span> | <span data-en="Imprint" data-de="Impressum">Imprint</span></p>
 </footer>
+
+<script>
+const langToggle = document.getElementById('lang-toggle');
+langToggle.addEventListener('click', () => {
+  const currentLang = document.documentElement.lang;
+  const newLang = currentLang === 'en' ? 'de' : 'en';
+  document.documentElement.lang = newLang;
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.textContent = el.getAttribute('data-'+newLang);
+  });
+});
+</script>
 
 </body>
 </html>
