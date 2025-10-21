@@ -226,22 +226,25 @@ h2{
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* WICHTIG: Image-Container für komplette Kopf-Anzeige */
+/* WICHTIG: Image-Container für komplette Kopf-Anzeige ohne Crop */
+.member-image-container{
+  width:100%;
+  background:#f0f0f0;
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:280px;
+}
+
 .member img{
   width:100%;
   height:auto;
-  border-radius:16px;
-  object-fit:contain;
-  object-position:center top;
   display:block;
-  background:#f5f5f5;
-  margin-bottom:1rem;
-  transition:transform 0.3s;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.member img:hover{
-  transform:scale(1.02);
+  object-fit:contain;
+  object-position:top center;
 }
 
 .member h3{
@@ -365,7 +368,7 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .member img{
-    height:auto;
+  .member-image-container{
+    min-height:auto;
   }
 }
