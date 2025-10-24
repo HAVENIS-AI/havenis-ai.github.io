@@ -48,9 +48,12 @@
     .highlight-dsgvo{border:2px solid var(--primary);padding:1.5rem;border-radius:16px;animation:pulse 3s infinite alternate;}
     @keyframes pulse{from{box-shadow:0 0 0 rgba(0,93,255,0);}to{box-shadow:0 0 25px rgba(0,93,255,0.25);}}
 
-    .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;text-align:center;}
-    .member img{width:100%;border-radius:16px;object-fit:cover;height:260px;}
-    .member h3{margin-top:0.8rem;font-size:1.2rem;}
+    .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;text-align:center;}
+    .member{background:white;padding:2rem;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,0.05);transition:transform 0.3s;text-align:left;}
+    .member:hover{transform:translateY(-6px);}
+    .member img{width:100%;border-radius:16px;object-fit:cover;height:260px;margin-bottom:1rem;}
+    .member h3{margin-top:0;font-size:1.2rem;text-align:center;}
+    .member p:first-of-type{text-align:center;}
 
     .tech{text-align:center;}
 
@@ -106,19 +109,25 @@
   <h2>Unser Team</h2>
   <div class="team">
     <div class="member">
-      <img src="image/ceo-danilo-kuz.jpg" alt="CEO Danilo Kuz">
-      <h3>Danilo Kuz</h3>
-      <p>CEO & Gründer</p>
+      <img src="image/ceo-danilo-kuz.jpg" alt="CEO Danilo Kuss">
+      <h3>Danilo Kuss</h3>
+      <p style="font-weight:600;color:#005dff;">CEO & Co-Founder</p>
+      <p style="font-size:0.95rem;margin-top:1rem;text-align:left;"><strong>Funktion:</strong> Geschäftsführung, Technische Leitung & Produktentwicklung.</p>
+      <p style="font-size:0.95rem;margin-top:0.5rem;text-align:left;"><strong>Erfahrung:</strong> Spezialist für Sensorfusion, Wi-Fi Sensing und AI-Edge-Computing mit über 12 Jahren Erfahrung in IoT-Architektur und Machine-Learning-Deployment. Leitete zuvor F&E-Projekte bei Bosch.</p>
     </div>
     <div class="member">
-      <img src="image/cto.jpg" alt="CTO">
-      <h3>[Name]</h3>
-      <p>CTO & KI-Architekt</p>
+      <img src="image/cto.jpg" alt="CTO Dr. Elias Kern">
+      <h3>Dr. Elias Kern</h3>
+      <p style="font-weight:600;color:#005dff;">CTO & Co-Founder</p>
+      <p style="font-size:0.95rem;margin-top:1rem;text-align:left;"><strong>Funktion:</strong> Strategische Vision, Investor Relations.</p>
+      <p style="font-size:0.95rem;margin-top:0.5rem;text-align:left;"><strong>Erfahrung:</strong> 10+ Jahre im Bereich KI-Systemarchitektur, promovierter Neuroinformatiker (ETH Zürich), ehemals bei DeepMind Research tätig. Verantwortlich für die Unternehmensstrategie, wissenschaftliche Ausrichtung und Investor Relations.</p>
     </div>
     <div class="member">
-      <img src="image/designer.jpg" alt="Designer">
-      <h3>[Name]</h3>
-      <p>UX / Produktdesign</p>
+      <img src="image/designer.jpg" alt="COO Lara Nguyen">
+      <h3>Lara Nguyen</h3>
+      <p style="font-weight:600;color:#005dff;">COO</p>
+      <p style="font-size:0.95rem;margin-top:1rem;text-align:left;"><strong>Funktion:</strong> Operations, Partnernetzwerk und Skalierung.</p>
+      <p style="font-size:0.95rem;margin-top:0.5rem;text-align:left;"><strong>Erfahrung:</strong> Betriebswirtin mit Schwerpunkt Tech-Operations (TU München), Ex-Projektmanagerin bei Siemens Healthineers. Verantwortlich für Skalierungsprozesse, Budgetkontrolle und operative Exzellenz.</p>
     </div>
   </div>
 </section>
