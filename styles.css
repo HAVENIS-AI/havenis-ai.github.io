@@ -1,285 +1,33 @@
-/* ===== CSS VARIABLEN ===== */
+/* ==========================================
+   HAVENIS AI™ - Advanced Stylesheet
+   CSS Variables & Best Practices
+   ========================================	=
+
+/* CSS Custom Properties für einfache Wartbarkeit */
 :root {
-    --primary-dark: #1e3c72;
+    -primary-dark: #1e3c72;
     --primary-light: #2a5298;
-    --accent-light: #00d4ff;
-    --accent-dark: #0099ff;
-    --white-transparent: rgba(255, 255, 255, 0.05);
-    --white-border: rgba(255, 255, 255, 0.1);
-    --text-primary: #ffffff;
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition-fast: all 0.3s ease;
+    --accent-cyan: #00d4ff;
+    --accent-blue: #0099ff;
+    --background-white: #ffffff;
+    --text-white: #ffffff;
+    --text-dark: #1a1a1a;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    
+    --border-radius: 0.25rem;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-mono: 'Courier New', monospace;
 }
 
-/* ===== RESET & BASICS ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
-    color: var(--text-primary);
-    min-height: 100vh;
-    line-height: 1.6;
-}
-
-/* ===== NAVIGATION ===== */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 4rem;
-    background: var(--white-transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--white-border);
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav > div:first-child {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-dark) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-nav > div:last-child {
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition-fast);
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    position: relative;
-}
-
-nav a:hover {
-    color: var(--accent-light);
-    background: rgba(0, 212, 255, 0.1);
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 1rem;
-    right: 1rem;
-    height: 2px;
-    background: var(--accent-light);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-
-nav a:hover::after {
-    transform: scaleX(1);
-}
-
-/* ===== MAIN CONTENT ===== */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    text-align: center;
-    min-height: 60vh;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-dark) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: fadeInUp 0.8s ease;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    line-height: 1.6;
-    animation: fadeInUp 1s ease;
-}
-
-/* ===== SECTIONS ===== */
-section {
-    padding: 4rem 2rem;
-    margin: 2rem 0;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-dark) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.feature-card {
-    background: var(--white-transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 1px solid var(--white-border);
-    transition: var(--transition-fast);
-}
-
-.feature-card:hover {
-    transform: translateY(-8px);
-    background: rgba(0, 212, 255, 0.1);
-    border-color: var(--accent-light);
-}
-
-.feature-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent-light);
-}
-
-.feature-card p {
-    font-size: 1rem;
-    animation: none;
-    margin-bottom: 0;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.team-member {
-    background: var(--white-transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 1px solid var(--white-border);
-    text-align: center;
-    transition: var(--transition-fast);
-}
-
-.team-member:hover {
-    transform: scale(1.05);
-    background: rgba(0, 212, 255, 0.1);
-}
-
-.team-member h3 {
-    color: var(--accent-light);
-    margin-bottom: 0.5rem;
-}
-
-.team-member p {
-    font-size: 0.9rem;
-    animation: none;
-    margin-bottom: 0;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== FOOTER ===== */
-footer {
-    padding: 2rem;
-    text-align: center;
-    border-top: 1px solid var(--white-border);
-    background: var(--white-transparent);
-    margin-top: 4rem;
-}
-
-footer a {
-    color: var(--accent-light);
-    transition: var(--transition-fast);
-}
-
-footer a:hover {
-    opacity: 0.8;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 2rem;
-    }
-
-    nav > div:last-child {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    main {
-        padding: 2rem 1rem;
-    }
-
-    section {
-        padding: 2rem 1rem;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    .features-grid,
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===== FALLBACK FÜR ÄLTERE BROWSER ===== */
-@supports not (backdrop-filter: blur(10px)) {
-    nav,
-    .feature-card,
-    .team-member {
-        background: rgba(30, 60, 114, 0.85) !important;
-    }
-}
