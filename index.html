@@ -3,132 +3,552 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HAVENIS AI™ - Revolutionäre Wi-Fi Sensing Technologie für intelligente IoT-Lösungen. Erkunden Sie die Zukunft der Wireless Sensing.">
-    <meta name="keywords" content="Wi-Fi Sensing, IoT, Wireless Technology, HAVEM IA">
+    <meta name="description" content="HAVENIS AI™ - Revolutionary Wi-Fi Sensing Technology for intelligent IoT solutions. Experience the future of Wireless Sensing.">
+    <meta name="keywords" content="Wi-Fi Sensing, IoT, Wireless Technology, AI, Sensing Technology">
     <meta name="author" content="HAVENIS AI">
     <meta name="theme-color" content="#2a5298">
-    
-    <!-- Open Graph Meta Tects Ƹr Social Sharing -->
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="HAVENIS AI™ - Wi-Fi Sensing Technology">
-    <meta property="og:description" content="Revolutiîäre Wi-Fi Sensing Technologie für intelligente IoT-Lösungen">
+    <meta property="og:description" content="Revolutionary Wi-Fi Sensing Technology for intelligent IoT solutions">
     <meta property="og:url" content="https://havenis-ai.github.io">
     <meta property="og:image" content="https://havenis-ai.github.io/og-image.png">
-    
-    <!-- Twitter Card Meta Tects -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="HAVENIS AI™">
-    <meta name="twitter:description" content="Revolutionäre Wi-Fi Sensing Technologie">
-    
-    <!-- Favicon -->
+    <meta name="twitter:description" content="Revolutionary Wi-Fi Sensing Technology">
+
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232a5298' width='100' height='100'/><circle cx='50' cy='50' r='30' fill='%2300d4ff'/></svg>">
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://havenis-ai.github.io">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
+
     <title>HAVENIS AI™ - Wi-Fi Sensing Technology</title>
+    <style>
+        :root {
+            --primary-color: #1e3c72;
+            --secondary-color: #2a5298;
+            --accent-color: #00d4ff;
+            --accent-dark: #0099ff;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --bg-light: rgba(255, 255, 255, 0.05);
+            --bg-dark: #0a1628;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a, .lang-toggle {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            position: relative;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .nav-menu a:hover, .lang-toggle:hover {
+            color: var(--accent-color);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-secondary);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Main sections */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 800;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Technology Section */
+        .tech-section {
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .tech-item {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .tech-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .team-member:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .member-avatar {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            overflow: hidden;
+        }
+
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .team-member .role {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: rgba(0, 212, 255, 0.05);
+            border-top: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-brand">
-            <strong>HAVENIS AI™</strong>
-        </div>
+        <div class="nav-brand">HAVENIS AI™</div>
         <div class="nav-menu">
-            <a href="#features" aria-label="Learn about HAVENIS AI™ features">Features</a>
-            <a href="#team" aria-label="Meet the HAVENIS AI™ team">Team</a>
-            <button class="lang-toggle" aria-label="Toggle language" id="langToggle">EN</button>
+            <a href="#technology">Technology</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+            <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
         </div>
     </nav>
-    
+
     <!-- Hero Section -->
     <main>
-        <section class="hero" id="home">
+        <section class="hero">
             <h1>HAVENIS AI™</h1>
-            <p class="tagline">Wi-Fi Sensing Technology for the Future</p>
-            <p class="description">Erleben Sie die revolutionäre Wi-Fi Sensing Technologie, die die IoT-Welt transformiert.</p>
-            <button class="cta-button" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
-                Mehr erfahren
+            <p class="tagline">Revolutionary Wi-Fi Sensing Technology</p>
+            <p class="description">The future of intelligent IoT with contactless AI perception through Wi-Fi sensing. Transform your world with next-generation wireless technology.</p>
+            <button class="cta-button" onclick="document.getElementById('technology').scrollIntoView({behavior: 'smooth'})">
+                Learn More
             </button>
         </section>
-        
+
         <!-- Features Section -->
         <section class="features" id="features">
-            <hj2>Features</Z2>
+            <h2>Key Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>🔍 Präzises Sensing</h3>
-                    <p>Hochpräzise Wi-Fi basierte Erkennungstechnologie mit Echtzeit-Datenverarbeitung.</p>
+                    <h3>🔍 Precision Sensing</h3>
+                    <p>High-precision Wi-Fi based detection technology with real-time data processing. Detect presence, movement, and vital signs through walls.</p>
                 </div>
                 <div class="feature-card">
                     <h3>⚡ High Performance</h3>
-                    <p>Blitzschnelle Verarbeitung und minimale Latenz für kritische Anwendungen.</p>
+                    <p>Lightning-fast processing with minimal latency for critical applications. Sub-second response times for real-time decision making.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🔐 Sicher & Zuverlässig</h3>
-                    <p>Enterprise-Grade Sicherheit mit verschlüsselter Datenübertragung.</p>
+                    <h3>🔐 Secure & Reliable</h3>
+                    <p>Enterprise-grade security with encrypted data transmission. Military-standard protocols for maximum data protection.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🌐 Skalierbar</h3>
-                    <p>Problemlose Skalierung von einzelnen Geräten bis zu großen IoT-Netzwerken.</p>
+                    <h3>🌐 Scalable</h3>
+                    <p>Seamless scaling from single devices to massive IoT networks. Handle millions of data points per second effortlessly.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📊 Analytics</h3>
-                    <p>Umfassende Datenanalyse und visuelle Dashboards für bessere Insights.</p>
+                    <h3>📊 Advanced Analytics</h3>
+                    <p>Comprehensive data analysis and interactive dashboards. Machine learning insights for actionable intelligence.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🚀 Zukunftssicher</h3>
-                    <p>Ständig aktualisierte Technologie für kommende Herausforderungen.</p>
+                    <h3>🚀 Future-Ready</h3>
+                    <p>Continuously updated technology for emerging challenges. Stay ahead with next-generation wireless capabilities.</p>
                 </div>
             </div>
         </section>
-        
+
+        <!-- Technology Section -->
+        <section class="tech-section" id="technology">
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Signal Processing</h4>
+                    <p>Advanced CSI analysis with machine learning algorithms</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI/ML Engine</h4>
+                    <p>Deep neural networks for pattern recognition</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Real-time Analytics</h4>
+                    <p>Stream processing for instant insights</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Cloud Integration</h4>
+                    <p>Seamless connectivity with major cloud platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50m+</div>
+                    <div class="stat-label">Range Detection</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">&lt;100ms</div>
+                    <div class="stat-label">Latency</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Uptime SLA</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Team Section -->
         <section class="team" id="team">
-            <h2>Unser Team</Z2>
-            <p class="team-intro">Innovatoren und Experten, die die Zukunft der Wi-Fi Sensing Technologie gestalten.</p>
+            <h2>Our Leadership Team</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-secondary);">Experts and innovators shaping the future of Wi-Fi Sensing Technology</p>
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="member-avatar">👨‍💼</div>
-                    <h3>Innovation Leader</h3>
-                    <p>Führung in Technologie und Strategie</p>
+                    <div class="member-avatar">
+                        <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/e22f22f0df01ddb6834da1b80906eb4b" alt="Dr. Sarah Mueller" loading="lazy">
+                    </div>
+                    <h3>Dr. Sarah Mueller</h3>
+                    <p class="role">CEO & Founder</p>
+                    <p>Leading innovation and strategy. 15+ years in wireless technology and IoT solutions.</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar">👩‍💻</div>
-                    <h3>Tech Expert</h3>
-                    <p>Entwicklung und Architektur</p>
+                    <div class="member-avatar">
+                        <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/89057860d5e1162939536af3a8070b9a" alt="Prof. Michael König" loading="lazy">
+                    </div>
+                    <h3>Prof. Michael König</h3>
+                    <p class="role">CTO & Co-Founder</p>
+                    <p>Development and architecture expert. PhD in Signal Processing and AI.</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar">👨‍🔬</div>
-                    <h3>Research Scientist</h3>
-                    <p>Grundlagenforschung und Innovation</p>
+                    <div class="member-avatar">
+                        <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/995a18bf585ef3bb59e28f55ac0c17b2" alt="Dr. Elena Rodriguez" loading="lazy">
+                    </div>
+                    <h3>Dr. Elena Rodriguez</h3>
+                    <p class="role">Head of Research</p>
+                    <p>Fundamental research and innovation. Leading breakthroughs in sensing technology.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/28677faa792f4162f67bb300ce3ac0de" alt="Thomas Weber" loading="lazy">
+                    </div>
+                    <h3>Thomas Weber</h3>
+                    <p class="role">VP of Engineering</p>
+                    <p>Production engineering and product development. 12+ years of IoT experience.</p>
                 </div>
             </div>
         </section>
-        
+
         <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>Bereit zu starten?</h2>
-            <p>Entdecken Sie die Möglichkeiten der Wi-Fi Sensing Technologie</p>
-            <button class="cta-button-large">Get Started</button>
+        <section class="cta-section" id="contact">
+            <h2>Ready to Transform Your IoT?</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Discover the possibilities of Wi-Fi Sensing Technology</p>
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="alert('Contact us: info@havenis-ai.com')">Get in Touch</button>
+            </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 HAVENIS AI™. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2025 HAVENIS AI™. All rights reserved.</p>
         <div class="footer-links">
-            <a href="#privacy">Datenschutz</a>
-            <a href="#terms">Nutzungsbedingungen</a>
-            <a href="#contact">Kontakt</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#impressum">Impressum</a>
         </div>
     </footer>
-    
-    <!-- JavaScript for Language Toggle -->
-    <script src="script.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Language Toggle
+        const langToggle = document.getElementById('langToggle');
+        if (langToggle) {
+            langToggle.addEventListener('click', () => {
+                const newLang = langToggle.textContent === 'EN' ? 'DE' : 'EN';
+                langToggle.textContent = newLang;
+                // Here you could implement language switching logic
+            });
+        }
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .team-member').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
