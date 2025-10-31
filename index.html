@@ -1,54 +1,214 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HAVENIS AI™ — Invisible. Ethical. Intelligent Protection.</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAVENIS AI™ – Invisible. Ethical. Intelligent Protection.</title>
     <style>
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0f1113;
-        color: #fff;
-      }
-      .cyan-gradient-text {
-        background: linear-gradient(145deg, #22D3EE, #08D9D6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-      }
-      .hero-bg {
-        background: radial-gradient(1000px 700px at 10% -20%, rgba(8, 217, 214, 0.05) 0%, transparent 70%),
-                    radial-gradient(800px 900px at 90% 110%, rgba(8, 217, 214, 0.08) 0%, transparent 60%),
-                    #0f1113;
-      }
-      .fade-in-section {
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f1113;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Header */
+        header {
+            background: rgba(15, 17, 19, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #22D3EE; }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(1000px 700px at 10% -20%, rgba(8, 217, 214, 0.05) 0%, transparent 70%);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(145deg, #22D3EE, #08D9D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { font-size: 1.3rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 2rem; }
+
+        /* Section */
+        section { padding: 5rem 0; }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #94a3b8;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .team-card {
+            background: #1a1c1f;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+        .team-card:hover { transform: translateY(-4px); }
+        .team-icon {
+            width: 48px;
+            height: 48px;
+            background: #0f1113;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #22D3EE;
+            font-size: 24px;
+            margin-bottom: 1.5rem;
+        }
+        .team-name { font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+        .team-title { font-size: 0.9rem; font-weight: 600; color: #08D9D6; margin-bottom: 1rem; }
+        .team-bio { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
+
+        /* Advisory Board */
+        .advisory { max-width: 700px; margin: 0 auto; }
+        .advisory-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(145deg, #22D3EE, #08D9D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .advisor-card {
+            background: #1a1c1f;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .advisor-name { font-weight: 700; color: white; }
+        .advisor-title { font-size: 0.9rem; color: #94a3b8; }
+
+        /* Footer */
+        footer {
+            background: #0a0b0c;
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(34, 211, 238, 0.1);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(145deg, #22D3EE, #08D9D6);
+            color: #0f1113;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .team-grid { grid-template-columns: 1fr; }
+        }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.417.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body class="antialiased">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">HAVENIS AI™</div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>HAVENIS AI™</h1>
+            <p class="subtitle">Invisible. Ethical. Intelligent Protection.<br>Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</p>
+            <a href="#team" class="btn">Unser Team</a>
+        </div>
+    </div>
+
+    <section id="team" style="border-top: 1px solid rgba(8, 217, 214, 0.1); border-bottom: 1px solid rgba(8, 217, 214, 0.1);">
+        <div class="container">
+            <h2 class="section-title">Team & Vision</h2>
+            <p class="section-subtitle">Wir verbinden KI-Forschung, Signalverarbeitung und Ethik zu einer neuen Sicherheitskategorie.</p>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-icon">👤</div>
+                    <div class="team-name">Danilo Kuss</div>
+                    <div class="team-title">CEO</div>
+                    <p class="team-bio">Experte für Geschäftsstrategie mit nachweislichen Erfolgen bei der Skalierung von Deep-Tech-Unternehmen.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">💻</div>
+                    <div class="team-name">Dr. Ben Weber</div>
+                    <div class="team-title">CTO</div>
+                    <p class="team-bio">Promovierter Ingenieur für Signalverarbeitung, der Architekt hinter unserer patentierten CSI-Analysetechnologie.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">🛡️</div>
+                    <div class="team-name">Clara Berg</div>
+                    <div class="team-title">Head of Security</div>
+                    <p class="team-bio">Erfahrene Sicherheitsberaterin, die die Brücke zwischen Technologie und den realen Bedürfnissen unserer Kunden schlägt.</p>
+                </div>
+            </div>
+
+            <div class="advisory">
+                <h3 class="advisory-title">Beirat</h3>
+                <div class="advisor-card">
+                    <span class="advisor-name">Prof. Dr. Schmidt</span>
+                    <span class="advisor-title">Experte für KI-Ethik</span>
+                </div>
+                <div class="advisor-card">
+                    <span class="advisor-name">Dr. Meier</span>
+                    <span class="advisor-title">Facharzt für Geriatrie</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="color: #94a3b8;">&copy; 2025 HAVENIS AI™ – Invisible. Ethical. Intelligent Protection.</p>
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 1rem;">Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</p>
+        </div>
+    </footer>
+</body>
 </html>
