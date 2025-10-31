@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAVENIS-AI: Privacy-First RF-Sensing Technology</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAVENIS AI™ — Invisible. Ethical. Intelligent Protection.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f1113;
+        color: #fff;
+      }
+      .cyan-gradient-text {
+        background: linear-gradient(145deg, #22D3EE, #08D9D6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      .hero-bg {
+        background: radial-gradient(1000px 700px at 10% -20%, rgba(8, 217, 214, 0.05) 0%, transparent 70%),
+                    radial-gradient(800px 900px at 90% 110%, rgba(8, 217, 214, 0.08) 0%, transparent 60%),
+                    #0f1113;
+      }
+      .fade-in-section {
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.417.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <header>
-        <h1>HAVENIS-AI</h1>
-        <p>Privacy-First RF-Sensing Technologie • Patent Pending • €25k ARR</p>
-    </header>
-
-    <div class="container">
-        <section id="technology">
-            <h2>🔬 Technologie-Übersicht</h2>
-            <p>Unser RF-Sensing-System bietet revolutionäre Möglichkeiten für kontaktlose Datenerfassung.</p>
-            <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/985640b739e79359e569e94ab2f9e75d" alt="Technology Diagram" title="RF-Sensing Technologie-Diagramm"/>
-        </section>
-
-        <section id="features">
-            <h2>✨ Hauptmerkmale</h2>
-            <p>Datenschutz an erster Stelle, fortschrittliche Sensortechnologie, globale Anwendbarkeit.</p>
-            <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/b84855af0c03d559cb9ddb3de5089fc4" alt="Features Illustration" title="Funktionen und Vorteile"/>
-        </section>
-
-        <section id="sensing">
-            <h2>📡 WiFi-Sensing-Technologie</h2>
-            <p>Nutzen Sie vorhandene WiFi-Infrastruktur für erweiterte Überwachungs- und Erkennungsfähigkeiten.</p>
-            <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/2c322f6e3b5aaf8d7d95025c055a5d94" alt="WiFi Sensing" title="WiFi-Sensing-System"/>
-        </section>
-
-        <section id="security">
-            <h2>🔒 Datenschutz & Sicherheit</h2>
-            <p>End-to-End-Verschlüsselung und datenschutzorientierte Architektur für maximale Sicherheit.</p>
-            <img src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/generate_image/response/6f7d25ad43a9f78d4afa42712bd8d550" alt="Security Shield" title="Datenschutz-Illustration"/>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 HAVENIS-AI. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
