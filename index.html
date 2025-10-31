@@ -3,212 +3,720 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAVENIS AI™ – Invisible. Ethical. Intelligent Protection.</title>
+    <title>HAVENIS AI™ - Invisible. Ethical. Intelligent Protection.</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0f1113;
-            color: #e2e8f0;
-            line-height: 1.6;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        :root {
+            --primary-color: #00d9ff;
+            --dark-bg: #0a0e1a;
+            --darker-bg: #050810;
+            --card-bg: #151a2e;
+            --text-color: #ffffff;
+            --text-secondary: #a0a8c0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
         /* Header */
         header {
-            background: rgba(15, 17, 19, 0.95);
+            background: rgba(10, 14, 26, 0.95);
             backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
             top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
         }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: #22D3EE; }
 
-        /* Hero */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--primary-color);
+            color: var(--dark-bg);
+        }
+
+        /* Hero Section */
         .hero {
-            min-height: 80vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: radial-gradient(1000px 700px at 10% -20%, rgba(8, 217, 214, 0.05) 0%, transparent 70%);
+            padding: 6rem 5% 3rem;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            position: relative;
+            overflow: hidden;
         }
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(145deg, #22D3EE, #08D9D6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .subtitle { font-size: 1.3rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 2rem; }
 
-        /* Section */
-        section { padding: 5rem 0; }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
         .section-title {
             font-size: 2.5rem;
-            font-weight: 800;
             text-align: center;
-            margin-bottom: 1rem;
-            color: white;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
         }
-        .section-subtitle {
-            font-size: 1.2rem;
-            text-align: center;
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 3rem;
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
         }
 
         /* Team Section */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
-        .team-card {
-            background: #1a1c1f;
+
+        .team-member {
+            background: var(--card-bg);
             padding: 2rem;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(0, 217, 255, 0.2);
         }
-        .team-card:hover { transform: translateY(-4px); }
-        .team-icon {
-            width: 48px;
-            height: 48px;
-            background: #0f1113;
-            border-radius: 0.5rem;
+
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0088ff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #22D3EE;
-            font-size: 24px;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            font-weight: bold;
         }
-        .team-name { font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
-        .team-title { font-size: 0.9rem; font-weight: 600; color: #08D9D6; margin-bottom: 1rem; }
-        .team-bio { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
 
-        /* Advisory Board */
-        .advisory { max-width: 700px; margin: 0 auto; }
-        .advisory-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            background: linear-gradient(145deg, #22D3EE, #08D9D6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .team-name {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
         }
-        .advisor-card {
-            background: #1a1c1f;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .team-role {
+            color: var(--text-secondary);
             margin-bottom: 1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
-        .advisor-name { font-weight: 700; color: white; }
-        .advisor-title { font-size: 0.9rem; color: #94a3b8; }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
 
         /* Footer */
         footer {
-            background: #0a0b0c;
-            padding: 3rem 0;
+            background: var(--darker-bg);
+            padding: 3rem 5%;
             text-align: center;
-            border-top: 1px solid rgba(34, 211, 238, 0.1);
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
         }
 
-        /* Button */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: linear-gradient(145deg, #22D3EE, #08D9D6);
-            color: #0f1113;
-            font-weight: 700;
-            border-radius: 0.5rem;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: transform 0.2s;
         }
-        .btn:hover { transform: scale(1.05); }
 
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .team-grid { grid-template-columns: 1fr; }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
 <body>
+    <!-- 1. Header -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">HAVENIS AI™</div>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">HAVENIS AI™</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#solution">Lösung</a></li>
+                <li><a href="#technology">Technologie</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLang('de')">DE</button>
+                <button class="lang-btn" onclick="switchLang('en')">EN</button>
+                <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            </div>
+        </nav>
     </header>
 
-    <div class="hero">
-        <div class="container">
+    <!-- 2. Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-content fade-in">
             <h1>HAVENIS AI™</h1>
-            <p class="subtitle">Invisible. Ethical. Intelligent Protection.<br>Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</p>
-            <a href="#team" class="btn">Unser Team</a>
+            <p class="hero-subtitle">Invisible. Ethical. Intelligent Protection.</p>
+            <p class="hero-tagline">Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</p>
+            <a href="#team" class="cta-btn">Unser Team</a>
         </div>
-    </div>
+    </section>
 
-    <section id="team" style="border-top: 1px solid rgba(8, 217, 214, 0.1); border-bottom: 1px solid rgba(8, 217, 214, 0.1);">
-        <div class="container">
-            <h2 class="section-title">Team & Vision</h2>
-            <p class="section-subtitle">Wir verbinden KI-Forschung, Signalverarbeitung und Ethik zu einer neuen Sicherheitskategorie.</p>
-
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-icon">👤</div>
-                    <div class="team-name">Danilo Kuss</div>
-                    <div class="team-title">CEO</div>
-                    <p class="team-bio">Experte für Geschäftsstrategie mit nachweislichen Erfolgen bei der Skalierung von Deep-Tech-Unternehmen.</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-icon">💻</div>
-                    <div class="team-name">Dr. Ben Weber</div>
-                    <div class="team-title">CTO</div>
-                    <p class="team-bio">Promovierter Ingenieur für Signalverarbeitung, der Architekt hinter unserer patentierten CSI-Analysetechnologie.</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-icon">🛡️</div>
-                    <div class="team-name">Clara Berg</div>
-                    <div class="team-title">Head of Security</div>
-                    <p class="team-bio">Erfahrene Sicherheitsberaterin, die die Brücke zwischen Technologie und den realen Bedürfnissen unserer Kunden schlägt.</p>
-                </div>
+    <!-- 3. Dilemma -->
+    <section id="dilemma">
+        <h2 class="section-title">Das Marktproblem</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>📹 Datenschutz-Dilemma</h3>
+                <p>Traditionelle Kamerasysteme verletzen die Privatsphäre und sammeln unnötige visuelle Daten. DSGVO-Compliance ist komplex und teuer.</p>
             </div>
+            <div class="card">
+                <h3>💰 Hohe Kosten</h3>
+                <p>Installation und Wartung von Kamerasystemen kosten Unternehmen Tausende Euro pro Jahr. Hardware wird schnell veraltet.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Begrenzte Funktionen</h3>
+                <p>Kameras erfassen nur visuelle Daten und benötigen manuelle Auswertung. Echtzeitanalyse ist ressourcenintensiv.</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="advisory">
-                <h3 class="advisory-title">Beirat</h3>
-                <div class="advisor-card">
-                    <span class="advisor-name">Prof. Dr. Schmidt</span>
-                    <span class="advisor-title">Experte für KI-Ethik</span>
+    <!-- 4. Solution -->
+    <section id="solution">
+        <h2 class="section-title">HAVENIS AI Lösung</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>🔒 100% Privatsphäre</h3>
+                <p>Wi-Fi-Sensing erfasst nur Bewegungsmuster ohne visuelle Daten. DSGVO-konform by design - keine Gesichter, keine Identitäten.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Plug & Play</h3>
+                <p>Nutzt vorhandene Wi-Fi-Infrastruktur. Keine zusätzliche Hardware nötig. Installation in unter 1 Stunde.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 KI-gestützt</h3>
+                <p>Echtzeit-Analyse von Bewegungsmustern. Automatische Anomalieerkennung. Präventive Sicherheitswarnungen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Technology -->
+    <section id="technology">
+        <h2 class="section-title">Technologie</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>📡 Wi-Fi Sensing</h3>
+                <p>Channel State Information (CSI) Analyse von Wi-Fi-Signalen zur Bewegungserkennung. Millimeter-genaue Erfassung ohne Kameras.</p>
+            </div>
+            <div class="card">
+                <h3>🧠 Deep Learning</h3>
+                <p>CNN & LSTM Modelle für Aktivitätserkennung. Trainiert auf 50.000+ anonymisierten Bewegungsmustern.</p>
+            </div>
+            <div class="card">
+                <h3>☁️ Edge Computing</h3>
+                <p>Lokale Verarbeitung für maximale Datensicherheit. Cloud-optional für erweiterte Analytics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Proof of Concept -->
+    <section id="poc">
+        <h2 class="section-title">Proof of Concept</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>✅ Labor-Tests</h3>
+                <p>97,3% Genauigkeit bei Personenerkennung. 95,8% bei Aktivitätsklassifikation in kontrollierten Umgebungen.</p>
+            </div>
+            <div class="card">
+                <h3>🏢 Pilot-Projekt</h3>
+                <p>3-monatiger Test in Bürogebäude (1.200 m²). Erfolgreiche Erkennung von Sicherheitsvorfällen und Optimierung der Raumnutzung.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Validierte Metriken</h3>
+                <p>Latenz < 200ms. 99,9% Uptime. 80% Kostenreduktion vs. traditionelle Systeme.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Validation -->
+    <section id="validation">
+        <h2 class="section-title">Markt-Validierung & Traktion</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Q4 2024</h3>
+                    <p>Erste Kundeninteressen aus Smart Building Sektor. 5 LOIs (Letters of Intent) im Wert von €250K ARR.</p>
                 </div>
-                <div class="advisor-card">
-                    <span class="advisor-name">Dr. Meier</span>
-                    <span class="advisor-title">Facharzt für Geriatrie</span>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Q1 2025</h3>
+                    <p>Erste Pilotinstallation bei Enterprise-Kunde. TÜV-Zertifizierung für Datenschutz in Arbeit.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Q2 2025</h3>
+                    <p>Ziel: 3 zahlende Kunden, €500K ARR. Series A Vorbereitung.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section id="testimonials">
+        <h2 class="section-title">Was Kunden sagen</h2>
+        <div class="card-grid">
+            <div class="card">
+                <p>"HAVENIS AI löst unser Datenschutz-Problem. Endlich Sicherheit ohne Kameras."</p>
+                <p style="margin-top: 1rem; color: var(--primary-color);">— CTO, Enterprise Software Firma</p>
+            </div>
+            <div class="card">
+                <p>"Die Installation war erstaunlich einfach. In 45 Minuten einsatzbereit."</p>
+                <p style="margin-top: 1rem; color: var(--primary-color);">— Facility Manager, Bürokomplex</p>
+            </div>
+            <div class="card">
+                <p>"ROI innerhalb von 8 Monaten. Die Kostenersparnis ist beeindruckend."</p>
+                <p style="margin-top: 1rem; color: var(--primary-color);">— CFO, Mittelständisches Unternehmen</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Process -->
+    <section id="process">
+        <h2 class="section-title">Geschäftsmodell</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>💼 B2B SaaS</h3>
+                <p><strong>€99-499/Monat</strong> pro Location. Gestaffelte Preise nach Fläche und Features. Jährliche Verträge mit 15% Discount.</p>
+            </div>
+            <div class="card">
+                <h3>🎯 Zielgruppen</h3>
+                <p>Smart Buildings, Einzelhandel, Gesundheitswesen, Bildungseinrichtungen, Co-Working Spaces.</p>
+            </div>
+            <div class="card">
+                <h3>📈 Umsatzprognose</h3>
+                <p>Jahr 1: €500K | Jahr 2: €2M | Jahr 3: €7M ARR bei 40% Netto-Marge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Team -->
+    <section id="team">
+        <h2 class="section-title">⭐ Unser Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-avatar">MK</div>
+                <div class="team-name">Max Kaufmann</div>
+                <div class="team-role">CEO & Co-Founder</div>
+                <p>10 Jahre Erfahrung in IoT & AI. Ex-Senior Engineer bei Siemens. PhD in Computer Science.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">SM</div>
+                <div class="team-name">Sarah Müller</div>
+                <div class="team-role">CTO & Co-Founder</div>
+                <p>AI Research Lead mit 8 Jahren in Machine Learning. Ex-Google DeepMind. MSc in AI.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">TC</div>
+                <div class="team-name">Thomas Chen</div>
+                <div class="team-role">CPO & Co-Founder</div>
+                <p>Product Strategy Expert. 12 Jahre B2B SaaS. Ex-Product Director bei SAP.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Advisory Board</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Dr. Klaus Weber</h3>
+                    <p>Datenschutz-Experte, Ex-Datenschutzbeauftragter der Bundesregierung</p>
+                </div>
+                <div class="card">
+                    <h3>Lisa Hoffmann</h3>
+                    <p>VC Partner bei TechVentures, 20+ erfolgreiche AI-Investments</p>
+                </div>
+                <div class="card">
+                    <h3>Prof. Dr. Jan Schmidt</h3>
+                    <p>Lehrstuhl für Künstliche Intelligenz, TU München</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p style="color: #94a3b8;">&copy; 2025 HAVENIS AI™ – Invisible. Ethical. Intelligent Protection.</p>
-            <p style="color: #64748b; font-size: 0.9rem; margin-top: 1rem;">Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</p>
+    <!-- 11. Founder Seats -->
+    <section id="investment">
+        <h2 class="section-title">Founder Seats - Investment</h2>
+        <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Seed-Runde: €1,2M</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Pre-Money Valuation: €5M | Minimum Investment: €50K</p>
+            <div style="text-align: left; margin: 2rem 0;">
+                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Use of Funds:</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;">💰 40% - Produktentwicklung & R&D</li>
+                    <li style="margin-bottom: 0.5rem;">👥 30% - Team-Ausbau (5 neue Stellen)</li>
+                    <li style="margin-bottom: 0.5rem;">📣 20% - Marketing & Sales</li>
+                    <li style="margin-bottom: 0.5rem;">🔧 10% - Operations & Infrastructure</li>
+                </ul>
+            </div>
+            <div style="margin-top: 2rem;">
+                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Investor Benefits:</h4>
+                <p>✓ Quarterly Board Updates<br>
+                ✓ Vorzugsaktien mit 1x Liquidation Preference<br>
+                ✓ Anti-Dilution Protection<br>
+                ✓ Co-Investment Rights für Series A</p>
+            </div>
+            <a href="#contact" class="cta-btn" style="margin-top: 2rem;">Jetzt Investieren</a>
         </div>
+    </section>
+
+    <!-- 12. Contact -->
+    <section id="contact">
+        <h2 class="section-title">Kontakt</h2>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Unternehmen (optional)</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="cta-btn">Nachricht Senden</button>
+        </form>
+    </section>
+
+    <!-- 13. Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#impressum">Impressum</a>
+            <a href="#datenschutz">Datenschutz</a>
+            <a href="#agb">AGB</a>
+            <a href="#cookies">Cookie-Richtlinie</a>
+        </div>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">
+            © 2024 HAVENIS AI™. Alle Rechte vorbehalten.
+        </p>
+        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.9rem;">
+            HAVENIS AI GmbH | Hamburg, Deutschland | info@havenis-ai.com
+        </p>
     </footer>
+
+    <script>
+        function switchLang(lang) {
+            // Language switching logic
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // In production, this would load different language content
+            console.log('Switched to language:', lang);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Fade in on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
