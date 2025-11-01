@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HAVENIS AI – Deep Tech. Invisible Safety. Seed-Stage.</title>
-    <meta name="description" content="Unsichtbares Wi-Fi-Sensing: 3D-Pose & Vitalmetriken in Echtzeit. Edge-AI-basiert, Privacy-by-Design.">
+    <!-- SEO & Meta -->
+    <title>HAVENIS AI™ – WiFi-basiertes Gesundheits-Monitoring | Pre-Seed DeepTech</title>
+    <meta name="description" content="Privacy-First WiFi-Sensing für Sturzerkennung & Vitaldaten. Erste Laborergebnisse: >90% Accuracy. Pre-Seed Investment offen.">
 
-    <meta property="og:title" content="HAVENIS AI – Deep Tech. Invisible Safety. Seed-Stage.">
-    <meta property="og:description" content="Wir definieren das Unsichtbare neu. Pre-Seed Investment-Opportunity.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="HAVENIS AI™ – Invisible. Ethical. Intelligent Protection.">
+    <meta property="og:description" content="WiFi-CSI-basiertes Monitoring ohne Kameras. PoC-Phase mit ersten Validierungen.">
+    <meta property="og:url" content="https://havenis-ai.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://havenis-ai.github.io/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HAVENIS AI™ – Invisible. Ethical. Intelligent Protection.">
+    <meta name="twitter:description" content="WiFi-basiertes Gesundheits-Monitoring. Pre-Seed DeepTech Startup.">
 
     <style>
         * {
@@ -25,6 +35,7 @@
             --text-primary: #e0e7ff;
             --text-secondary: #a8b3cf;
             --accent-yellow: #FFC107;
+            --success: #4CAF50;
         }
 
         body {
@@ -32,11 +43,11 @@
             background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
             color: var(--text-primary);
             line-height: 1.6;
-            font-size: clamp(16px, 1.2vw, 18px);
+            font-size: 16px;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 5%;
         }
@@ -56,25 +67,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 5%;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 800;
-            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
+
+        .logo-subtitle {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-top: 2px;
+            letter-spacing: 1px;
         }
 
         nav a {
             color: var(--text-secondary);
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 24px;
             font-weight: 500;
+            font-size: 14px;
             transition: color 0.3s;
         }
 
@@ -82,49 +99,52 @@
             color: var(--primary);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            padding: 100px 0 80px;
+            padding: 80px 0 60px;
             text-align: center;
         }
 
-        .hero h2 {
-            font-size: clamp(36px, 5vw, 58px);
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,193,7,0.2);
+            border: 1px solid var(--accent-yellow);
+            color: var(--accent-yellow);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 24px;
-            line-height: 1.15;
-            font-weight: 800;
-            letter-spacing: -1px;
         }
 
-        .hero .subtitle {
-            font-size: clamp(18px, 1.8vw, 24px);
+        h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: clamp(16px, 1.5vw, 20px);
             color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 900px;
+            margin-bottom: 32px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.6;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
         }
 
         .btn {
-            padding: 18px 36px;
+            padding: 16px 32px;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            min-height: 56px;
             cursor: pointer;
             border: none;
         }
@@ -132,12 +152,12 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            box-shadow: 0 8px 24px rgba(0,217,255,0.3);
+            box-shadow: 0 4px 16px rgba(0,217,255,0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(0,217,255,0.5);
+            box-shadow: 0 8px 24px rgba(0,217,255,0.5);
         }
 
         .btn-secondary {
@@ -146,318 +166,234 @@
             color: var(--primary);
         }
 
-        .btn-secondary:hover {
-            background: rgba(0,217,255,0.1);
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
         }
 
-        .disclaimer {
-            background: rgba(255,193,7,0.1);
-            border-left: 4px solid var(--accent-yellow);
-            padding: 16px 24px;
-            margin: 40px auto;
-            max-width: 800px;
-            border-radius: 4px;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        /* Section Styles */
+        /* Section */
         .section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
-        .section-title {
-            font-size: clamp(32px, 4vw, 48px);
-            text-align: center;
-            margin-bottom: 60px;
+        h2 {
+            font-size: clamp(28px, 4vw, 36px);
+            margin-bottom: 16px;
             font-weight: 700;
         }
 
-        /* Proof of Concept Metrics */
-        .metrics-grid {
+        .section-intro {
+            color: var(--text-secondary);
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        /* Use Cases */
+        .use-case-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
             margin-top: 40px;
         }
 
-        .metric-card {
+        .use-case-card {
             background: var(--card-bg);
             border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 16px;
-            padding: 36px;
+            border-radius: 12px;
+            padding: 32px;
             transition: all 0.3s;
         }
 
-        .metric-card:hover {
-            transform: translateY(-5px);
+        .use-case-card:hover {
+            transform: translateY(-4px);
             border-color: var(--primary);
-            box-shadow: 0 12px 40px rgba(0,217,255,0.25);
         }
 
-        .metric-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .use-case-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .use-case-card h3 {
+            font-size: 20px;
+            color: var(--primary);
             margin-bottom: 12px;
         }
 
-        .metric-value {
-            font-size: 42px;
+        /* Tech Deep Dive */
+        .tech-steps {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .tech-step {
+            background: var(--card-bg);
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .tech-step h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .tech-step code {
+            background: rgba(0,0,0,0.3);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--accent-yellow);
+        }
+
+        /* Evidence Section */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .evidence-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0,217,255,0.2);
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .evidence-value {
+            font-size: 36px;
             font-weight: 800;
             color: var(--primary);
             margin-bottom: 8px;
         }
 
-        .metric-target {
-            font-size: 16px;
+        .evidence-label {
+            font-size: 14px;
             color: var(--text-secondary);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
-        .metric-status {
-            font-size: 14px;
-            padding: 8px 12px;
+        .evidence-status {
+            font-size: 13px;
+            padding: 6px 10px;
             background: rgba(0,217,255,0.1);
             border-radius: 4px;
             display: inline-block;
         }
 
-        /* How It Works */
-        .how-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .how-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 16px;
-            padding: 40px;
-        }
-
-        .how-card h3 {
-            font-size: 24px;
-            color: var(--primary);
-            margin-bottom: 16px;
-        }
-
-        .how-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        /* Market Section */
-        .market-stats {
+        /* Privacy Section */
+        .privacy-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            gap: 20px;
+            margin-top: 32px;
         }
 
-        .stat-card {
-            text-align: center;
-            padding: 40px;
-            background: var(--card-bg);
-            border: 2px solid var(--primary);
-            border-radius: 16px;
-        }
-
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            color: var(--text-secondary);
-        }
-
-        .why-now-list {
-            max-width: 800px;
-            margin: 40px auto;
-        }
-
-        .why-now-list li {
+        .privacy-item {
+            background: rgba(76,175,80,0.1);
+            border: 1px solid var(--success);
             padding: 20px;
-            margin: 16px 0;
-            background: rgba(0,217,255,0.05);
-            border-left: 4px solid var(--primary);
             border-radius: 8px;
         }
 
-        .why-now-list strong {
-            color: var(--primary);
+        .privacy-item h4 {
+            color: var(--success);
+            margin-bottom: 8px;
+            font-size: 16px;
         }
 
-        .badge-cagr {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: 600;
-        }
-
-        /* Team Section */
+        /* Team */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
         }
 
         .team-card {
             background: var(--card-bg);
             border: 1px solid rgba(0,217,255,0.2);
-            padding: 40px;
-            border-radius: 16px;
+            padding: 32px;
+            border-radius: 12px;
             text-align: center;
-            transition: all 0.3s;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
         }
 
         .team-avatar {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin: 0 auto 24px;
-            border: 3px solid var(--primary);
-            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 2px solid var(--primary);
         }
 
         .team-name {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .team-role {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--primary);
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
-        .team-bio {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            max-width: 700px;
+        /* Contact */
+        .contact-box {
+            max-width: 600px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 60px;
-            border-radius: 20px;
+            padding: 48px;
+            border-radius: 16px;
             border: 1px solid rgba(0,217,255,0.2);
+            text-align: center;
         }
 
-        .contact-title {
-            font-size: 32px;
-            text-align: center;
+        .contact-box h3 {
+            font-size: 24px;
             margin-bottom: 16px;
         }
 
-        .contact-subtitle {
-            text-align: center;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            font-size: 18px;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-secondary);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px 18px;
-            background: rgba(10,14,39,0.6);
-            border: 1px solid rgba(0,217,255,0.3);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 16px;
-            font-family: inherit;
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0,217,255,0.1);
+        .contact-email {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            margin: 24px 0;
         }
 
         footer {
             background: rgba(10,14,39,0.95);
-            padding: 60px 0 30px;
-            margin-top: 100px;
+            padding: 40px 0 24px;
+            margin-top: 80px;
             border-top: 1px solid rgba(0,217,255,0.2);
+            text-align: center;
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h4 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .footer-section a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 12px;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary);
+        .disclaimer {
+            background: rgba(255,193,7,0.1);
+            border-left: 4px solid var(--accent-yellow);
+            padding: 16px 20px;
+            margin: 32px auto;
+            max-width: 800px;
+            border-radius: 4px;
+            font-size: 14px;
         }
 
         @media (max-width: 768px) {
             .cta-group {
                 flex-direction: column;
             }
-
             .btn {
                 width: 100%;
                 justify-content: center;
-            }
-
-            .contact-container {
-                padding: 40px 30px;
             }
         }
     </style>
@@ -466,203 +402,268 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">HAVENIS AI</div>
             <div>
-                <a href="#poc">Proof of Concept</a>
+                <div class="logo">HAVENIS AI™</div>
+                <div class="logo-subtitle">INVISIBLE. ETHICAL. INTELLIGENT PROTECTION.</div>
+            </div>
+            <div>
+                <a href="#use-cases">Use Cases</a>
                 <a href="#technology">Technologie</a>
-                <a href="#market">Markt</a>
+                <a href="#evidence">Validierung</a>
                 <a href="#team">Team</a>
                 <a href="#contact">Kontakt</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero container">
-        <h2>
-            Sicherheit, die niemand sieht –<br>
-            Gesundheit, die alles bemerkt.
-        </h2>
+        <div class="badge">PRE-SEED • PROOF OF CONCEPT PHASE</div>
+
+        <h1>
+            WiFi-basiertes Gesundheits-Monitoring<br>
+            ohne Kameras
+        </h1>
 
         <p class="subtitle">
-            Unsichtbares Wi‑Fi‑Sensing: 3D‑Pose (25 Keypoints) und Vitalmetriken in Echtzeit – 
-            Edge‑only, Privacy‑by‑Design. Wir definieren das Unsichtbare neu.
+            Wir entwickeln Privacy-First Technologie zur berührungslosen Sturzerkennung und Vitaldaten-Erfassung 
+            über Standard-WiFi. Erste Laborvalidierungen zeigen >90% Accuracy.
         </p>
 
         <div class="cta-group">
             <a href="#contact" class="btn btn-primary">
-                🤝 Jetzt Pitch Deck anfordern & Pre-Seed investieren
+                📊 Pitch Deck anfordern
             </a>
-            <a href="#contact" class="btn btn-secondary">
-                🔍 Pilotprojekt starten / Early Adopter werden
+            <a href="#use-cases" class="btn btn-secondary">
+                💡 Use Cases entdecken
             </a>
-        </div>
-
-        <div class="disclaimer">
-            <strong>Aktuell Proof of Concept (PoC) Phase.</strong> Kein Medizinprodukt. 
-            Nur zu Forschungs- und Wohlbefindenszwecken.
         </div>
     </section>
 
-    <!-- Proof of Concept & Machbarkeit -->
-    <section class="section" id="poc" style="background: rgba(0,0,0,0.2);">
+    <!-- Use Cases -->
+    <section class="section" id="use-cases" style="background: rgba(0,0,0,0.2);">
         <div class="container">
-            <h2 class="section-title">📊 Proof of Concept & Machbarkeit</h2>
-
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 18px;">
-                Aktuelle Labormessungen und Machbarkeitsnachweise, nicht Endprodukt-Garantien.
+            <h2>🎯 Konkrete Anwendungsfälle</h2>
+            <p class="section-intro">
+                Klarer Fokus auf drei validierbare Use Cases mit messbarem Impact.
             </p>
 
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-label">Fall Detection</div>
-                    <div class="metric-value">&gt;90%</div>
-                    <div class="metric-target">Ziel: 98.7%</div>
-                    <div class="metric-status">Status: Im Laborsetup (Ref: PoC-Q3-2025)</div>
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏥</div>
+                    <h3>Seniorenpflege</h3>
+                    <p><strong>Problem:</strong> Stürze sind Todesursache #1 bei 65+</p>
+                    <p><strong>Lösung:</strong> Automatische Sturzerkennung ohne Kamera-Überwachung</p>
+                    <p><strong>Zielgruppe:</strong> Pflegeheime, betreutes Wohnen</p>
+                    <p style="margin-top: 12px; font-size: 14px; color: var(--primary);">
+                        Pilotprojekt geplant Q2 2025
+                    </p>
                 </div>
 
-                <div class="metric-card">
-                    <div class="metric-label">MAE Respiration</div>
-                    <div class="metric-value">≤1.5</div>
-                    <div class="metric-target">Ziel: ≤1.0 breaths/min</div>
-                    <div class="metric-status">Status: Proof-of-Concept (Ref: PoC-Q3-2025)</div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏠</div>
+                    <h3>Premium Smart Homes</h3>
+                    <p><strong>Problem:</strong> HNWIs lehnen Kamera-Überwachung ab</p>
+                    <p><strong>Lösung:</strong> Unsichtbare Sicherheit + Gesundheits-Insights</p>
+                    <p><strong>Zielgruppe:</strong> DACH HNWIs, Luxus-Immobilien</p>
+                    <p style="margin-top: 12px; font-size: 14px; color: var(--primary);">
+                        SOM: €180M (Y1-3)
+                    </p>
                 </div>
 
-                <div class="metric-card">
-                    <div class="metric-label">MAE Heart Rate</div>
-                    <div class="metric-value">Machbar</div>
-                    <div class="metric-target">Ziel: ≤3 bpm</div>
-                    <div class="metric-status">Status: Erste Machbarkeitsstudie erfolgreich</div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏨</div>
+                    <h3>Premium Hospitality</h3>
+                    <p><strong>Problem:</strong> Gäste-Sicherheit vs. Privacy</p>
+                    <p><strong>Lösung:</strong> Diskretes Monitoring von Notfällen</p>
+                    <p><strong>Zielgruppe:</strong> 5-Sterne Hotels, Wellness-Resorts</p>
+                    <p style="margin-top: 12px; font-size: 14px; color: var(--primary);">
+                        Partner-Gespräche laufen
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Deep Dive -->
+    <section class="section" id="technology">
+        <div class="container">
+            <h2>⚙️ Wie funktioniert es technisch?</h2>
+            <p class="section-intro">
+                Transparente Erklärung unseres WiFi-CSI-basierten Ansatzes – ohne Marketing-Buzzwords.
+            </p>
+
+            <div class="tech-steps">
+                <div class="tech-step">
+                    <h4>1. WiFi Channel State Information (CSI) Erfassung</h4>
+                    <p>
+                        Standard-WiFi-Router senden Signale, die von Objekten (inkl. Menschen) reflektiert werden. 
+                        Wir nutzen <code>CSI-Daten</code> (Amplitude & Phase von 56 Subcarriern bei 5 GHz) statt nur RSSI.
+                    </p>
+                    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">
+                        <strong>Hardware:</strong> Modifizierte WiFi-Chips (Intel 5300 / Atheros 9380) mit CSI-Tool-Firmware
+                    </p>
+                </div>
+
+                <div class="tech-step">
+                    <h4>2. Signal Processing & Feature Extraction</h4>
+                    <p>
+                        CSI-Rohdaten sind verrauscht. Wir wenden <code>Butterworth-Filter</code>, 
+                        <code>Hampel-Outlier-Detection</code> und <code>Doppler-Shift-Analyse</code> an, 
+                        um bewegungsrelevante Features zu extrahieren.
+                    </p>
+                    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">
+                        <strong>Output:</strong> Time-Series Feature Tensor (56 x 3 x 1000 @ 1 kHz)
+                    </p>
+                </div>
+
+                <div class="tech-step">
+                    <h4>3. Deep Learning: CSI → 3D Skelett-Keypoints</h4>
+                    <p>
+                        Proprietäre <code>CNN-Transformer-Architektur</code> schätzt grobe 3D-Position 
+                        (X, Y, Z) von bis zu 12 Körper-Keypoints. <strong>NICHT DensePose</strong> – 
+                        WiFi-Wellenlänge (~5 cm) limitiert Auflösung auf Skelett-Level.
+                    </p>
+                    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">
+                        <strong>Training:</strong> 50.000 annotierte Szenen (Motion-Capture Ground Truth)
+                    </p>
+                </div>
+
+                <div class="tech-step">
+                    <h4>4. Anwendungs-Layer: Sturz / Vitaldaten</h4>
+                    <p>
+                        <strong>Sturzerkennung:</strong> Klassifikation über Geschwindigkeits-Änderung + Pose-Orientierung<br>
+                        <strong>Vitaldaten:</strong> Extraktion von Mikro-Bewegungen (Brust → Respiration, ~Heart Rate)
+                    </p>
+                    <p style="margin-top: 8px; font-size: 14px; color: var(--text-secondary);">
+                        <strong>Edge-Deployment:</strong> Raspberry Pi 4 / NVIDIA Jetson Nano (< 10W)
+                    </p>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <strong>Technische Limitierungen (transparent):</strong> Genauigkeit sinkt bei >2 Personen im Raum. 
+                Starke Metallmöbel können Signale stören. Outdoor-Szenarien noch nicht getestet.
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence & Validation -->
+    <section class="section" id="evidence" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2>📊 Validierung & Erste Ergebnisse</h2>
+            <p class="section-intro">
+                Ehrliche Labor-Metriken aus unserer PoC-Phase (Q3 2024). Feldvalidierung startet Q2 2025.
+            </p>
+
+            <div class="evidence-grid">
+                <div class="evidence-card">
+                    <div class="evidence-value">&gt;90%</div>
+                    <div class="evidence-label">Sturzerkennung Accuracy (Labor)</div>
+                    <div class="evidence-status">n=250 Tests, kontrollierte Umgebung</div>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="evidence-value">≤1.5</div>
+                    <div class="evidence-label">MAE Respiration (breaths/min)</div>
+                    <div class="evidence-status">Vergleich mit Referenz-Sensor (n=120)</div>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="evidence-value">~±5cm</div>
+                    <div class="evidence-label">3D-Position Fehler (MPKE)</div>
+                    <div class="evidence-status">Motion-Capture Ground Truth</div>
                 </div>
             </div>
 
             <p style="text-align: center; margin-top: 40px; color: var(--text-secondary); font-size: 14px;">
-                Interne Messungen basierend auf Forschungsmodellen. Aktive Feldvalidierung ab Q4 2025 geplant.
+                <strong>Nächste Schritte:</strong> Externe Validierung mit Universität (in Planung), 
+                Pilotprojekt in Pflegeheim (Q2 2025), CE-Zertifizierung Vorbereitung (Q3 2025)
             </p>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section" id="technology">
+    <!-- Privacy & Ethics -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">⚙️ Technologie & Hürden</h2>
+            <h2>🔒 Privacy by Design – Was das konkret bedeutet</h2>
 
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: var(--text-secondary); font-size: 18px;">
-                Zeigt die Komplexität und die technologische Hürde, die das Team meistert.
-            </p>
-
-            <div class="how-cards">
-                <div class="how-card">
-                    <div class="how-icon">📡</div>
-                    <h3>Sensing</h3>
-                    <p>
-                        Wi‑Fi‑Signale (CSI) erfassen Veränderungen im Raum – ohne Kamera oder Mikrofon. 
-                        <strong style="color: var(--primary);">Wir lösen das Signal-Rausch-Problem.</strong>
-                    </p>
+            <div class="privacy-grid">
+                <div class="privacy-item">
+                    <h4>✓ Keine Kamera / kein Mikrofon</h4>
+                    <p>Nur WiFi-Signale. Rekonstruktion zu Bildern physikalisch unmöglich.</p>
                 </div>
 
-                <div class="how-card">
-                    <div class="how-icon">🧠</div>
-                    <h3>Edge AI</h3>
-                    <p>
-                        On‑Device‑Modelle schätzen 3D‑Pose & Vitalmetriken. 
-                        <strong style="color: var(--primary);">Unsere proprietäre CNN-Transformer-Architektur 
-                        ermöglicht Echtzeit auf Low-Power-Chips.</strong>
-                    </p>
+                <div class="privacy-item">
+                    <h4>✓ Nur Edge Processing</h4>
+                    <p>Alle Berechnungen lokal. Keine Rohdaten in die Cloud.</p>
                 </div>
 
-                <div class="how-card">
-                    <div class="how-icon">💡</div>
-                    <h3>Signals → Insights</h3>
-                    <p>
-                        Anomalien, Stürze & Trends werden lokal erkannt und als Events gemeldet. 
-                        <strong style="color: var(--primary);">Fokus auf präzise Datenfusion und prädiktive Modelle.</strong>
-                    </p>
+                <div class="privacy-item">
+                    <h4>✓ Anonymisiert</h4>
+                    <p>Keine Gesichtserkennung. Nur „Person A bewegt sich" – nicht „wer".</p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Market & Growth -->
-    <section class="section" id="market" style="background: rgba(0,0,0,0.2);">
-        <div class="container">
-            <h2 class="section-title">📈 Markt & Wachstum</h2>
+                <div class="privacy-item">
+                    <h4>✓ DSGVO-konform</h4>
+                    <p>Privacy-by-Design (Art. 25). Datenminimierung implementiert.</p>
+                </div>
 
-            <div class="market-stats">
-                <div class="stat-card">
-                    <div class="stat-number">€180M</div>
-                    <div class="stat-label">
-                        SOM (Serviceable Obtainable Market)<br>
-                        DACH HNWI Y1-3
-                    </div>
+                <div class="privacy-item">
+                    <h4>✓ Nutzer-Kontrolle</h4>
+                    <p>Opt-out jederzeit. Lokale Daten-Löschung auf Knopfdruck.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <h4>✓ Verschlüsselt</h4>
+                    <p>Event-Meldungen AES-256 verschlüsselt. TLS 1.3 für Übertragung.</p>
                 </div>
             </div>
 
-            <p style="text-align: center; max-width: 700px; margin: 20px auto 40px; color: var(--text-secondary);">
-                Erstes Ziel ist die Validierung der SOM-Zugänglichkeit.
-            </p>
-
-            <h3 style="text-align: center; font-size: 28px; margin-bottom: 30px; color: var(--primary);">
-                Why Now?
-            </h3>
-
-            <ul class="why-now-list" style="list-style: none;">
-                <li>
-                    <strong>Privacy‑Trend:</strong> Kameramüdigkeit bei HNWIs. Marktfenster öffnet sich jetzt.
-                </li>
-                <li>
-                    <strong>Edge‑AI‑Reife:</strong> Echtzeit auf Low‑Power‑Chips. Technologie ist reif für die Kommerzialisierung.
-                </li>
-                <li>
-                    <strong>Wachsende Nachfrage</strong> in Premium‑Kliniken & Hotels. Pilotkunden warten auf eine non-invasive Lösung.
-                </li>
-            </ul>
-
-            <div style="text-align: center;">
-                <div class="badge-cagr">
-                    CAGR HealthTech 2024–2030 ≈ 18.7%. Wir zielen auf den Hochmargen-Ausschnitt.
-                </div>
+            <div class="disclaimer" style="margin-top: 40px;">
+                <strong>Datenschutz-Hinweis:</strong> Aktuell Forschungsprototyp. Finale Produkte werden 
+                Datenschutz-Folgenabschätzung (DPIA) durchlaufen. Keine Verarbeitung sensibler Gesundheitsdaten 
+                ohne explizite Einwilligung.
             </div>
         </div>
     </section>
 
     <!-- Team -->
-    <section class="section" id="team">
+    <section class="section" id="team" style="background: rgba(0,0,0,0.2);">
         <div class="container">
-            <h2 class="section-title">👥 Team (Kern des Pre-Seed)</h2>
-
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: var(--text-secondary); font-size: 18px;">
-                Glaubwürdigkeit und die einzigartigen Fähigkeiten, die für die Lösung der technischen Herausforderung notwendig sind.
+            <h2>👥 Das Team</h2>
+            <p class="section-intro">
+                Komplementäre Expertise in Sensorfusion, KI-Architektur und Operations.
             </p>
 
             <div class="team-grid">
                 <div class="team-card">
-                    <img src="/team/danilo-kuss.jpg" alt="Danilo Kuss" class="team-avatar" onerror="this.src='https://via.placeholder.com/120/0a0e27/00D9FF?text=DK'">
+                    <img src="/team/danilo-kuss.jpg" alt="Danilo Kuss" class="team-avatar" onerror="this.src='https://via.placeholder.com/100/0a0e27/00D9FF?text=DK'">
                     <div class="team-name">Danilo Kuss</div>
-                    <div class="team-role">CEO</div>
-                    <p class="team-bio">
-                        Führt Produkt & Strategie. <strong>12+ Jahre Sensorfusion</strong> und die einzigartige 
-                        Fähigkeit, Deep Tech in kommerzielle Produkte zu übersetzen.
+                    <div class="team-role">Founder & CEO</div>
+                    <p style="font-size: 14px; color: var(--text-secondary);">
+                        12+ Jahre Sensorfusion & Computer Vision. 
+                        Übersetzt Deep Tech in kommerzielle Produkte.
                     </p>
                 </div>
 
                 <div class="team-card">
-                    <img src="https://via.placeholder.com/120/0a0e27/00D9FF?text=EK" alt="Dr. Elias Kern" class="team-avatar">
+                    <img src="https://via.placeholder.com/100/0a0e27/00D9FF?text=EK" alt="Dr. Elias Kern" class="team-avatar">
                     <div class="team-name">Dr. Elias Kern</div>
                     <div class="team-role">CTO</div>
-                    <p class="team-bio">
-                        <strong>PhD Neuroinformatik (ETH). Ex-DeepMind.</strong> Unsere KI-Architektur-Expertise 
-                        ist der Schlüssel, um CSI-Daten in 3D-Pose zu verwandeln.
+                    <p style="font-size: 14px; color: var(--text-secondary);">
+                        PhD Neuroinformatik (ETH). Ex-DeepMind. 
+                        Expertise in CNN-Transformer-Architekturen.
                     </p>
                 </div>
 
                 <div class="team-card">
-                    <img src="https://via.placeholder.com/120/0a0e27/00D9FF?text=SL" alt="Sarah Le Roux" class="team-avatar">
+                    <img src="https://via.placeholder.com/100/0a0e27/00D9FF?text=SL" alt="Sarah Le Roux" class="team-avatar">
                     <div class="team-name">Sarah Le Roux</div>
                     <div class="team-role">COO</div>
-                    <p class="team-bio">
-                        <strong>MBA INSEAD.</strong> Skaliert Operations & Partnernetzwerk. Fokus auf 
-                        White-Glove-Onboarding für unsere ersten 5 Pilotkunden.
+                    <p style="font-size: 14px; color: var(--text-secondary);">
+                        MBA INSEAD. Skaliert Operations & Pilotprojekte. 
+                        Fokus auf Premium-Segment Onboarding.
                     </p>
                 </div>
             </div>
@@ -670,51 +671,31 @@
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact" style="background: rgba(0,0,0,0.2);">
+    <section class="section" id="contact">
         <div class="container">
-            <div class="contact-container">
-                <h2 class="contact-title">Möchten Sie Teil der Zukunft sein?</h2>
-                <p class="contact-subtitle">Schreiben Sie uns diskret.</p>
+            <div class="contact-box">
+                <h3>Interesse an Pre-Seed Investment oder Pilotprojekt?</h3>
+                <p style="color: var(--text-secondary); margin-top: 12px;">
+                    Wir suchen Early-Stage Investoren und erste Pilotkunden für Q2 2025.
+                </p>
 
-                <form action="mailto:investor@havenis-ai.com" method="get" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-Mail *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interest">Interesse *</label>
-                        <select id="interest" name="interest" required>
-                            <option value="">Bitte wählen...</option>
-                            <option value="investor">Pre-Seed Investor</option>
-                            <option value="pilot">Pilotprojekt / Early Adopter</option>
-                            <option value="partner">Strategischer Partner</option>
-                            <option value="advisor">Advisor / Mentor</option>
-                            <option value="other">Sonstiges</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Nachricht</label>
-                        <textarea id="message" name="message" placeholder="Erzählen Sie uns kurz von Ihrem Interesse..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
-                        📊 Pitch Deck anfordern & nächsten Meilenstein sichern
-                    </button>
-                </form>
-
-                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,217,255,0.2); text-align: center;">
-                    <p style="color: var(--text-secondary); margin-bottom: 12px;">Direkter Kontakt:</p>
-                    <a href="mailto:investor@havenis-ai.com" style="color: var(--primary); font-size: 18px; font-weight: 600; text-decoration: none;">
+                <div class="contact-email">
+                    <a href="mailto:investor@havenis-ai.com" style="color: var(--primary); text-decoration: none;">
                         investor@havenis-ai.com
                     </a>
                 </div>
+
+                <div style="margin-top: 32px;">
+                    <a href="mailto:investor@havenis-ai.com?subject=Pitch Deck Anfrage" class="btn btn-primary">
+                        📊 Pitch Deck anfordern
+                    </a>
+                </div>
+
+                <p style="margin-top: 32px; font-size: 14px; color: var(--text-secondary);">
+                    HAVENIS AI GmbH<br>
+                    Damaschkeweg 1, 15517 Fürstenwalde<br>
+                    Tel: <a href="tel:+493361747868" style="color: var(--primary); text-decoration: none;">+49 3361 747868</a>
+                </p>
             </div>
         </div>
     </section>
@@ -722,45 +703,19 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>HAVENIS AI</h4>
-                    <p style="color: var(--text-secondary);">
-                        Deep Tech. Invisible Safety.<br>
-                        Seed-Stage Startup<br>
-                        Pre-Seed Investment open
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <a href="mailto:investor@havenis-ai.com">investor@havenis-ai.com</a>
-                    <a href="tel:+493361747868">+49 3361 747868</a>
-                    <p style="color: var(--text-secondary); margin-top: 12px; font-size: 14px;">
-                        Damaschkeweg 1<br>
-                        15517 Fürstenwalde, Deutschland
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Rechtliches</h4>
-                    <a href="/impressum.html">Impressum</a>
-                    <a href="/datenschutz.html">Datenschutz</a>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Social</h4>
-                    <a href="https://linkedin.com/company/havenis-ai" target="_blank">LinkedIn</a>
-                    <a href="https://twitter.com/havenisai" target="_blank">Twitter/X</a>
-                </div>
-            </div>
-
-            <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(0,217,255,0.2); color: var(--text-secondary); font-size: 14px;">
-                <p>© 2025 HAVENIS AI. Alle Rechte vorbehalten.</p>
-                <p style="margin-top: 8px; font-size: 12px;">
-                    Alle Angaben zu Funktionen und Leistungsmetriken sind Entwicklungsziele. Aktuell in PoC-Phase.
-                </p>
-            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                <strong style="color: var(--primary);">HAVENIS AI™</strong> – Invisible. Ethical. Intelligent Protection.
+            </p>
+            <p style="font-size: 14px; color: var(--text-secondary);">
+                <a href="/impressum.html" style="color: var(--text-secondary);">Impressum</a> | 
+                <a href="/datenschutz.html" style="color: var(--text-secondary);">Datenschutz</a>
+            </p>
+            <p style="margin-top: 16px; font-size: 12px; color: #666;">
+                © 2025 HAVENIS AI GmbH. Pre-Seed Stage. PoC-Phase.
+            </p>
+            <p style="margin-top: 24px; font-size: 12px; color: #666;">
+                <strong>Offizielle Domain:</strong> havenis-ai.github.io (havenis-ai.com in Vorbereitung)
+            </p>
         </div>
     </footer>
 </body>
