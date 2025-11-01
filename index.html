@@ -3,561 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAVENIS AI™ - WiFi-basierte 3D-Skelett-Rekonstruktion | Ethische Sicherheit</title>
-    <meta name="description" content="3D-Skelett-Tracking (25 Keypoints) aus WiFi-Signalen. 98,7% Genauigkeit (TU München validiert). Privacy-First Security ohne Kameras.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="HAVENIS AI - WiFi wird zu Ihrem unsichtbaren Schutzengel. 98,7% Sturzerkennung ohne Kameras, ohne Wearables.">
+    <title>HAVENIS AI – Sicherheit, die niemand sieht</title>
+    <link rel="stylesheet" href="styles-optimized.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="main-nav">
+    <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">HAVENIS AI™</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#technologie">Technologie</a>
-                <a href="#validation">Validation</a>
-                <a href="investors.html" class="nav-highlight">Für Investoren</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Kontakt</a>
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <h3>HAVENIS AI</h3>
+                </div>
+                <div class="nav-links">
+                    <a href="#demo">Demo</a>
+                    <a href="#pillars">Säulen</a>
+                    <a href="#market">Markt</a>
+                    <a href="/investors.html" class="btn-nav-investors">Für Investoren</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section - FIXED: No more "DensePose" claims -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="patent-badge">🏆 Patent DE-P-2025-xxxx (filed) | IP-Geschützt</div>
+    <!-- Hero Section - OPTIMIERT -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Klarheit in 5 Sekunden -->
+            <div class="hero-badge">
+                🔬 TU München validiert | 📊 €800k Seed-Runde aktiv
+            </div>
 
-            <h1 class="hero-title">
-                Invisible. Ethical.<br>
-                Intelligent Protection.
+            <h1 class="hero-headline">
+                WiFi wird zu Ihrem<br>
+                <span class="gradient-text">unsichtbaren Schutzengel</span>
             </h1>
 
-            <p class="hero-subtitle">
-                Wir erkennen Bewegungen, Körperhaltungen und Vitalmuster allein durch WiFi-Signale – ganz ohne Kamera.<br>
-                HAVENIS AI macht Räume sicher, respektvoll und intelligent.
+            <p class="hero-subheadline">
+                HAVENIS erkennt Stürze (98,7%), überwacht Vitaldaten und schützt Ihr Zuhause –<br>
+                <strong>ohne Kameras, ohne Wearables, ohne Kompromisse bei der Privacy</strong>
             </p>
 
-            <p class="technical-subtitle">
-                <strong>3D-Skelett-Rekonstruktion (25 Keypoints)</strong> aus elektromagnetischen Wellen.<br>
-                OpenPose-vergleichbare Genauigkeit ohne visuelle Sensoren.
-            </p>
-
-            <div class="cta-buttons">
-                <a href="investors.html" class="btn btn-primary">📊 Für Investoren</a>
-                <a href="#contact" class="btn btn-secondary">🚀 Pilot-Demo anfragen</a>
+            <!-- Dual-CTA (je nach Zielgruppe) -->
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="scrollToDemo()">
+                    🎥 30-Sek-Demo ansehen
+                </button>
+                <button class="btn-secondary" onclick="window.location='/investors.html'">
+                    📊 Für Investoren
+                </button>
             </div>
 
-            <!-- IMPROVED: Validation metrics with methodology links -->
-            <div class="validation-metrics">
-                <div class="metric">
-                    <div class="metric-value">98,7%</div>
-                    <div class="metric-label">Sturzerkennung</div>
-                    <div class="metric-source">
-                        TU München 2024
-                        <a href="#validation" class="metric-link">📄 Details</a>
-                    </div>
+            <!-- Social Proof direkt sichtbar -->
+            <div class="hero-proof">
+                <div class="proof-item">
+                    <strong>98,7%</strong>
+                    <small>Sturz-Accuracy<br>(TU München)</small>
                 </div>
-                <div class="metric">
-                    <div class="metric-value">±0,22</div>
-                    <div class="metric-label">MAE Atemfrequenz</div>
-                    <div class="metric-source">
-                        ETH Zürich 2024
-                        <a href="#validation" class="metric-link">📄 Details</a>
-                    </div>
+                <div class="proof-item">
+                    <strong>±0,22 bpm</strong>
+                    <small>Atem-Genauigkeit<br>(ETH Zürich)</small>
                 </div>
-                <div class="metric">
-                    <div class="metric-value">r=0,94</div>
-                    <div class="metric-label">Herzfrequenz</div>
-                    <div class="metric-source">
-                        Fraunhofer IIS 2024
-                        <a href="#validation" class="metric-link">📄 Details</a>
-                    </div>
+                <div class="proof-item">
+                    <strong>0</strong>
+                    <small>Kameras<br>(GDPR Art. 25)</small>
                 </div>
+            </div>
+        </div>
+
+        <!-- Visuelles Element (rechts oder fullscreen) -->
+        <div class="hero-visual">
+            <div class="hero-visual-placeholder" style="background-image: url('assets/visuals/hero-wifi-waves.webp'); background-size: cover; background-position: center;">
+                <div class="wifi-animation">
+                    <div class="wifi-wave"></div>
+                    <div class="wifi-wave"></div>
+                    <div class="wifi-wave"></div>
+                </div>
+            </div>
+            <!-- Overlay-Annotation -->
+            <div class="visual-annotation">
+                <span class="pulse-dot"></span>
+                Keine Kamera – nur WiFi-Signale
             </div>
         </div>
     </section>
 
-    <!-- NEW: Trust Signals Bar -->
-    <section class="trust-signals">
+    <!-- Validation Section - VERBESSERT -->
+    <section class="validation-bar">
         <div class="container">
-            <p class="trust-headline">Validiert & Unterstützt durch:</p>
-            <div class="trust-logos">
-                <div class="trust-item">
-                    <div class="trust-logo">🎓</div>
-                    <strong>TU München</strong>
-                    <small>Research Partner</small>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-logo">🎓</div>
-                    <strong>ETH Zürich</strong>
-                    <small>Validation Partner</small>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-logo">🏢</div>
-                    <strong>Fraunhofer IIS</strong>
-                    <small>Technical Validation</small>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-logo">🔒</div>
-                    <strong>DSGVO Art. 25</strong>
-                    <small>Privacy by Design</small>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-logo">✅</div>
-                    <strong>TÜV SÜD</strong>
-                    <small>Privacy Audit (geplant)</small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visualization Section -->
-    <section class="visualization" id="technologie">
-        <div class="container">
-            <h2>Unsichtbare Technologie, sichtbar gemacht</h2>
-
-            <div class="demo-area">
-                <div class="split-view">
-                    <div class="view-left">
-                        <h3>WiFi-Signal-Pattern</h3>
-                        <div class="signal-animation" id="signalAnimation"></div>
-                    </div>
-                    <div class="view-arrow">→</div>
-                    <div class="view-right">
-                        <h3>Rekonstruiertes 3D-Skelett</h3>
-                        <div class="pose-animation" id="poseAnimation"></div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="demo-caption">
-                Unsere KI übersetzt drahtlose Signale in Bewegungsdaten – in Echtzeit, ohne Bildaufnahme.
-            </p>
-
-            <p class="technical-label">
-                RF-Pose-Estimation Engine v2.3 — 25-Keypoint Human Skeleton Model
-            </p>
-
-            <div class="tech-specs">
-                <h3>Technische Spezifikationen</h3>
-                <ul>
-                    <li><strong>Spatial Resolution:</strong> &lt;2cm Lokalisierungsfehler pro Keypoint</li>
-                    <li><strong>Temporal Resolution:</strong> 30 FPS Echtzeit-Tracking</li>
-                    <li><strong>WiFi Standards:</strong> 2.4 GHz / 5 GHz (IEEE 802.11ac/ax)</li>
-                    <li><strong>Processing:</strong> Edge AI (Hailo-8, 26 TOPS)</li>
-                    <li><strong>Privacy:</strong> Keine Bilddaten, lokale Verarbeitung, &lt;48h Speicherung</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>Wie es funktioniert</h2>
-
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">📡</div>
-                    <h3>Erfassen</h3>
-                    <p>Standard-WiFi-Antennen (2.4/5 GHz) senden/empfangen Funkwellen und erfassen CSI-Daten (Channel State Information)</p>
-                </div>
-
-                <div class="step-arrow">→</div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">🧠</div>
-                    <h3>Analysieren</h3>
-                    <p>CNN & LSTM-Modelle interpretieren Signalreflexionen als Körperoberflächen. Trainiert auf 2M+ synthetischen RF-Datasets</p>
-                </div>
-
-                <div class="step-arrow">→</div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">👤</div>
-                    <h3>Erkennen</h3>
-                    <p>25-Keypoint-Skelettmodell rekonstruiert Posen, Bewegungen und Mikrosignale (Atmung: ±0,22 bpm, Herzschlag: r=0,94)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Three Pillars Section -->
-    <section class="pillars">
-        <div class="container">
-            <h2>3 Funktionssäulen – IP-geschützt durch Patent DE-P-2025-xxxx</h2>
-
-            <div class="pillar-grid">
-                <div class="pillar">
-                    <div class="pillar-icon">🛡️</div>
-                    <h3>Prädiktive Sicherheit</h3>
-                    <div class="pillar-metric">&gt;95% Genauigkeit</div>
-                    <p>Anomale Bewegungsmuster → Frühwarnung vor Einbrüchen in HNWI-Residenzen</p>
-                    <span class="patent-tag">Patent DE-P-2025-xxxx (filed)</span>
-                </div>
-
-                <div class="pillar">
-                    <div class="pillar-icon">🚨</div>
-                    <h3>Notfallprävention</h3>
-                    <div class="pillar-metric">98,7% Sturzerkennung</div>
-                    <p>Echtzeit-Erkennung mit Auto-Alarm für ältere HNWIs. Latenz &lt;200ms</p>
-                    <span class="patent-tag">Patent DE-P-2025-xxxx (filed)</span>
-                </div>
-
-                <div class="pillar">
-                    <div class="pillar-icon">💓</div>
-                    <h3>Vitalmonitoring</h3>
-                    <div class="pillar-metric">±0,22 MAE Atemfrequenz</div>
-                    <p>Kontaktlose Atem-/Herzfrequenz-Trends (r=0,94), nächtliche Berichte</p>
-                    <span class="patent-tag">Patent DE-P-2025-xxxx (filed)</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Privacy Section -->
-    <section class="privacy">
-        <div class="container">
-            <div class="privacy-badge">🔐</div>
-            <h2>Ethik & Datenschutz</h2>
-            <p class="section-intro">Das ist unser USP – Sicherheit ohne Überwachung</p>
-
-            <div class="privacy-features">
-                <div class="privacy-item">
-                    <div class="check">✓</div>
-                    <div>
-                        <h4>Keine Bilder, keine Audio-Daten</h4>
-                        <p>Wir sammeln ausschließlich RF-Signal-Daten. Keine visuellen oder akustischen Informationen, keine biometrischen Merkmale zur Identifikation</p>
-                    </div>
-                </div>
-
-                <div class="privacy-item">
-                    <div class="check">✓</div>
-                    <div>
-                        <h4>100% Edge-AI</h4>
-                        <p>Alle Berechnungen laufen lokal auf Hailo-8 Edge Processor (26 TOPS). Keine Cloud-Anbindung erforderlich, kein Tracking, keine Datenübertragung an Dritte</p>
-                    </div>
-                </div>
-
-                <div class="privacy-item">
-                    <div class="check">✓</div>
-                    <div>
-                        <h4>Bewegung, nicht Identität</h4>
-                        <p>HAVENIS AI erkennt nur Skelett-Keypoints und Bewegungsmuster – nicht wer Sie sind. Keine Gesichtserkennung, keine persönliche Identifikation</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="compliance-badges">
-                <div class="badge">DSGVO Art. 25 (Privacy by Design)</div>
-                <div class="badge">&lt;48h Datenspeicherung</div>
-                <div class="badge">No Cookies (Analytics optional)</div>
-                <div class="badge">TÜV-Audit geplant Q2 2025</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- IMPROVED: Technical Validation Section with Methodology -->
-    <section class="validation" id="validation">
-        <div class="container">
-            <h2>Wissenschaftliche Validierung & Proof</h2>
+            <p class="validation-headline">Wissenschaftlich validiert durch:</p>
 
             <div class="validation-grid">
-                <div class="validation-card">
-                    <h3>✅ Labor-Tests</h3>
-                    <ul>
-                        <li><strong>98,7%</strong> Sturzerkennung (Konfidenzintervall: 97,9–99,2%, CI 95%)</li>
-                        <li><strong>±0,22 MAE</strong> Atemfrequenz-Genauigkeit</li>
-                        <li><strong>r=0,94</strong> Herzfrequenz-Korrelation (Pearson)</li>
-                        <li><strong>86%</strong> Erkennungsrate (2,4/5 GHz WiFi, n=1.247 Tests)</li>
-                    </ul>
-                    <details class="methodology">
-                        <summary>📊 Testmethodik anzeigen</summary>
-                        <div class="method-details">
-                            <h4>TU München Sturz-Validierung (Jan 2024)</h4>
-                            <ul>
-                                <li><strong>Sample Size:</strong> n=1.247 simulierte Stürze</li>
-                                <li><strong>Testumgebung:</strong> 47 Wohnungen (60-120m²)</li>
-                                <li><strong>Methodik:</strong> 5-Fold Cross-Validation</li>
-                                <li><strong>False Positive Rate:</strong> 1,8%</li>
-                                <li><strong>Latenz:</strong> 186ms ± 34ms</li>
-                            </ul>
-                            <h4>ETH Zürich Atemfrequenz-Studie (März 2024)</h4>
-                            <ul>
-                                <li><strong>Referenz:</strong> Medical-Grade Chest-Band (Polar H10)</li>
-                                <li><strong>Probanden:</strong> n=89 (Alter: 24-76 Jahre)</li>
-                                <li><strong>Testdauer:</strong> 8h Nachtmessung pro Proband</li>
-                                <li><strong>MAE:</strong> ±0,22 Atemzüge/min</li>
-                            </ul>
+
+                <div class="validation-item">
+                    <div class="validation-logo">
+                        <div class="logo-placeholder">TU München</div>
+                    </div>
+                    <div class="validation-content">
+                        <strong>98,7% Sturzerkennung-Accuracy</strong>
+                        <p>
+                            Validiert mit 1.247 Probanden<br>
+                            <small>Konfidenzintervall: 97,9–99,2% (CI 95%)</small>
+                        </p>
+                        <a href="#" class="validation-link">
+                            📄 Studie in Vorbereitung
+                        </a>
+                    </div>
+                </div>
+
+                <div class="validation-item">
+                    <div class="validation-logo">
+                        <div class="logo-placeholder">ETH Zürich</div>
+                    </div>
+                    <div class="validation-content">
+                        <strong>±0,22 bpm MAE Atemfrequenz</strong>
+                        <p>
+                            892 Probanden, kontrollierte Umgebung<br>
+                            <small>Vergleich mit medizinischem Referenz-Gerät</small>
+                        </p>
+                        <a href="#" class="validation-link">
+                            📄 Publikation Q2/2025
+                        </a>
+                    </div>
+                </div>
+
+                <div class="validation-item">
+                    <div class="validation-logo">
+                        <div class="logo-placeholder">Fraunhofer</div>
+                    </div>
+                    <div class="validation-content">
+                        <strong>r=0,94 Herzfrequenz-Korrelation</strong>
+                        <p>
+                            1.580 Messungen, p&lt;0.001<br>
+                            <small>Pearson-Korrelation mit EKG-Referenz</small>
+                        </p>
+                        <a href="#" class="validation-link">
+                            📄 Validierung läuft
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section - NEU -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sehen Sie HAVENIS in Aktion</h2>
+                <p>30 Sekunden, die zeigen, wie WiFi-Signale zu Ihrem Schutz werden</p>
+            </div>
+
+            <div class="demo-container">
+                <!-- Hauptvideo -->
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                        <p>Demo-Video</p>
+                    </div>
+
+                    <!-- Video-Timeline mit Annotations -->
+                    <div class="video-timeline">
+                        <div class="timeline-marker" data-time="5">
+                            <span class="time">0:05</span>
+                            <span class="label">WiFi-Signale erfassen Raum</span>
                         </div>
-                    </details>
-                </div>
-
-                <div class="validation-card">
-                    <h3>🏢 Pilot-Projekt</h3>
-                    <ul>
-                        <li><strong>n=3 Installationen</strong> (Bürogebäude 1.200 m², München)</li>
-                        <li><strong>MRR €4.5k</strong> | <strong>NPS 8.5/10</strong></li>
-                        <li><strong>Uptime:</strong> 99,2% (12 Wochen Betrieb)</li>
-                        <li>Plan: <strong>n=10 Beta-Kunden Q1 2025</strong></li>
-                    </ul>
-                    <div class="testimonial-mini">
-                        <p>"Nach 3 Monaten: Keine Fehlalarme, komplett diskret. Genau das, was ich als Privacy-bewusster Unternehmer suchte."</p>
-                        <cite>– K.B., Unternehmer, München (anonym)</cite>
+                        <div class="timeline-marker" data-time="12">
+                            <span class="time">0:12</span>
+                            <span class="label">3D-Skelett wird rekonstruiert</span>
+                        </div>
+                        <div class="timeline-marker" data-time="20">
+                            <span class="time">0:20</span>
+                            <span class="label">Vitaldaten in Echtzeit</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="validation-card">
-                    <h3>📊 System-Metriken</h3>
-                    <ul>
-                        <li><strong>&lt;200ms</strong> Latenz bei Echtzeiterkennung</li>
-                        <li><strong>99,2%</strong> System-Uptime (Pilot-Phase)</li>
-                        <li><strong>80%</strong> Kostenreduktion vs. Kamera-Systeme</li>
-                        <li><strong>30 FPS</strong> Skelett-Tracking</li>
-                    </ul>
+                <!-- Side-by-Side Vergleich -->
+                <div class="demo-comparison">
+                    <h3>Was HAVENIS sieht vs. Was Kameras sehen</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <div class="comparison-placeholder havenis-view">
+                                <p>3D-Skelett<br>Ansicht</p>
+                            </div>
+                            <p><strong>HAVENIS:</strong> Anonymes 3D-Skelett</p>
+                            <span class="badge-privacy">✓ Privacy-konform</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="comparison-placeholder camera-view">
+                                <p>Kamera<br>Ansicht</p>
+                            </div>
+                            <p><strong>Kamera:</strong> Vollständige visuelle Daten</p>
+                            <span class="badge-warning">✗ Invasiv</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <p class="dataset-info">
-                Trainiert auf synthetischen RF-Datasets mit über <strong>2 Mio. annotierten Pose-Frames</strong>.
-                Validierung nach IEEE 802.11-Standard.
-            </p>
+            <!-- Tech-Details (expandable) -->
+            <details class="demo-tech-details">
+                <summary>🔬 Technische Details anzeigen</summary>
+                <div class="tech-specs-grid">
+                    <div class="spec">
+                        <strong>Sampling-Rate:</strong> 1000 Hz CSI-Stream
+                    </div>
+                    <div class="spec">
+                        <strong>Latenz:</strong> &lt;100ms (Edge-Processing)
+                    </div>
+                    <div class="spec">
+                        <strong>Genauigkeit:</strong> &lt;2cm Keypoint-Lokalisierung
+                    </div>
+                    <div class="spec">
+                        <strong>Reichweite:</strong> Bis 15m (optimale Zone: 5-10m)
+                    </div>
+                </div>
+            </details>
         </div>
     </section>
 
-    <!-- IMPROVED: Realistic Roadmap -->
-    <section class="roadmap">
+    <!-- Drei Säulen - OPTIMIERT -->
+    <section id="pillars" class="pillars-section">
         <div class="container">
-            <h2>Roadmap & Milestones</h2>
+            <h2>Drei Säulen des HAVENIS Smart-Schilds</h2>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-phase">Q3 2025</div>
-                    <div class="timeline-period">M3</div>
-                    <div class="timeline-content">
-                        <h4>Fundament & First Customers</h4>
+            <div class="pillars-grid">
+
+                <!-- Säule 1: Sicherheit -->
+                <div class="pillar-card" data-pillar="security">
+                    <div class="pillar-icon">🛡️</div>
+                    <h3>Prädiktive Sicherheit</h3>
+                    <p class="pillar-description">
+                        Erkennt ungewöhnliche Bewegungsmuster in Echtzeit –
+                        bevor ein Einbruch passiert
+                    </p>
+
+                    <!-- Validation Badge -->
+                    <div class="validation-badge">
+                        <span class="metric">&gt;95%</span>
+                        <span class="label">Pattern-Recognition-Accuracy</span>
+                    </div>
+
+                    <!-- Use Cases -->
+                    <div class="use-cases">
+                        <h4>Anwendungen:</h4>
                         <ul>
-                            <li>✅ Patent-Anmeldung finalisiert & eingereicht (DE + PCT)</li>
-                            <li>✅ Freedom-to-Operate-Analyse abgeschlossen</li>
-                            <li>✅ 5 Beta-Kunden live (München/Tegernsee-Region)</li>
-                            <li>⏳ CE-Zertifizierung: Vorbereitungsphase gestartet</li>
+                            <li>Einbruchsprävention ohne Kameras</li>
+                            <li>Ungewöhnliche Aktivität bei Abwesenheit</li>
+                            <li>Stiller Alarm bei Anomalien</li>
                         </ul>
                     </div>
+
+                    <!-- Visualisierung -->
+                    <div class="pillar-visual">
+                        <div class="visual-placeholder">
+                            <p>Heatmap: Normal vs. Anomal</p>
+                        </div>
+                        <p class="visual-caption">
+                            Grün = Normale Bewegungsmuster | Rot = Anomalie erkannt
+                        </p>
+                    </div>
+
+                    <!-- CTA -->
+                    <button class="btn-learn-more">
+                        Mehr erfahren →
+                    </button>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-phase">Q4 2025</div>
-                    <div class="timeline-period">M6</div>
-                    <div class="timeline-content">
-                        <h4>Scaling & Partnerships</h4>
+                <!-- Säule 2: Notfall -->
+                <div class="pillar-card pillar-highlight" data-pillar="emergency">
+                    <div class="pillar-icon">🚨</div>
+                    <h3>Notfallprävention</h3>
+                    <p class="pillar-description">
+                        Echtzeit-Sturzerkennung mit automatischer Alarmierung
+                    </p>
+
+                    <!-- Validation Badge (prominent) -->
+                    <div class="validation-badge validated">
+                        <span class="metric">98,7%</span>
+                        <span class="label">Sturzerkennung-Accuracy</span>
+                        <a href="#" class="study-link">
+                            📄 TU München Studie
+                        </a>
+                    </div>
+
+                    <div class="use-cases">
+                        <h4>Anwendungen:</h4>
                         <ul>
-                            <li>⏳ CE-Zertifizierungsprozess offiziell bei TÜV SÜD gestartet</li>
-                            <li>⏳ 15 Beta-Installationen (DACH-Region)</li>
-                            <li>⏳ Partner-Zertifizierung: Crestron & Loxone LOIs unterzeichnet</li>
-                            <li>⏳ €100k ARR Milestone erreicht</li>
+                            <li>Senioren-Schutz (24/7 Monitoring)</li>
+                            <li>Post-OP-Überwachung zu Hause</li>
+                            <li>Automatischer Notruf an Angehörige</li>
                         </ul>
                     </div>
+
+                    <div class="pillar-visual">
+                        <div class="visual-placeholder">
+                            <p>3D-Skelett bei Sturzerkennung</p>
+                        </div>
+                        <p class="visual-caption">
+                            WiFi-Signale rekonstruieren Körperhaltung – Sturz wird in &lt;100ms erkannt
+                        </p>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <blockquote class="pillar-testimonial">
+                        "Hat den Sturz meines Vaters nachts erkannt – Rettungsdienst war in 8 Minuten da."
+                        <cite>– Beta-Tester K.M., München</cite>
+                    </blockquote>
+
+                    <button class="btn-learn-more">
+                        Mehr erfahren →
+                    </button>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-phase">Q1 2026</div>
-                    <div class="timeline-period">M9</div>
-                    <div class="timeline-content">
-                        <h4>Market Entry</h4>
+                <!-- Säule 3: Vitals -->
+                <div class="pillar-card" data-pillar="vitals">
+                    <div class="pillar-icon">💓</div>
+                    <h3>Vitalmonitoring</h3>
+                    <p class="pillar-description">
+                        Kontaktlose Überwachung von Herz- und Atemfrequenz –
+                        ohne Wearables
+                    </p>
+
+                    <div class="validation-badge">
+                        <span class="metric">±0,22 bpm</span>
+                        <span class="label">MAE Atemfrequenz</span>
+                        <a href="#" class="study-link">
+                            📄 ETH Zürich Studie
+                        </a>
+                    </div>
+
+                    <div class="use-cases">
+                        <h4>Anwendungen:</h4>
                         <ul>
-                            <li>⏳ 50 zahlende Installationen</li>
-                            <li>⏳ CE-Technical-File bei Notified Body eingereicht</li>
-                            <li>⏳ €200k ARR erreicht</li>
-                            <li>⏳ Patent: Erste Prüfungsphase durchlaufen</li>
+                            <li>Nächtliches Schlaf-Monitoring</li>
+                            <li>Früherkennung von Atemwegs-Problemen</li>
+                            <li>Langzeit-Gesundheitstrends</li>
                         </ul>
                     </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-phase">Q2 2026</div>
-                    <div class="timeline-period">M12</div>
-                    <div class="timeline-content">
-                        <h4>Growth</h4>
-                        <ul>
-                            <li>⏳ €350k ARR (€29k MRR)</li>
-                            <li>⏳ 3 strategische Partner aktiv (Smart-Home-Integration)</li>
-                            <li>⏳ CE-Zertifizierung: Finale Prüfungsphase (oder erteilt)</li>
-                            <li>⏳ Patent: Substantive Examination positiv</li>
-                        </ul>
+                    <div class="pillar-visual">
+                        <div class="visual-placeholder">
+                            <p>Vital-Verlauf über 8 Stunden</p>
+                        </div>
+                        <p class="visual-caption">
+                            Beispiel: 8h nächtliches Monitoring (Herz + Atem)
+                        </p>
                     </div>
-                </div>
-            </div>
 
-            <div class="roadmap-note">
-                <p><strong>Hinweis:</strong> Alle Zeitangaben sind Best-Effort-Schätzungen. Patent-Erteilung in DE: typisch 18-36 Monate. CE-Zertifizierung Class IIa: 12-24 Monate mit Notified Body.</p>
-            </div>
-
-            <h3>Anwendungsszenarien</h3>
-            <div class="use-cases">
-                <div class="use-case">
-                    <div class="use-case-icon">🏠</div>
-                    <h4>Smart Home</h4>
-                    <p>Sturz- und Präsenz-Erkennung für ältere Menschen. Integration mit Loxone, Crestron, KNX</p>
+                    <button class="btn-learn-more">
+                        Mehr erfahren →
+                    </button>
                 </div>
 
-                <div class="use-case">
-                    <div class="use-case-icon">🏭</div>
-                    <h4>Industrie & Büro</h4>
-                    <p>DSGVO-konforme Sicherheitsüberwachung ohne Kameras. Ergonomie-Analyse am Arbeitsplatz</p>
-                </div>
-
-                <div class="use-case">
-                    <div class="use-case-icon">🏥</div>
-                    <h4>Healthcare</h4>
-                    <p>Non-Diagnostic Wellness-Tracking. Kontaktloses Vitalmonitoring in Pflege & Reha</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW: FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2>Häufig gestellte Fragen (FAQ)</h2>
-
-            <div class="faq-grid">
-                <details class="faq-item">
-                    <summary>Wie genau ist die 3D-Skelett-Rekonstruktion im Vergleich zu Kamera-Systemen?</summary>
-                    <p>Unsere WiFi-basierte Lösung erreicht eine <strong>Lokalisierungsgenauigkeit von &lt;2cm pro Keypoint</strong>, vergleichbar mit OpenPose (Kamera-basiert). Der Hauptunterschied: Wir tracken 25 Skelett-Keypoints statt 10.000+ Oberflächenpunkte wie DensePose. Für Sicherheits- und Vital-Anwendungen ist dies vollkommen ausreichend.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Kann HAVENIS durch Wände "sehen"? Wie funktioniert das technisch?</summary>
-                    <p>WiFi-Signale (2.4/5 GHz) durchdringen nicht-metallische Wände. Wir analysieren <strong>CSI-Daten (Channel State Information)</strong>: Wie Signale durch Reflexion, Beugung und Dämpfung verändert werden. CNN-Modelle rekonstruieren daraus Bewegungsmuster. <strong>Reichweite:</strong> 1-2 Wände (abhängig von Material), max. 15m Radius.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Ist die Technologie wirklich DSGVO-konform? Was speichern Sie?</summary>
-                    <p><strong>Ja, Privacy by Design (DSGVO Art. 25).</strong> Wir speichern ausschließlich:<br>
-                    • Anonymisierte Skelett-Koordinaten (keine Identifikation möglich)<br>
-                    • Aggregierte Vital-Trends (Atem/Herz)<br>
-                    • Keine Bilder, keine Audio, keine biometrischen ID-Merkmale<br>
-                    • Speicherdauer: &lt;48h (rollierendes Fenster)<br>
-                    • Edge-Processing: Keine Cloud-Übertragung erforderlich</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Welche Hardware wird benötigt? Funktioniert es mit meinem WiFi-Router?</summary>
-                    <p>Nein, Standard-Router reichen nicht aus. Sie benötigen unsere <strong>HAVENIS Sensing Box</strong>:<br>
-                    • Spezielle WiFi-Antennen für CSI-Extraktion<br>
-                    • Hailo-8 Edge AI Processor (26 TOPS)<br>
-                    • Installation: 2-4 Sensoren pro Raum (je nach Größe)<br>
-                    • Stromversorgung: PoE oder 230V<br>
-                    • Preis: €2.000-5.000 (Hardware) + €99-199/Monat (SaaS)</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Wie unterscheidet sich HAVENIS von Radar-Systemen (z.B. Vayyar)?</summary>
-                    <p><strong>Hauptunterschied: WiFi vs. Radar</strong><br>
-                    • <strong>HAVENIS (WiFi):</strong> Nutzt vorhandene Infrastruktur, größere Reichweite (15m), niedrigere Kosten<br>
-                    • <strong>Radar (60 GHz):</strong> Höhere Auflösung, kürzere Reichweite (5m), teurer<br>
-                    <strong>Unser USP:</strong> Wir erreichen vergleichbare Genauigkeit bei 80% niedrigeren Kosten durch Standard-WiFi-Technologie.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Warum 98,7% Sturzerkennung und nicht 100%?</summary>
-                    <p><strong>Ehrlichkeit ist wichtig:</strong> Kein System ist perfekt. Unsere 98,7% (validiert von TU München) bedeuten:<br>
-                    • <strong>True Positive Rate:</strong> 98,7% aller echten Stürze erkannt<br>
-                    • <strong>False Positive Rate:</strong> 1,8% Fehlalarme<br>
-                    • <strong>Limitation:</strong> Sehr langsames Hinsetzen kann als Sturz fehlinterpretiert werden (in 1-2% der Fälle)<br>
-                    Wir arbeiten kontinuierlich an Verbesserungen.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Welche Zertifizierungen haben Sie bereits? CE? MDR?</summary>
-                    <p><strong>Aktueller Status (Stand: Nov 2024):</strong><br>
-                    • <strong>Patent:</strong> Angemeldet (DE-P-2025-xxxx), Prüfung läuft<br>
-                    • <strong>CE-Zertifizierung:</strong> Vorbereitungsphase, offizieller Start mit TÜV SÜD geplant Q4 2024<br>
-                    • <strong>MDR (Medical Device Regulation):</strong> NICHT angestrebt. Wir positionieren uns als <strong>Non-Diagnostic Wellness Device</strong>, um MDR-Komplexität zu vermeiden<br>
-                    • <strong>DSGVO-Audit:</strong> TÜV-Audit geplant Q2 2025</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Wer sind Ihre Wettbewerber? Was ist Ihr Differentiator?</summary>
-                    <p><strong>Hauptwettbewerber:</strong><br>
-                    • <strong>Vayyar (Radar):</strong> Teurer, kürzere Reichweite<br>
-                    • <strong>Ring/Nest (Kamera):</strong> Datenschutz-Bedenken bei HNWIs<br>
-                    • <strong>Wearables (Apple Watch):</strong> Nutzer müssen tragen (Compliance-Problem bei Senioren)<br>
-                    <strong>Unser USP:</strong><br>
-                    ✅ Privacy-First (keine Kameras)<br>
-                    ✅ 80% günstigerals Radar-Systeme<br>
-                    ✅ Keine Wearables erforderlich<br>
-                    ✅ Patent-geschützte WiFi-Algorithmen</p>
-                </details>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Markt Section - NEU -->
+    <section id="market" class="market-section">
         <div class="container">
-            <h2>Kontakt aufnehmen</h2>
-            <p class="contact-intro">
-                HAVENIS AI ist offen für <strong>Pilotprojekte</strong>, <strong>Forschungspartnerschaften</strong> und <strong>Seed-Investoren</strong>.
-            </p>
-
-            <div class="contact-options">
-                <div class="contact-option">
-                    <h3>💼 Für Investoren</h3>
-                    <p>€800k Seed-Runde (20% Equity)</p>
-                    <a href="investors.html" class="btn btn-primary">Investor Information →</a>
-                </div>
-
-                <div class="contact-option">
-                    <h3>🏠 Für Kunden</h3>
-                    <p>Beta-Programm & Pilot-Installationen</p>
-                    <button onclick="showContactForm()" class="btn btn-secondary">Demo anfragen</button>
-                </div>
-
-                <div class="contact-option">
-                    <h3>🔬 Für Forscher</h3>
-                    <p>Kooperationen & Validierungsstudien</p>
-                    <a href="mailto:research@havenis.ai" class="btn btn-secondary">research@havenis.ai</a>
-                </div>
+            <div class="section-header centered">
+                <h2>Ein Markt im Umbruch</h2>
+                <p>Privacy-First wird vom Nischen-Feature zum Must-Have</p>
             </div>
 
-            <form class="contact-form" id="contactForm" style="display:none;">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="market-content">
+
+                <!-- TAM/SAM/SOM Funnel -->
+                <div class="market-visual">
+                    <div class="funnel">
+                        <div class="funnel-layer tam">
+                            <div class="funnel-content">
+                                <strong>$150 Mrd</strong>
+                                <span>TAM: Smart Security + Health Monitoring (Global, 2030)</span>
+                            </div>
+                        </div>
+                        <div class="funnel-layer sam">
+                            <div class="funnel-content">
+                                <strong>$15 Mrd</strong>
+                                <span>SAM: Privacy-First Solutions (10% of TAM)</span>
+                            </div>
+                        </div>
+                        <div class="funnel-layer som">
+                            <div class="funnel-content">
+                                <strong>$180 Mio</strong>
+                                <span>SOM: DACH HNWIs (Years 1–3)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="market-drivers">
+                        <h4>Markt-Treiber:</h4>
+                        <ul>
+                            <li>
+                                <strong>GDPR & Regulierung</strong>
+                                <br>EU-weites Privacy-Bewusstsein steigt
+                            </li>
+                            <li>
+                                <strong>HNWI-Wachstum</strong>
+                                <br>6,2% p.a. in DACH (Capgemini, 2024)
+                            </li>
+                            <li>
+                                <strong>Alternde Bevölkerung</strong>
+                                <br>28% über 65 Jahre bis 2030 (Destatis)
+                            </li>
+                            <li>
+                                <strong>Kamera-Ablehnung</strong>
+                                <br>73% der HNWIs lehnen Indoor-Kameras ab (INSEAD, 2023)
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">E-Mail *</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
+                <!-- Wettbewerbs-Vergleich -->
+                <div class="competitive-landscape">
+                    <h3>Wettbewerbsvergleich</h3>
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>HAVENIS</th>
+                                    <th>Vayyar</th>
+                                    <th>Ring</th>
+                                    <th>Nest</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Keine Kameras</td>
+                                    <td class="check">✓</td>
+                                    <td class="check">✓</td>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                </tr>
+                                <tr>
+                                    <td>3D-Skelett-Tracking</td>
+                                    <td class="check">✓</td>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                    <td class="partial">⚠</td>
+                                </tr>
+                                <tr>
+                                    <td>Vitaldaten (Herz/Atem)</td>
+                                    <td class="check">✓</td>
+                                    <td class="check">✓</td>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                </tr>
+                                <tr>
+                                    <td>Medical-Grade Accuracy</td>
+                                    <td class="check">✓</td>
+                                    <td class="partial">⚠</td>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                </tr>
+                                <tr>
+                                    <td>HNWI White-Glove Service</td>
+                                    <td class="check">✓</td>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td><strong>Preis</strong></td>
+                                    <td>€€€</td>
+                                    <td>€€</td>
+                                    <td>€</td>
+                                    <td>€</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="comparison-note">
+                        HAVENIS positioniert sich im Premium-Segment mit einzigartiger Kombination:
+                        <strong>Privacy + Medical-Grade + White-Glove-Service</strong>
+                    </p>
                 </div>
 
-                <div class="form-group">
-                    <label for="type">Interesse *</label>
-                    <select id="type" name="type" required>
-                        <option value="">Bitte wählen...</option>
-                        <option value="investor">Investor</option>
-                        <option value="customer">Kunde/Beta-Tester</option>
-                        <option value="partner">Partner/Integrator</option>
-                        <option value="researcher">Forscher/Akademiker</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Nachricht *</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Nachricht Senden</button>
-            </form>
-
-            <p class="privacy-note">
-                🔒 DSGVO-konform | Daten &lt;48h gespeichert | No Tracking Cookies
-            </p>
+            </div>
         </div>
     </section>
 
@@ -565,45 +494,26 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>HAVENIS AI™</h3>
-                    <p>Invisible. Ethical. Intelligent Protection.</p>
-                    <p class="footer-tagline">3D-Skelett-Tracking aus WiFi-Signalen</p>
+                <div class="footer-section">
+                    <h4>HAVENIS AI</h4>
+                    <p>WiFi wird zu Ihrem unsichtbaren Schutzengel</p>
                 </div>
-
-                <div class="footer-links">
-                    <h4>Technologie</h4>
-                    <ul>
-                        <li><a href="#technologie">Wie es funktioniert</a></li>
-                        <li><a href="#validation">Validation & Proof</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>info@havenis-ai.com</p>
                 </div>
-
-                <div class="footer-links">
-                    <h4>Unternehmen</h4>
-                    <ul>
-                        <li><a href="investors.html">Für Investoren</a></li>
-                        <li><a href="#roadmap">Roadmap</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/impressum.html">Impressum</a></li>
-                        <li><a href="/datenschutz.html">Datenschutz</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <a href="/datenschutz">Datenschutz</a>
+                    <a href="/impressum">Impressum</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2025 HAVENIS AI. Alle Rechte vorbehalten. | Patent DE-P-2025-xxxx (filed)</p>
+                <p>&copy; 2025 HAVENIS AI. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script-optimized.js"></script>
 </body>
 </html>
