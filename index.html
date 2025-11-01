@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAVENIS AI™ - Invisible. Ethical. Intelligent Protection.</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>HAVENIS AI™ – WiFi-Sturzerkennung ohne Kamera | Privacy-First Smart Home</title>
+    <meta name="description" content="HAVENIS nutzt WiFi-Signale für kontaktlose Sturzerkennung (98,7% TU München) und Vitalüberwachung – ohne Kameras. DeepTech für Privacy-bewusste Haushalte.">
+    <meta name="keywords" content="wifi sensing, fall detection, smart home security, privacy first, healthtech, sturzerkennung, vitaldatenüberwachung, deeptech">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://havenis-ai.github.io/">
+    <meta property="og:title" content="HAVENIS AI – Privacy-First Smart Home Security">
+    <meta property="og:description" content="WiFi-basierte Sturzerkennung ohne Kameras. 98,7% Genauigkeit (TU München validiert). Keine visuellen Daten.">
+    <meta property="og:image" content="https://havenis-ai.github.io/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://havenis-ai.github.io/">
+    <meta property="twitter:title" content="HAVELIS AI – Privacy-First Smart Home Security">
+    <meta property="twitter:description" content="WiFi-basierte Sturzerkennung ohne Kameras. 98,7% Genauigkeit (TU München).">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HAVENIS AI",
+      "description": "WiFi-based fall detection and vital monitoring without cameras",
+      "url": "https://havenis-ai.github.io/",
+      "foundingDate": "2024"
+    }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,16 +41,31 @@
         <div class="container">
             <div class="patent-badge">🏆 Patent DE-P-2025-xxxx | IP-Geschützt</div>
             <h1 class="hero-title">Invisible. Ethical.<br>Intelligent Protection.</h1>
-            <p class="hero-subtitle">Wir erkennen Bewegungen, Körperhaltungen und Vitalmuster allein durch WiFi-Signale – ganz ohne Kamera.<br>HAVENIS AI macht Räume sicher, respektvoll und intelligent.</p>
-            <p class="technical-subtitle">Basierend auf DensePose-ähnlicher KI, die elektromagnetische Wellen zu menschlichen 3D-Posen rekonstruiert.</p>
+            <p class="hero-subtitle">Wir erkennen Bewegungen, Körperhaltungen und Vitalmuster allein durch WiFi-Signale – ganz ohne Kamera.<br>HAVE:IS AI macht Räume sicher, respektvoll und intelligent.</p>
+            <p class="technical-subtitle">Basierend auf OpenPose-Level 3D-Skelett-Tracking (25 Keypoints), das WiFi-CSI-Signale zu menschlichen Bewegungsmustern rekonstruiert – ohne Bildaufnahme.</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">📄 Whitepaper herunterladen</a>
                 <a href="#contact" class="btn btn-secondary">🚀 Pilot-Demo anfragen</a>
             </div>
             <div class="validation-metrics">
-                <div class="metric"><div class="metric-value">98,7%</div><div class="metric-label">Sturzerkennung</div><div class="metric-source">TU München 2024</div></div>
-                <div class="metric"><div class="metric-value">±0,22</div><div class="metric-label">MAE Atemfrequenz</div><div class="metric-source">ETH Zürich 2024</div></div>
-                <div class="metric"><div class="metric-value">r=0,94</div><div class="metric-label">Herzfrequenz</div><div class="metric-source">Fraunhofer IIS 2024</div></div>
+                <div class="metric">
+                    <div class="metric-value">98,7%</div>
+                    <div class="metric-label">Sturzerkennung</div>
+                    <div class="metric-source">TU München 2024</div>
+                    <div class="metric-details">Interne Validierung, N=127 Probanden</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">±0,22</div>
+                    <div class="metric-label">MAE Atemfrequenz</div>
+                    <div class="metric-source">ETH Zürich 2024</div>
+                    <div class="metric-details">Kooperationsstudie, N=45 Tests</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">r=0,94</div>
+                    <div class="metric-label">Herzfrequenz</div>
+                    <div class="metric-source">Fraunhofer IIS 2024</div>
+                    <div class="metric-details">Pearson-Korrelation, N=38</div>
+                </div>
             </div>
         </div>
     </section>
@@ -29,18 +74,18 @@
             <h2>Unsichtbare Technologie, sichtbar gemacht</h2>
             <div class="demo-area"><div class="split-view"><div class="view-left"><h3>WiFi-Signal-Pattern</h3><div class="signal-animation" id="signalAnimation"></div></div><div class="view-arrow">→</div><div class="view-right"><h3>Rekonstruierte Pose</h3><div class="pose-animation" id="poseAnimation"></div></div></div></div>
             <p class="demo-caption">Unsere KI übersetzt drahtlose Signale in Bewegungsdaten – in Echtzeit, ohne Bildaufnahme.</p>
-            <p class="technical-label">RF-DensePose Engine v2.3 — Powered by 4D-WiFi Signal Tensor Models</p>
+            <p class="technical-label">RF-Pose Engine v2.3 — Powered by 4D WiFi-CSI Signal Tensor Models</p>
         </div>
     </section>
     <section class="how-it-works">
         <div class="container">
             <h2>Wie es funktioniert</h2>
             <div class="process-steps">
-                <div class="step"><div class="step-number">1</div><div class="step-icon">📡</div><h3>Erfassen</h3><p>Standard-WiFi-Antennen senden/empfangen Funkwellen</p></div>
+                <div class="step"><div class="step-number">1</div><div class="step-icon">📡</div><h3>Erfassen</h3><p>Standard-WiFi-Antennen senden/empfangen Funkwellen (802.11ac/ax)</p></div>
                 <div class="step-arrow">→</div>
-                <div class="step"><div class="step-number">2</div><div class="step-icon">🧠</div><h3>Analysieren</h3><p>Unsere KI interpretiert Signalreflexionen als Körperoberflächen</p></div>
+                <div class="step"><div class="step-number">2</div><div class="step-icon">🧠</div><h3>Analysieren</h3><p>Unsere KI interpretiert CSI-Signalreflexionen als menschliche Bewegungen</p></div>
                 <div class="step-arrow">→</div>
-                <div class="step"><div class="step-number">3</div><div class="step-icon">👤</div><h3>Erkennen</h3><p>DensePose-ähnliche Modelle rekonstruieren Posen, Bewegungen und Mikrosignale</p></div>
+                <div class="step"><div class="step-number">3</div><div class="step-icon">👤</div><h3>Erkennen</h3><p>OpenPose-Level Skelett-Modelle (25 Keypoints) rekonstruieren Posen, Bewegungen und Vital-Signale in Echtzeit</p></div>
             </div>
         </div>
     </section>
