@@ -1,75 +1,40 @@
-// Enhanced HAVENIS AI JavaScript
-console.log('HAVENIS AI Website loaded - Version 2.0');
-
-// Pitchdeck Download with Email Capture
-function downloadPitchdeck() {
-    const email = prompt('Bitte geben Sie Ihre E-Mail-Adresse ein, um das Pitchdeck zu erhalten:');
-
-    if (email && email.includes('@')) {
-        // In production: Send to backend/Mailchimp
-        console.log('Pitchdeck request from:', email);
-        alert(`Vielen Dank! Das Pitchdeck wird an ${email} gesendet.\n\nEin Teammitglied wird sich in Kürze bei Ihnen melden.`);
-
-        // Track event (Google Analytics would go here)
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'pitchdeck_download', {
-                'email': email,
-                'page': window.location.pathname
-            });
-        }
-    } else if (email) {
-        alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-    }
-}
-
-// Book Call
-function bookCall() {
-    // In production: Integrate Calendly
-    alert('Sie werden zu unserem Calendly-Link weitergeleitet...\n\n(Demo: calendly.com/havenis-ai/30min)');
-    // window.open('https://calendly.com/havenis-ai/30min', '_blank');
-}
-
-// Request Data Room Access
-function requestAccess(docType) {
-    alert(`Zugang zu "${docType}" angefordert.\n\nBitte senden Sie uns eine E-Mail an founders@havenis.ai mit Ihrem NDA.`);
-
-    // Track event
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'dataroom_access', {
-            'document': docType
-        });
-    }
-}
+// HAVENIS AI - Enhanced JavaScript
+console.log('🚀 HAVENIS AI Website loaded');
 
 // Form submission handler
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            type: document.getElementById('type') ? document.getElementById('type').value : 'general',
-            message: document.getElementById('message').value,
-            timestamp: new Date().toISOString()
-        };
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                type: document.getElementById('type')?.value || 'general',
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
 
-        console.log('Form submitted:', formData);
+            console.log('Form submitted:', formData);
 
-        // In production: Send to backend
-        alert('Vielen Dank für Ihre Nachricht!\n\nWir werden uns innerhalb von 24 Stunden bei Ihnen melden.');
+            // Show success message
+            alert('Vielen Dank für Ihre Nachricht! Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.');
 
-        // Track event
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'contact_form_submit', {
-                'type': formData.type
-            });
-        }
+            // Reset form
+            this.reset();
+            this.style.display = 'none';
+        });
+    }
+});
 
-        // Reset form
-        this.reset();
-    });
+// Show contact form function
+function showContactForm() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.style.display = 'block';
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 // Smooth scrolling for anchor links
@@ -78,15 +43,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const navHeight = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Intersection Observer for animations
+// Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -109,20 +76,88 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Track page views
-if (typeof gtag !== 'undefined') {
-    gtag('config', 'GA_MEASUREMENT_ID', {
-        'page_title': document.title,
-        'page_path': window.location.pathname
-    });
+// Enhanced signal animation with wave effects
+const signalAnimation = document.getElementById('signalAnimation');
+if (signalAnimation) {
+    setInterval(() => {
+        const wave = document.createElement('div');
+        wave.style.cssText = `
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,102,255,0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: expand 2s ease-out forwards;
+            pointer-events: none;
+        `;
+        signalAnimation.appendChild(wave);
+
+        setTimeout(() => wave.remove(), 2000);
+    }, 500);
 }
 
-// Mobile menu toggle (if needed)
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+// Add CSS animation for wave expansion
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes expand {
+        from {
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+        }
+        to {
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+// Navbar scroll effect
+let lastScroll = 0;
+const nav = document.querySelector('.main-nav');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+        nav.style.boxShadow = 'none';
+    } else {
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+    }
+
+    lastScroll = currentScroll;
+});
+
+// FAQ accordion auto-close
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('toggle', function() {
+        if (this.open) {
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== this && otherItem.open) {
+                    otherItem.open = false;
+                }
+            });
+        }
     });
+});
+
+// Track events (placeholder for future analytics)
+function trackEvent(category, action, label) {
+    console.log(`Event: ${category} - ${action} - ${label}`);
+    // Future: Send to Google Analytics, Mixpanel, etc.
 }
+
+// Track CTA clicks
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const text = this.textContent.trim();
+        trackEvent('CTA', 'Click', text);
+    });
+});
+
+console.log('✅ All features initialized successfully');
