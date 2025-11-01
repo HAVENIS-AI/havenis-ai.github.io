@@ -160,10 +160,16 @@
             <div class="demo-container">
                 <!-- Hauptvideo -->
                 <div class="demo-video">
-                    <div class="video-placeholder">
-                        <div class="play-button">▶</div>
-                        <p>Demo-Video</p>
-                    </div>
+                    <video id="demo-video" controls poster="assets/visuals/hero-wifi-waves.webp" preload="metadata" style="width: 100%; height: 400px; border-radius: 12px; background: linear-gradient(135deg, var(--grey-blue), var(--dark-cyan));">
+                        <!-- Fügen Sie hier Ihre Video-URL ein wenn verfügbar -->
+                        <!-- <source src="assets/videos/havenis-demo.mp4" type="video/mp4"> -->
+                        <!-- <source src="assets/videos/havenis-demo.webm" type="video/webm"> -->
+                        <div class="video-placeholder" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: white;">
+                            <div class="play-button" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; margin-bottom: 1rem; cursor: pointer;">▶</div>
+                            <p style="font-size: 18px; font-weight: 600;">Demo-Video</p>
+                            <p style="font-size: 14px; opacity: 0.8; margin-top: 0.5rem;">WiFi-Sensing Technologie in Aktion</p>
+                        </div>
+                    </video>
 
                     <!-- Video-Timeline mit Annotations -->
                     <div class="video-timeline">
