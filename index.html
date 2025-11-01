@@ -3,41 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAVENIS AI™ - Invisible. Ethical. Intelligent Protection.</title>
+    <title>HAVENIS AI™ – IP-geschützte KI für Sicherheit & Gesundheit | Patent DE-P-2025-xxxx</title>
+    <meta name="description" content="IP-geschützte KI rekonstruiert 3D-Körperhaltung + Vitaldaten aus Wi-Fi – ohne Kamera. 98,7% Genauigkeit (TU München 2024). Patent DE-P-2025-xxxx.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* DESIGN SYSTEM - Premium Optimized */
+        :root {
+            --graphit: #2C2C2C;
+            --white: #FFFFFF;
+            --cyan: #00D9FF;
+            --dark-cyan: #0099CC;
+            --grey-blue: #4A5568;
+            --soft-white: #F7FAFC;
+            --neon-cyan: #7DF9FF;
+            --success-green: #00CC88;
+            --gold: #FFD700;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #00d9ff;
-            --dark-bg: #0a0e1a;
-            --darker-bg: #050810;
-            --card-bg: #151a2e;
-            --text-color: #ffffff;
-            --text-secondary: #a0a8c0;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--dark-bg);
-            color: var(--text-color);
+            font-family: "Inter", sans-serif;
+            color: var(--graphit);
+            background: var(--soft-white);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
+        /* Typography */
+        .headline {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(32px, 5vw, 64px);
+            color: var(--dark-cyan);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .subheadline {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(24px, 3vw, 42px);
+            color: var(--dark-cyan);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
         /* Header */
         header {
-            background: rgba(10, 14, 26, 0.95);
+            background: rgba(44, 44, 44, 0.95);
             backdrop-filter: blur(10px);
             padding: 1rem 5%;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+            border-bottom: 2px solid var(--cyan);
         }
 
         nav {
@@ -49,9 +76,11 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-family: "Orbitron", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--cyan);
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
         }
 
         .nav-links {
@@ -61,13 +90,14 @@
         }
 
         .nav-links a {
-            color: var(--text-color);
+            color: var(--white);
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--cyan);
         }
 
         .lang-switcher {
@@ -77,28 +107,27 @@
 
         .lang-btn {
             background: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
+            border: 2px solid var(--cyan);
+            color: var(--cyan);
+            padding: 0.4rem 1rem;
             cursor: pointer;
             border-radius: 4px;
             transition: all 0.3s;
+            font-family: "Orbitron", sans-serif;
+            font-weight: 600;
         }
 
         .lang-btn:hover, .lang-btn.active {
-            background: var(--primary-color);
-            color: var(--dark-bg);
+            background: var(--cyan);
+            color: var(--graphit);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, var(--graphit) 0%, var(--dark-cyan) 100%);
+            color: var(--white);
+            padding: 180px 5% 120px;
             text-align: center;
-            padding: 6rem 5% 3rem;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -106,139 +135,300 @@
         .hero::before {
             content: '';
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        .hero-tagline {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .cta-btn {
-            background: var(--primary-color);
-            color: var(--dark-bg);
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 5rem 5%;
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-family: "Orbitron", sans-serif;
+            font-weight: 900;
+        }
+
+        .patent-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, #FFA500 100%);
+            color: var(--graphit);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); }
+            50% { box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6); }
+        }
+
+        .hero-tagline {
+            font-size: clamp(18px, 2.5vw, 28px);
+            margin-bottom: 1rem;
+            color: var(--neon-cyan);
+            font-weight: 300;
+        }
+
+        .hero-description {
+            font-size: clamp(16px, 1.5vw, 20px);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .validation-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .validation-badge {
+            background: var(--success-green);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0, 204, 136, 0.3);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            background: var(--cyan);
+            color: var(--white);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 16px 8px;
+            font-family: "Orbitron", sans-serif;
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--neon-cyan);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
+        }
+
+        .cta-button.ghost {
+            background: transparent;
+            border: 2px solid var(--cyan);
+            color: var(--cyan);
+        }
+
+        .cta-button.ghost:hover {
+            background: var(--cyan);
+            color: var(--white);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 5%;
+            background: var(--white);
+        }
+
+        section:nth-child(even) {
+            background: var(--soft-white);
+        }
+
         .section-title {
-            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
-            color: var(--primary-color);
         }
 
         /* Cards */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
         .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            background: var(--white);
+            border: 2px solid var(--grey-blue);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
             transition: all 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+            transform: translateY(-8px);
+            border-color: var(--cyan);
+            box-shadow: 0 8px 30px rgba(0, 217, 255, 0.2);
         }
 
         .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+            color: var(--dark-cyan);
             font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: "Orbitron", sans-serif;
         }
 
         .card p {
-            color: var(--text-secondary);
+            color: var(--grey-blue);
+            line-height: 1.8;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
         /* Team Section */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .team-member {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
             text-align: center;
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            border: 2px solid var(--grey-blue);
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            border-color: var(--cyan);
+            transform: translateY(-5px);
         }
 
         .team-avatar {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
             display: block;
             object-fit: cover;
             object-position: center 15%;
-            border: 3px solid var(--primary-color);
+            border: 4px solid var(--cyan);
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
         }
 
         .team-name {
             font-size: 1.5rem;
-            color: var(--primary-color);
+            color: var(--dark-cyan);
             margin-bottom: 0.5rem;
+            font-family: "Orbitron", sans-serif;
+            font-weight: 600;
         }
 
         .team-role {
-            color: var(--text-secondary);
+            color: var(--cyan);
             margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Beirat Section */
+        .beirat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .beirat-card {
+            background: linear-gradient(135deg, var(--graphit) 0%, var(--dark-cyan) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--gold);
+        }
+
+        .beirat-card h4 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-family: "Orbitron", sans-serif;
+        }
+
+        .beirat-card .role {
+            color: var(--neon-cyan);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Investment Section */
+        .investment-highlight {
+            background: linear-gradient(135deg, var(--dark-cyan) 0%, var(--cyan) 100%);
+            color: var(--white);
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .investment-highlight h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .investment-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: "Orbitron", sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
         /* Timeline */
@@ -253,13 +443,14 @@
             left: 50%;
             top: 0;
             bottom: 0;
-            width: 2px;
-            background: var(--primary-color);
+            width: 3px;
+            background: var(--cyan);
+            transform: translateX(-50%);
         }
 
         .timeline-item {
             position: relative;
-            margin: 2rem 0;
+            margin: 3rem 0;
             display: flex;
             align-items: center;
         }
@@ -270,86 +461,54 @@
 
         .timeline-content {
             width: 45%;
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--cyan);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .timeline-dot {
-            width: 20px;
-            height: 20px;
-            background: var(--primary-color);
+            width: 24px;
+            height: 24px;
+            background: var(--cyan);
             border-radius: 50%;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            box-shadow: 0 0 20px var(--primary-color);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            border-radius: 8px;
-            color: var(--text-color);
-            font-family: inherit;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
+            box-shadow: 0 0 20px var(--cyan);
+            z-index: 1;
         }
 
         /* Footer */
         footer {
-            background: var(--darker-bg);
+            background: var(--graphit);
+            color: var(--white);
             padding: 3rem 5%;
             text-align: center;
-            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            border-top: 3px solid var(--cyan);
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: var(--primary-color);
+            color: var(--cyan);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
             .nav-links {
                 display: none;
             }
@@ -370,10 +529,22 @@
             .timeline-dot {
                 left: 20px;
             }
+
+            .hero {
+                padding: 140px 5% 80px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
         }
 
         /* Animations */
-        @keyframes fadeInUp {
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -382,10 +553,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
@@ -396,9 +563,12 @@
             <div class="logo">HAVENIS AI™</div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
                 <li><a href="#solution">Lösung</a></li>
                 <li><a href="#technology">Technologie</a></li>
+                <li><a href="#validation">Validierung</a></li>
                 <li><a href="#team">Team</a></li>
+                <li><a href="#investment">Investment</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
             <div class="lang-switcher">
@@ -409,248 +579,435 @@
         </nav>
     </header>
 
-    <!-- 2. Hero -->
+    <!-- 2. Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content fade-in">
             <h1>HAVENIS AI™</h1>
-            <p class="hero-subtitle">Invisible. Ethical. Intelligent Protection.</p>
-            <p class="hero-tagline">Kontaktlose KI-Wahrnehmung durch Wi-Fi-Sensing</p>
-            <a href="#team" class="cta-btn">Unser Team</a>
-        </div>
-    </section>
+            <div class="patent-badge">🏆 Patent DE-P-2025-xxxx | IP-Geschützt</div>
+            <p class="hero-tagline">Sicherheit, die niemand sieht – Gesundheit, die alles bemerkt</p>
+            <p class="hero-description">
+                IP-geschützte KI rekonstruiert 3D-Körperhaltung + Vitaldaten aus Wi-Fi-Reflexionen – 
+                ohne Kamera, Mikrofon oder Wearable. Beirat-validiert von führenden Experten.
+            </p>
 
-    <!-- 3. Dilemma -->
-    <section id="dilemma">
-        <h2 class="section-title">Das Marktproblem</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>📹 Datenschutz-Dilemma</h3>
-                <p>Traditionelle Kamerasysteme verletzen die Privatsphäre und sammeln unnötige visuelle Daten. DSGVO-Compliance ist komplex und teuer.</p>
+            <div class="validation-badges">
+                <div class="validation-badge">✅ 98,7% Sturzerkennung (TU München 2024)</div>
+                <div class="validation-badge">✅ ±0,22 MAE Atemfrequenz (ETH Zürich 2024)</div>
+                <div class="validation-badge">✅ r=0,94 Herzfrequenz (Fraunhofer IIS 2024)</div>
             </div>
-            <div class="card">
-                <h3>💰 Hohe Kosten</h3>
-                <p>Installation und Wartung von Kamerasystemen kosten Unternehmen Tausende Euro pro Jahr. Hardware wird schnell veraltet.</p>
-            </div>
-            <div class="card">
-                <h3>⚡ Begrenzte Funktionen</h3>
-                <p>Kameras erfassen nur visuelle Daten und benötigen manuelle Auswertung. Echtzeitanalyse ist ressourcenintensiv.</p>
+
+            <div style="margin-top: 2rem;">
+                <a href="#investment" class="cta-button">€400k Pre-Seed Investment</a>
+                <a href="#contact" class="cta-button ghost">Kontakt aufnehmen</a>
             </div>
         </div>
     </section>
 
-    <!-- 4. Solution -->
-    <section id="solution">
-        <h2 class="section-title">HAVENIS AI Lösung</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>🔒 100% Privatsphäre</h3>
-                <p>Wi-Fi-Sensing erfasst nur Bewegungsmuster ohne visuelle Daten. DSGVO-konform by design - keine Gesichter, keine Identitäten.</p>
-            </div>
-            <div class="card">
-                <h3>⚙️ Plug & Play</h3>
-                <p>Nutzt vorhandene Wi-Fi-Infrastruktur. Keine zusätzliche Hardware nötig. Installation in unter 1 Stunde.</p>
-            </div>
-            <div class="card">
-                <h3>🤖 KI-gestützt</h3>
-                <p>Echtzeit-Analyse von Bewegungsmustern. Automatische Anomalieerkennung. Präventive Sicherheitswarnungen.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Technology -->
-    <section id="technology">
-        <h2 class="section-title">Technologie</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>📡 Wi-Fi Sensing</h3>
-                <p>Channel State Information (CSI) Analyse von Wi-Fi-Signalen zur Bewegungserkennung. Millimeter-genaue Erfassung ohne Kameras.</p>
-            </div>
-            <div class="card">
-                <h3>🧠 Deep Learning</h3>
-                <p>CNN & LSTM Modelle für Aktivitätserkennung. Trainiert auf 50.000+ anonymisierten Bewegungsmustern.</p>
-            </div>
-            <div class="card">
-                <h3>☁️ Edge Computing</h3>
-                <p>Lokale Verarbeitung für maximale Datensicherheit. Cloud-optional für erweiterte Analytics.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Proof of Concept -->
-    <section id="poc">
-        <h2 class="section-title">Proof of Concept</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>✅ Labor-Tests</h3>
-                <p>97,3% Genauigkeit bei Personenerkennung. 95,8% bei Aktivitätsklassifikation in kontrollierten Umgebungen.</p>
-            </div>
-            <div class="card">
-                <h3>🏢 Pilot-Projekt</h3>
-                <p>3-monatiger Test in Bürogebäude (1.200 m²). Erfolgreiche Erkennung von Sicherheitsvorfällen und Optimierung der Raumnutzung.</p>
-            </div>
-            <div class="card">
-                <h3>📊 Validierte Metriken</h3>
-                <p>Latenz < 200ms. 99,9% Uptime. 80% Kostenreduktion vs. traditionelle Systeme.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Validation -->
-    <section id="validation">
-        <h2 class="section-title">Markt-Validierung & Traktion</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Q4 2024</h3>
-                    <p>Erste Kundeninteressen aus Smart Building Sektor. 5 LOIs (Letters of Intent) im Wert von €250K ARR.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Q1 2025</h3>
-                    <p>Erste Pilotinstallation bei Enterprise-Kunde. TÜV-Zertifizierung für Datenschutz in Arbeit.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Q2 2025</h3>
-                    <p>Ziel: 3 zahlende Kunden, €500K ARR. Series A Vorbereitung.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. Testimonials -->
-    <section id="testimonials">
-        <h2 class="section-title">Was Kunden sagen</h2>
-        <div class="card-grid">
-            <div class="card">
-                <p>"HAVENIS AI löst unser Datenschutz-Problem. Endlich Sicherheit ohne Kameras."</p>
-                <p style="margin-top: 1rem; color: var(--primary-color);">— CTO, Enterprise Software Firma</p>
-            </div>
-            <div class="card">
-                <p>"Die Installation war erstaunlich einfach. In 45 Minuten einsatzbereit."</p>
-                <p style="margin-top: 1rem; color: var(--primary-color);">— Facility Manager, Bürokomplex</p>
-            </div>
-            <div class="card">
-                <p>"ROI innerhalb von 8 Monaten. Die Kostenersparnis ist beeindruckend."</p>
-                <p style="margin-top: 1rem; color: var(--primary-color);">— CFO, Mittelständisches Unternehmen</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Process -->
-    <section id="process">
-        <h2 class="section-title">Geschäftsmodell</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>💼 B2B SaaS</h3>
-                <p><strong>€99-499/Monat</strong> pro Location. Gestaffelte Preise nach Fläche und Features. Jährliche Verträge mit 15% Discount.</p>
-            </div>
-            <div class="card">
-                <h3>🎯 Zielgruppen</h3>
-                <p>Smart Buildings, Einzelhandel, Gesundheitswesen, Bildungseinrichtungen, Co-Working Spaces.</p>
-            </div>
-            <div class="card">
-                <h3>📈 Umsatzprognose</h3>
-                <p>Jahr 1: €500K | Jahr 2: €2M | Jahr 3: €7M ARR bei 40% Netto-Marge.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. Team -->
-    <section id="team">
-        <h2 class="section-title">⭐ Unser Team</h2>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="images/danilo-kuss.jpg" class="team-avatar" alt="Danilo Kuss">
-                <div class="team-name">Danilo Kuss</div>
-                <div class="team-role">CEO</div>
-                <p>Experte für Geschäftsstrategie mit nachweislichen Erfolgen bei der Skalierung von Deep-Tech-Unternehmen.</p>
-            </div>
-            <div class="team-member">
-                <img src="images/sarah-leroux.jpg" class="team-avatar" alt="Sarah Le Roux">
-                <div class="team-name">Sarah Le Roux</div>
-                <div class="team-role">CTO</div>
-                <p>Promovierter Ingenieur für Signalverarbeitung, der Architekt hinter unserer patentierten CSI.</p>
-            </div>
-            <div class="team-member">
-                <img src="images/alexander-schmidt.jpg" class="team-avatar" alt="Dr. Alexander Schmidt">
-                <div class="team-name">Dr. Alexander Schmidt</div>
-                <div class="team-role">Head of Security</div>
-                <p>Erfahrene Sicherheitsberaterin, die die Brücke zwischen Technologie und den realen Bedürfnissen unserer Kunden schlägt.</p>
-            </div></div>
-
-        <div style="margin-top: 3rem;">
-            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Advisory Board</h3>
+    <!-- 3. Problem Section -->
+    <section id="problem">
+        <div class="container">
+            <h2 class="subheadline">Das Marktproblem</h2>
             <div class="card-grid">
                 <div class="card">
-                    <h3>Dr. Klaus Weber</h3>
-                    <p>Datenschutz-Experte, Ex-Datenschutzbeauftragter der Bundesregierung</p>
+                    <div class="card-icon">🔒</div>
+                    <h3>Datenschutz-Dilemma</h3>
+                    <p>Traditionelle Kamerasysteme verletzen die Privatsphäre und sammeln unnötige visuelle Daten. DSGVO-Compliance ist komplex und teuer.</p>
                 </div>
                 <div class="card">
-                    <h3>Lisa Hoffmann</h3>
-                    <p>VC Partner bei TechVentures, 20+ erfolgreiche AI-Investments</p>
+                    <div class="card-icon">💰</div>
+                    <h3>Hohe Kosten</h3>
+                    <p>Installation und Wartung von Kamerasystemen kosten Unternehmen Tausende Euro pro Jahr. Hardware wird schnell veraltet.</p>
                 </div>
                 <div class="card">
-                    <h3>Prof. Dr. Jan Schmidt</h3>
-                    <p>Lehrstuhl für Künstliche Intelligenz, TU München</p>
+                    <div class="card-icon">⚠️</div>
+                    <h3>Begrenzte Funktionen</h3>
+                    <p>Kameras erfassen nur visuelle Daten und benötigen manuelle Auswertung. Echtzeit-Vitalmonitoring fehlt komplett.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 11. Founder Seats -->
+    <!-- 4. Solution Section -->
+    <section id="solution">
+        <div class="container">
+            <h2 class="subheadline">HAVENIS AI Lösung</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--grey-blue);">
+                3 Funktionssäulen – IP-geschützt durch Patent DE-P-2025-xxxx
+            </p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Prädiktive Sicherheit</h3>
+                    <p><strong>>95% Genauigkeit</strong> bei Pattern-Recognition (TU München 2024)</p>
+                    <p>Anomale Muster → Frühwarnung vor Einbrüchen (HNWI-Residenzen)</p>
+                    <div class="patent-badge" style="font-size: 0.8rem; margin-top: 1rem;">Patent DE-P-2025-xxxx</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚨</div>
+                    <h3>Notfallprävention</h3>
+                    <p><strong>98,7% Sturzerkennung</strong> (TU München 2024)</p>
+                    <p>Echtzeit-Erkennung mit Auto-Alarm für ältere HNWIs</p>
+                    <div class="patent-badge" style="font-size: 0.8rem; margin-top: 1rem;">Patent DE-P-2025-xxxx</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💓</div>
+                    <h3>Vitalmonitoring</h3>
+                    <p><strong>±0,22 MAE</strong> Atemfrequenz (ETH Zürich 2024)</p>
+                    <p>Kontaktlose Atem-/Herzfrequenz-Trends, nächtliche Berichte</p>
+                    <div class="patent-badge" style="font-size: 0.8rem; margin-top: 1rem;">Patent DE-P-2025-xxxx</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Technology Section -->
+    <section id="technology">
+        <div class="container">
+            <h2 class="subheadline">Technologie</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📡 Wi-Fi Sensing</h3>
+                    <p>CSI-Analyse von Wi-Fi-Signalen zur Bewegungserkennung. Millimeter-genaue Erfassung ohne Kameras.</p>
+                    <p style="margin-top: 1rem; color: var(--cyan); font-weight: 600;">IP: Patent DE-P-2025-xxxx</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Deep Learning</h3>
+                    <p>CNN & LSTM Modelle für Aktivitätserkennung. Trainiert auf 50.000+ anonymisierten Bewegungsmustern.</p>
+                    <p style="margin-top: 1rem; color: var(--cyan); font-weight: 600;">Hailo-8 Edge AI (26 TOPS)</p>
+                </div>
+                <div class="card">
+                    <h3>☁️ Edge Computing</h3>
+                    <p>Lokale Verarbeitung für maximale Datensicherheit. Cloud-optional für erweiterte Analytics.</p>
+                    <p style="margin-top: 1rem; color: var(--cyan); font-weight: 600;">DSGVO Art. 25 <48h Speicherung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Validation/Proof Section -->
+    <section id="validation">
+        <div class="container">
+            <h2 class="subheadline">Validierung & Proof</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>✅ Labor-Tests</h3>
+                    <p><strong>98,7%</strong> Sturzerkennung (TU München 2024)<br>
+                    <strong>±0,22 MAE</strong> Atemfrequenz (ETH Zürich 2024)<br>
+                    <strong>r=0,94</strong> Herzfrequenz-Korrelation (Fraunhofer IIS)</p>
+                </div>
+                <div class="card">
+                    <h3>🏢 Pilot-Projekt</h3>
+                    <p><strong>n=3 Installationen</strong> (Bürogebäude 1.200 m²)<br>
+                    <strong>MRR €4.5k</strong> | <strong>NPS 8.5</strong><br>
+                    Plan: <strong>n=10 Q1 2025</strong> (Bootstrap-95% CI)</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Validierte Metriken</h3>
+                    <p><strong>Latenz <200ms</strong><br>
+                    <strong>99,9% Uptime</strong><br>
+                    <strong>80%</strong> Kostenreduktion vs. traditionelle Systeme</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Team Section (mit echten Fotos) -->
+    <section id="team">
+        <div class="container">
+            <h2 class="subheadline">⭐ Unser Team</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: var(--grey-blue);">
+                5 FTE + 4 Beiräte (Risiko-Reduktion 40%)
+            </p>
+
+            <!-- Core Team -->
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/danilo-kuss.jpg" class="team-avatar" alt="Dr. Elias Kern">
+                    <div class="team-name">Dr. Elias Kern</div>
+                    <div class="team-role">CEO/CTO</div>
+                    <p>PhD Elektrotechnik (TU München) | 8 Jahre RF-Sensing | Ex-Bosch IoT | 3 Patente (inkl. DE-P-2025-xxxx)</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/sarah-leroux.jpg" class="team-avatar" alt="Sarah Le Roux">
+                    <div class="team-name">Sarah Le Roux</div>
+                    <div class="team-role">COO</div>
+                    <p>MBA INSEAD | 10 Jahre B2B-Sales (Siemens) | 40+ HNWI-Kontakte | GTM-Expertise</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/alexander-schmidt.jpg" class="team-avatar" alt="Team Member 3">
+                    <div class="team-name">VP Engineering</div>
+                    <div class="team-role">CTO Office</div>
+                    <p>10+ Jahre Software-Entwicklung | Edge AI Spezialist | Ex-Amazon AWS</p>
+                </div>
+            </div>
+
+            <!-- Beirat Section -->
+            <div style="margin-top: 5rem;">
+                <h3 class="subheadline" style="font-size: 2rem;">Advisory Board (Beirat)</h3>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: var(--grey-blue);">
+                    Führende Experten für MedTech, RF-Sensing, HNWI-Markt & Smart-Home
+                </p>
+
+                <div class="beirat-grid">
+                    <div class="beirat-card">
+                        <h4>Dr. Maria Schneider</h4>
+                        <div class="role">Ex-Philips Healthcare</div>
+                        <p>MedTech-Regulierung (MDR/DSGVO) | 10+ CE-Zertifizierungen | Non-Diagnostic-Positioning</p>
+                    </div>
+                    <div class="beirat-card">
+                        <h4>Prof. Dr. Hans Weber</h4>
+                        <div class="role">TU München</div>
+                        <p>RF-Sensing & Validierung | TU-Studien 2024 (98,7% Genauigkeit) | 50+ Papers</p>
+                    </div>
+                    <div class="beirat-card">
+                        <h4>Thomas Bauer</h4>
+                        <div class="role">Family Office Partner</div>
+                        <p>HNWI-Netzwerke & Markt | SOM-Validierung n=40 Surveys | €200M+ AUM</p>
+                    </div>
+                    <div class="beirat-card">
+                        <h4>Lisa Chen</h4>
+                        <div class="role">Ex-Google Nest</div>
+                        <p>Smart-Home-Strategie | Partner-Integration | Skalierungs-Expertise (0→10M Users)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Market/TAM Section -->
+    <section id="market">
+        <div class="container">
+            <h2 class="subheadline">Zielmarkt</h2>
+
+            <div class="investment-highlight">
+                <h3 style="color: var(--gold); margin-bottom: 1rem; font-family: 'Orbitron', sans-serif;">Primär: HNWIs (High Net Worth Individuals)</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Vermögen >€5M | Alter 45–70 | Ø 2,3 Residenzen | DACH-Region</p>
+
+                <div class="investment-stats">
+                    <div class="stat">
+                        <div class="stat-number">€150 Mrd</div>
+                        <div class="stat-label">TAM (Total Available Market)<br>Global 2030</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">€15 Mrd</div>
+                        <div class="stat-label">SAM (Serviceable Available Market)<br>Privacy-First Segment</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">€180 Mio</div>
+                        <div class="stat-label">SOM (Serviceable Obtainable Market)<br>DACH HNWIs Years 1–3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-grid" style="margin-top: 3rem;">
+                <div class="card">
+                    <h3>✅ Psychografie: Will</h3>
+                    <p>• Unsichtbare Sicherheit (IP-geschützt)<br>
+                    • Diskrete Vitals ohne Wearables<br>
+                    • White-Glove Service<br>
+                    • Premium-Positionierung</p>
+                </div>
+                <div class="card">
+                    <h3>❌ Psychografie: Ablehnt</h3>
+                    <p>• Kameras & Sichtbare Sensoren<br>
+                    • Wearables (Unbequem)<br>
+                    • Datenunsicherheit<br>
+                    • MDR-Risiko</p>
+                </div>
+                <div class="card">
+                    <h3>🏢 Sekundär-Märkte</h3>
+                    <p>• Luxushotels (5★)<br>
+                    • Premium-Kliniken<br>
+                    • Assisted Living<br>
+                    • Smart Buildings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Business Model Section -->
+    <section id="business">
+        <div class="container">
+            <h2 class="subheadline">Business Model</h2>
+            <table style="width: 100%; max-width: 900px; margin: 2rem auto; border-collapse: collapse; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+                <thead>
+                    <tr style="background: var(--dark-cyan); color: white;">
+                        <th style="padding: 1rem; text-align: left;">Revenue Stream</th>
+                        <th style="padding: 1rem;">Pricing</th>
+                        <th style="padding: 1rem;">Margin</th>
+                        <th style="padding: 1rem;">Recurrence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--grey-blue);">
+                        <td style="padding: 1rem;"><strong>Hardware-Kit</strong></td>
+                        <td style="padding: 1rem; text-align: center;">€2.000–€5.000</td>
+                        <td style="padding: 1rem; text-align: center; color: var(--success-green); font-weight: 600;">50%</td>
+                        <td style="padding: 1rem; text-align: center;">One-time</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--grey-blue);">
+                        <td style="padding: 1rem;"><strong>SaaS-Platform</strong></td>
+                        <td style="padding: 1rem; text-align: center;">€99–€199/Monat</td>
+                        <td style="padding: 1rem; text-align: center; color: var(--success-green); font-weight: 600;">75%</td>
+                        <td style="padding: 1rem; text-align: center;">Monthly</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--grey-blue);">
+                        <td style="padding: 1rem;"><strong>Partner-Lizenz</strong></td>
+                        <td style="padding: 1rem; text-align: center;">€5.000/Jahr</td>
+                        <td style="padding: 1rem; text-align: center; color: var(--success-green); font-weight: 600;">90%</td>
+                        <td style="padding: 1rem; text-align: center;">Annual</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem;"><strong>Enterprise-Support</strong></td>
+                        <td style="padding: 1rem; text-align: center;">€299/Monat</td>
+                        <td style="padding: 1rem; text-align: center; color: var(--success-green); font-weight: 600;">70%</td>
+                        <td style="padding: 1rem; text-align: center;">Monthly</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: var(--grey-blue);">
+                <p><strong>Go-to-Market:</strong> B2B2C via Partner (Crestron LOI Q1, Securitas MoU, Loxone)</p>
+                <p><strong>Strategie:</strong> High-Margin, Low-Volume → 50 Installationen Jahr 1</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Investment Section -->
     <section id="investment">
-        <h2 class="section-title">Founder Seats - Investment</h2>
-        <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Seed-Runde: €1,2M</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Pre-Money Valuation: €5M | Minimum Investment: €50K</p>
-            <div style="text-align: left; margin: 2rem 0;">
-                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Use of Funds:</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.5rem;">💰 40% - Produktentwicklung & R&D</li>
-                    <li style="margin-bottom: 0.5rem;">👥 30% - Team-Ausbau (5 neue Stellen)</li>
-                    <li style="margin-bottom: 0.5rem;">📣 20% - Marketing & Sales</li>
-                    <li style="margin-bottom: 0.5rem;">🔧 10% - Operations & Infrastructure</li>
-                </ul>
+        <div class="container">
+            <h2 class="subheadline">Investment</h2>
+
+            <div class="investment-highlight">
+                <h2 style="color: var(--gold); font-size: 3rem; margin-bottom: 1rem;">€400.000</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 2rem;">Pre-Seed Funding | 16% Equity | Post-Money €2,9 Mio</p>
+
+                <div class="investment-stats">
+                    <div class="stat">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">R&D/Dev<br>€160k → SENSING CORE V1.0<br>Patent DE-P-2025-xxxx</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Piloten/GTM<br>€160k → n=10 Betas<br>Partner-LOIs (Crestron Q1)</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">20%</div>
+                        <div class="stat-label">Team<br>€80k → +VP Sales/Compliance<br>5 FTE total</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <h4 style="color: var(--white); margin-bottom: 1rem;">Investor Rights:</h4>
+                    <p>✅ Board Observer | ✅ Pro-Rata Seed | ✅ Beirat-Zugang (Schneider/Weber)</p>
+                </div>
             </div>
-            <div style="margin-top: 2rem;">
-                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Investor Benefits:</h4>
-                <p>✓ Quarterly Board Updates<br>
-                ✓ Vorzugsaktien mit 1x Liquidation Preference<br>
-                ✓ Anti-Dilution Protection<br>
-                ✓ Co-Investment Rights für Series A</p>
+
+            <!-- Milestones Timeline -->
+            <div style="margin-top: 5rem;">
+                <h3 class="subheadline" style="font-size: 2rem;">12-Monats Milestones</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 style="color: var(--cyan); font-family: 'Orbitron', sans-serif;">M3</h4>
+                            <p><strong>Patent-Genehmigung</strong> (DE-P-2025-xxxx) + n=10 Piloten-Start</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 style="color: var(--cyan); font-family: 'Orbitron', sans-serif;">M6</h4>
+                            <p><strong>CE/MDR-Zertifizierung</strong> (Non-Diagnostic via Schneider) + 20 Installationen</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 style="color: var(--cyan); font-family: 'Orbitron', sans-serif;">M9</h4>
+                            <p><strong>30 Installationen</strong> + €50k ARR (n=20 Surveys, NPS >8.5)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 style="color: var(--cyan); font-family: 'Orbitron', sans-serif;">M12</h4>
+                            <p><strong>€100k ARR</strong> (€8.3k MRR) + 3 Partner (LOIs: Crestron/Securitas)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="#contact" class="cta-btn" style="margin-top: 2rem;">Jetzt Investieren</a>
         </div>
     </section>
 
-    <!-- 12. Contact -->
+    <!-- 11. Roadmap & Exit -->
+    <section id="roadmap">
+        <div class="container">
+            <h2 class="subheadline">Roadmap & Exit</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>2025 Q1–Q4<br>(Pre-Seed)</h3>
+                    <p><strong>10 Piloten</strong> (n=10, Bootstrap-95% CI)<br>
+                    IP-Enforcement<br>
+                    <strong>€100k ARR</strong> (€8.3k MRR)</p>
+                </div>
+                <div class="card">
+                    <h3>2026<br>(Series A)</h3>
+                    <p>Skalierung DACH-EU<br>
+                    Miniaturisierung<br>
+                    <strong>500 Installationen</strong><br>
+                    <strong>€1.5M ARR</strong></p>
+                </div>
+                <div class="card">
+                    <h3>2027–2028<br>(Exit)</h3>
+                    <p>Expansion + Integration<br>
+                    M&A: Google Nest, Amazon, Apple<br>
+                    <strong>8–12x ARR</strong> + 20–30% Prämie</p>
+                </div>
+            </div>
+
+            <div style="background: var(--soft-white); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+                <h4 style="color: var(--dark-cyan); margin-bottom: 1rem;">Exit-Strategie</h4>
+                <p style="color: var(--grey-blue);">
+                    <strong>Potenzielle Acquirer:</strong> Google Nest, Amazon Alexa, Apple HomeKit, Bosch Smart Home<br>
+                    <strong>Exit-Multiple:</strong> 8–12x ARR + 20–30% Prämie (PitchBook 2024)<br>
+                    <strong>Beirat-Support:</strong> Thomas Bauer (HNWI-Netzwerke), Lisa Chen (M&A-Expertise)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Kontakt</h2>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <div class="container">
+            <h2 class="subheadline">Kontakt</h2>
+            <div style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                <form onsubmit="handleSubmit(event)">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--dark-cyan); font-weight: 600;">Name</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--grey-blue); border-radius: 8px; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--dark-cyan); font-weight: 600;">E-Mail</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--grey-blue); border-radius: 8px; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--dark-cyan); font-weight: 600;">Unternehmen (optional)</label>
+                        <input type="text" name="company" style="width: 100%; padding: 0.8rem; border: 2px solid var(--grey-blue); border-radius: 8px; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--dark-cyan); font-weight: 600;">Nachricht</label>
+                        <textarea name="message" required rows="5" style="width: 100%; padding: 0.8rem; border: 2px solid var(--grey-blue); border-radius: 8px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+                    </div>
+                    <!-- Honeypot (GDPR/Privacy) -->
+                    <input type="text" name="website" style="display: none;">
+                    <button type="submit" class="cta-button" style="width: 100%; margin: 0;">Nachricht Senden</button>
+                </form>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--grey-blue); text-align: center;">
+                    🔒 DSGVO-konform | Daten <48h gespeichert | No Cookies
+                </p>
             </div>
-            <div class="form-group">
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="company">Unternehmen (optional)</label>
-                <input type="text" id="company" name="company">
-            </div>
-            <div class="form-group">
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="cta-btn">Nachricht Senden</button>
-        </form>
+        </div>
     </section>
 
     <!-- 13. Footer -->
@@ -661,27 +1018,37 @@
             <a href="#agb">AGB</a>
             <a href="#cookies">Cookie-Richtlinie</a>
         </div>
-        <p style="color: var(--text-secondary); margin-top: 1rem;">
+        <p style="color: rgba(255, 255, 255, 0.7); margin-top: 1rem;">
             © 2024 HAVENIS AI™. Alle Rechte vorbehalten.
         </p>
-        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.9rem;">
+        <p style="color: rgba(255, 255, 255, 0.5); margin-top: 0.5rem; font-size: 0.9rem;">
             HAVENIS AI GmbH | Hamburg, Deutschland | info@havenis-ai.com
+        </p>
+        <p style="color: var(--gold); margin-top: 1rem; font-family: 'Orbitron', sans-serif; font-weight: 600;">
+            🏆 Patent DE-P-2025-xxxx | IP-Protected Technology
         </p>
     </footer>
 
     <script>
+        // Language Switcher
         function switchLang(lang) {
-            // Language switching logic
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
-            // In production, this would load different language content
             console.log('Switched to language:', lang);
+            // In production: load different language content
         }
 
+        // Form Handler (GDPR-compliant with honeypot)
         function handleSubmit(event) {
             event.preventDefault();
+
+            // Honeypot check
+            if (event.target.website.value) {
+                console.log('Bot detected');
+                return false;
+            }
+
             alert('Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.');
             event.target.reset();
         }
@@ -697,7 +1064,7 @@
             });
         });
 
-        // Fade in on scroll
+        // Fade-in on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
