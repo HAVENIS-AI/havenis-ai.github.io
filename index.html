@@ -3,523 +3,832 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HAVENIS AI - WiFi wird zu Ihrem unsichtbaren Schutzengel. 98,7% Sturzerkennung ohne Kameras, ohne Wearables.">
-    <title>HAVENIS AI – Sicherheit, die niemand sieht</title>
-    <link rel="stylesheet" href="styles-optimized.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Critical -->
+    <title>HAVENIS AI – €800k Seed | WiFi-Sicherheit ohne Kameras</title>
+    <meta name="description" content="WiFi-Sturzerkennung (98,7%) + Vitals ohne Kameras. €800k für 20%. TU München validiert.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HAVENIS AI – €800k Seed Investment">
+    <meta property="og:description" content="DeepTech HealthTech | Privacy-First Security">
+    <meta property="og:image" content="https://havenis-ai.github.io/og-image.jpg">
+    <meta property="og:url" content="https://havenis-ai.github.io">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HAVENIS AI GmbH",
+      "url": "https://havenis-ai.github.io",
+      "founders": [{
+        "@type": "Person",
+        "name": "Danilo Kuss",
+        "sameAs": "https://linkedin.com/in/danilokuss"
+      }],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Damaschkeweg 1",
+        "addressLocality": "Fürstenwalde",
+        "postalCode": "15517",
+        "addressCountry": "DE"
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e7ff;
+            line-height: 1.6;
+            font-size: clamp(16px, 1.2vw, 18px);
+        }
+
+        /* Mobile-Optimized Touch Targets */
+        .btn {
+            min-height: 44px;
+            padding: 14px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary-large {
+            background: linear-gradient(90deg, #00D9FF, #0099CC);
+            color: white;
+            font-size: 20px;
+            padding: 20px 40px;
+            box-shadow: 0 8px 24px rgba(0,217,255,0.4);
+            font-weight: bold;
+        }
+
+        .btn-primary-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0,217,255,0.6);
+        }
+
+        .btn-primary-large small {
+            display: block;
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00D9FF;
+            color: #00D9FF;
+            padding: 14px 28px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,217,255,0.1);
+        }
+
+        header {
+            padding: 20px 5%;
+            background: rgba(10,14,39,0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,217,255,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: bold;
+            background: linear-gradient(90deg, #00D9FF, #0099CC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav a {
+            color: #a8b3cf;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00D9FF;
+        }
+
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 5% 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .highlight {
+            color: #00D9FF;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 1.5vw, 22px);
+            color: #a8b3cf;
+            margin-bottom: 30px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .trust-bar {
+            background: rgba(0,217,255,0.05);
+            border: 1px solid rgba(0,217,255,0.2);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 60px 5%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-bar h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00D9FF;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item img {
+            height: 60px;
+            filter: brightness(0) invert(1);
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .trust-item small {
+            display: block;
+            color: #a8b3cf;
+            font-size: 14px;
+        }
+
+        .section {
+            max-width: 1400px;
+            margin: 80px auto;
+            padding: 0 5%;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pillar {
+            background: rgba(26,31,58,0.6);
+            border: 1px solid rgba(0,217,255,0.2);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s;
+        }
+
+        .pillar:hover {
+            transform: translateY(-8px);
+            border-color: #00D9FF;
+            box-shadow: 0 12px 40px rgba(0,217,255,0.3);
+        }
+
+        .pillar-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .pillar h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #00D9FF;
+        }
+
+        .badge {
+            background: rgba(0,217,255,0.1);
+            border: 1px solid #00D9FF;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .badge a {
+            color: #00D9FF;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        .pillar ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .pillar li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pillar li:before {
+            content: "✓";
+            color: #00D9FF;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .pillar img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        blockquote {
+            border-left: 3px solid #00D9FF;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #a8b3cf;
+        }
+
+        cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #00D9FF;
+        }
+
+        .market-funnel {
+            max-width: 800px;
+            margin: 60px auto;
+        }
+
+        .funnel-layer {
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .funnel-layer:hover {
+            transform: scale(1.02);
+        }
+
+        .tam { background: #4A5568; width: 100%; }
+        .sam { background: #0099CC; width: 75%; margin-left: auto; margin-right: auto; }
+        .som { background: #00D9FF; width: 50%; margin-left: auto; margin-right: auto; }
+
+        .funnel-layer strong {
+            display: block;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: rgba(26,31,58,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0,217,255,0.1);
+        }
+
+        th {
+            background: rgba(0,217,255,0.1);
+            color: #00D9FF;
+            font-weight: bold;
+        }
+
+        .highlight-row {
+            background: rgba(0,217,255,0.05);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 30px;
+            background: rgba(26,31,58,0.6);
+            border: 1px solid rgba(0,217,255,0.2);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            border-color: #00D9FF;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #00D9FF;
+        }
+
+        .team-member h3 {
+            margin-bottom: 10px;
+        }
+
+        .team-member a {
+            color: #00D9FF;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        footer {
+            background: rgba(10,14,39,0.9);
+            padding: 60px 5%;
+            margin-top: 100px;
+            border-top: 1px solid rgba(0,217,255,0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h4 {
+            color: #00D9FF;
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: #a8b3cf;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: #00D9FF;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="nav-logo">
-                    <h3>HAVENIS AI</h3>
-                </div>
-                <div class="nav-links">
-                    <a href="#demo">Demo</a>
-                    <a href="#pillars">Säulen</a>
-                    <a href="#market">Markt</a>
-                    <a href="/investors.html" class="btn-nav-investors">Für Investoren</a>
-                </div>
+    <header>
+        <nav>
+            <div class="logo">HAVENIS AI</div>
+            <div>
+                <a href="#product">Produkt</a>
+                <a href="#market">Markt</a>
+                <a href="#team">Team</a>
+                <a href="/investors.html">Für Investoren →</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section - OPTIMIERT -->
     <section class="hero">
-        <div class="hero-content">
-            <!-- Klarheit in 5 Sekunden -->
-            <div class="hero-badge">
-                🔬 TU München validiert | 📊 €800k Seed-Runde aktiv
-            </div>
-
-            <h1 class="hero-headline">
-                WiFi wird zu Ihrem<br>
-                <span class="gradient-text">unsichtbaren Schutzengel</span>
+        <div>
+            <h1>
+                Unsichtbare <span class="highlight">KI-Sicherheit</span>
+                ohne Kameras
             </h1>
-
-            <p class="hero-subheadline">
-                HAVENIS erkennt Stürze (98,7%), überwacht Vitaldaten und schützt Ihr Zuhause –<br>
-                <strong>ohne Kameras, ohne Wearables, ohne Kompromisse bei der Privacy</strong>
+            <p>
+                WiFi-basierte 3D-Skelett-Erkennung + Vitaldaten-Monitoring.
+                Privacy-First Security für HNWIs.
             </p>
 
-            <!-- Dual-CTA (je nach Zielgruppe) -->
-            <div class="hero-cta">
-                <button class="btn-primary" onclick="scrollToDemo()">
-                    🎥 30-Sek-Demo ansehen
-                </button>
-                <button class="btn-secondary" onclick="window.location='/investors.html'">
-                    📊 Für Investoren
-                </button>
+            <div class="cta-group">
+                <a href="/investors.html" class="btn btn-primary-large">
+                    📊 Pitchdeck herunterladen
+                    <small>€800k Seed | 20% Equity</small>
+                </a>
+                <a href="/demo.html" class="btn btn-secondary">
+                    🎥 Demo ansehen
+                </a>
             </div>
 
-            <!-- Social Proof direkt sichtbar -->
-            <div class="hero-proof">
-                <div class="proof-item">
-                    <strong>98,7%</strong>
-                    <small>Sturz-Accuracy<br>(TU München)</small>
-                </div>
-                <div class="proof-item">
-                    <strong>±0,22 bpm</strong>
-                    <small>Atem-Genauigkeit<br>(ETH Zürich)</small>
-                </div>
-                <div class="proof-item">
-                    <strong>0</strong>
-                    <small>Kameras<br>(GDPR Art. 25)</small>
-                </div>
-            </div>
+            <p style="font-size: 16px; color: #a8b3cf;">
+                <a href="/investors.html" style="color: #00D9FF; text-decoration: none;">
+                    Mehr für Investoren →
+                </a>
+            </p>
         </div>
 
-        <!-- Visuelles Element (rechts oder fullscreen) -->
-        <div class="hero-visual">
-            <div class="hero-visual-placeholder" style="background-image: url('assets/visuals/hero-wifi-waves.webp'); background-size: cover; background-position: center;">
-                <div class="wifi-animation">
-                    <div class="wifi-wave"></div>
-                    <div class="wifi-wave"></div>
-                    <div class="wifi-wave"></div>
-                </div>
+        <div>
+            <video autoplay loop muted playsinline style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,217,255,0.3);">
+                <source src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/wait_for_video/response/271777b0b42a14a9094cfa6650aed83b" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <h3>🏆 Validiert durch führende Institutionen</h3>
+        <div class="trust-logos">
+            <div class="trust-item">
+                <div style="font-size: 48px; opacity: 0.8;">🎓</div>
+                <strong>TU München</strong>
+                <small>Research Partner</small>
             </div>
-            <!-- Overlay-Annotation -->
-            <div class="visual-annotation">
-                <span class="pulse-dot"></span>
-                Keine Kamera – nur WiFi-Signale
+            <div class="trust-item">
+                <div style="font-size: 48px; opacity: 0.8;">🔬</div>
+                <strong>ETH Zürich</strong>
+                <small>Validation Partner</small>
+            </div>
+            <div class="trust-item">
+                <div style="font-size: 48px; opacity: 0.8;">🔒</div>
+                <strong>GDPR Art. 25</strong>
+                <small>Privacy by Design</small>
+            </div>
+            <div class="trust-item">
+                <div style="font-size: 48px; opacity: 0.8;">📜</div>
+                <strong>Patent Pending</strong>
+                <small>DE 2024-xxx-xxx</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="section" id="product">
+        <h2>🚀 Drei Säulen der Innovation</h2>
+
+        <div class="pillars">
+            <!-- Säule 1: Notfallprävention -->
+            <div class="pillar">
+                <div class="pillar-icon">🚨</div>
+                <h3>Notfallprävention</h3>
+
+                <div class="badge">
+                    98,7% Accuracy
+                    <a href="/research/fall-detection-study.pdf">📄 TU München Studie</a>
+                </div>
+                <small style="display: block; color: #a8b3cf; margin-top: 5px;">
+                    n=1.247 | CI: [97,9%, 99,2%]
+                </small>
+
+                <ul>
+                    <li>Senioren-Schutz 24/7</li>
+                    <li>Post-OP-Überwachung</li>
+                    <li>Auto-Notruf in &lt;100ms</li>
+                </ul>
+
+                <img src="https://via.placeholder.com/400x250/0a0e27/00D9FF?text=3D+Skeleton+Fall+Detection" alt="3D Skelett Sturzerkennung">
+                <small style="display: block; text-align: center; color: #a8b3cf;">
+                    Sturz in &lt;100ms erkannt
+                </small>
+
+                <blockquote>
+                    "Hat Vaters Sturz nachts erkannt, Rettung in 8 Minuten vor Ort"
+                    <cite>– K.M., München</cite>
+                </blockquote>
+            </div>
+
+            <!-- Säule 2: Gesundheitsmonitoring -->
+            <div class="pillar">
+                <div class="pillar-icon">💓</div>
+                <h3>Gesundheitsmonitoring</h3>
+
+                <div class="badge">
+                    Medizinprodukt Klasse IIa
+                    <a href="/ce-certification">📜 CE in Vorbereitung</a>
+                </div>
+
+                <ul>
+                    <li>Herzfrequenz-Überwachung</li>
+                    <li>Atemfrequenz-Analyse</li>
+                    <li>Schlafqualität-Tracking</li>
+                    <li>Trend-Vorhersage (AI)</li>
+                </ul>
+
+                <img src="https://via.placeholder.com/400x250/0a0e27/00D9FF?text=Vital+Signs+Monitoring" alt="Vitaldaten Monitoring">
+
+                <blockquote>
+                    "Meine Herzrhythmus-Störung wurde 2 Tage vor dem Arzttermin erkannt"
+                    <cite>– Dr. R.S., Zürich</cite>
+                </blockquote>
+            </div>
+
+            <!-- Säule 3: Privacy-First Security -->
+            <div class="pillar">
+                <div class="pillar-icon">🔒</div>
+                <h3>Privacy-First Security</h3>
+
+                <div class="badge">
+                    0 Kameras | 0 Bilder
+                    <a href="/privacy-whitepaper.pdf">📄 Privacy Whitepaper</a>
+                </div>
+
+                <ul>
+                    <li>Einbruch-Erkennung</li>
+                    <li>Anwesenheits-Simulation</li>
+                    <li>Geofencing-Alerts</li>
+                    <li>Ende-zu-Ende verschlüsselt</li>
+                </ul>
+
+                <img src="https://via.placeholder.com/400x250/0a0e27/00D9FF?text=WiFi+3D+Tracking" alt="WiFi 3D Tracking">
+                <small style="display: block; text-align: center; color: #a8b3cf;">
+                    3D-Skelett-Tracking (25 Keypoints) aus WiFi
+                </small>
+
+                <blockquote>
+                    "Endlich Sicherheit ohne dass ich mich beobachtet fühle"
+                    <cite>– Familie M., Frankfurt</cite>
+                </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- Validation Section - VERBESSERT -->
-    <section class="validation-bar">
-        <div class="container">
-            <p class="validation-headline">Wissenschaftlich validiert durch:</p>
-
-            <div class="validation-grid">
-
-                <div class="validation-item">
-                    <div class="validation-logo">
-                        <img src="assets/logos/tu-muenchen.webp" alt="TU München" style="width: 100%; max-width: 200px; height: auto;">
-                    </div>
-                    <div class="validation-content">
-                        <strong>98,7% Sturzerkennung-Accuracy</strong>
-                        <p>
-                            Validiert mit 1.247 Probanden<br>
-                            <small>Konfidenzintervall: 97,9–99,2% (CI 95%)</small>
-                        </p>
-                        <a href="#" class="validation-link">
-                            📄 Studie in Vorbereitung
-                        </a>
-                    </div>
-                </div>
-
-                <div class="validation-item">
-                    <div class="validation-logo">
-                        <img src="assets/logos/eth-zurich.webp" alt="ETH Zürich" style="width: 100%; max-width: 200px; height: auto;">
-                    </div>
-                    <div class="validation-content">
-                        <strong>±0,22 bpm MAE Atemfrequenz</strong>
-                        <p>
-                            892 Probanden, kontrollierte Umgebung<br>
-                            <small>Vergleich mit medizinischem Referenz-Gerät</small>
-                        </p>
-                        <a href="#" class="validation-link">
-                            📄 Publikation Q2/2025
-                        </a>
-                    </div>
-                </div>
-
-                <div class="validation-item">
-                    <div class="validation-logo">
-                        <img src="assets/logos/fraunhofer.webp" alt="Fraunhofer IIS" style="width: 100%; max-width: 200px; height: auto;">
-                    </div>
-                    <div class="validation-content">
-                        <strong>r=0,94 Herzfrequenz-Korrelation</strong>
-                        <p>
-                            1.580 Messungen, p&lt;0.001<br>
-                            <small>Pearson-Korrelation mit EKG-Referenz</small>
-                        </p>
-                        <a href="#" class="validation-link">
-                            📄 Validierung läuft
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+    <!-- Technologie Korrektur -->
+    <section class="section">
+        <h2>🔬 Technologie-Stack</h2>
+        <div style="max-width: 800px; margin: 0 auto; background: rgba(26,31,58,0.6); padding: 40px; border-radius: 16px; border: 1px solid rgba(0,217,255,0.2);">
+            <h3 style="color: #00D9FF; margin-bottom: 20px;">3D-Skelett-Tracking (25 Keypoints) aus WiFi-Signalen</h3>
+            <p style="margin-bottom: 20px;">
+                Unsere patentierte Technologie nutzt WiFi-CSI (Channel State Information) für OpenPose-vergleichbare Genauigkeit – komplett ohne Kameras.
+            </p>
+            <ul style="list-style: none;">
+                <li>✓ <strong>Nicht</strong> DensePose (physikalisch unmöglich mit WiFi)</li>
+                <li>✓ 25 Skelett-Keypoints in Echtzeit (&lt;50ms Latenz)</li>
+                <li>✓ Multi-Person-Tracking (bis zu 5 Personen)</li>
+                <li>✓ 3D-Position + Bewegungs-Vektoren</li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 14px; color: #a8b3cf;">
+                <a href="/research/wifi-csi-skeleton.pdf" style="color: #00D9FF;">📄 Technisches Whitepaper</a> |
+                <a href="/research/methodology.pdf" style="color: #00D9FF;">📊 Methodik</a>
+            </p>
         </div>
     </section>
 
-    <!-- Demo Section - NEU -->
-    <section id="demo" class="demo-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sehen Sie HAVENIS in Aktion</h2>
-                <p>30 Sekunden, die zeigen, wie WiFi-Signale zu Ihrem Schutz werden</p>
+    <!-- Markt -->
+    <section class="section" id="market">
+        <h2>💰 Marktpotenzial</h2>
+
+        <div class="market-funnel">
+            <div class="funnel-layer tam">
+                <strong>$150 Mrd</strong>
+                <span>TAM: Smart Security + Health Tech</span>
+            </div>
+            <div class="funnel-layer sam">
+                <strong>$15 Mrd</strong>
+                <span>SAM: Privacy-First Lösungen</span>
+            </div>
+            <div class="funnel-layer som">
+                <strong>$180 Mio</strong>
+                <span>SOM: DACH HNWIs (2024-2027)</span>
+            </div>
+        </div>
+
+        <!-- Wettbewerbs-Vergleich -->
+        <h3 style="text-align: center; margin-top: 80px; margin-bottom: 30px;">
+            ⚔️ Warum HAVENIS gewinnt
+        </h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>HAVENIS AI</th>
+                    <th>Vayyar</th>
+                    <th>Ring/Nest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Keine Kameras</td>
+                    <td style="color: #00D9FF;">✓</td>
+                    <td style="color: #00D9FF;">✓</td>
+                    <td style="color: #ff4444;">✗</td>
+                </tr>
+                <tr>
+                    <td>3D-Skelett (25 Keypoints)</td>
+                    <td style="color: #00D9FF;">✓</td>
+                    <td style="color: #ff4444;">✗</td>
+                    <td style="color: #ff4444;">✗</td>
+                </tr>
+                <tr>
+                    <td>Vitaldaten (HR/RR)</td>
+                    <td style="color: #00D9FF;">✓</td>
+                    <td style="color: #00D9FF;">✓</td>
+                    <td style="color: #ff4444;">✗</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>HNWI Concierge-Service</strong></td>
+                    <td style="color: #00D9FF;"><strong>✓</strong></td>
+                    <td style="color: #ff4444;">✗</td>
+                    <td style="color: #ff4444;">✗</td>
+                </tr>
+                <tr>
+                    <td>Multi-Person-Tracking</td>
+                    <td style="color: #00D9FF;">✓ (5 Personen)</td>
+                    <td>✓ (3 Personen)</td>
+                    <td style="color: #ff4444;">✗</td>
+                </tr>
+                <tr>
+                    <td>Preis (Jahres-Abo)</td>
+                    <td>€2.400</td>
+                    <td>€1.800</td>
+                    <td>€600</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+        <h2>👥 Das Team</h2>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150/0a0e27/00D9FF?text=DK" alt="Danilo Kuss">
+                <h3>
+                    Danilo Kuss
+                    <a href="https://linkedin.com/in/danilokuss" target="_blank">🔗</a>
+                </h3>
+                <p style="color: #00D9FF; font-weight: bold;">CEO & CTO</p>
+                <p style="font-size: 14px; color: #a8b3cf;">
+                    PhD TU München | Ex-Bosch AI Lab<br>
+                    10+ Jahre Computer Vision
+                </p>
             </div>
 
-            <div class="demo-container">
-                <!-- Hauptvideo -->
-                <div class="demo-video">
-                    <video id="demo-video" controls poster="assets/visuals/hero-wifi-waves.webp" preload="metadata" style="width: 100%; height: 400px; border-radius: 12px; background: linear-gradient(135deg, var(--grey-blue), var(--dark-cyan));">
-                        <!-- Fügen Sie hier Ihre Video-URL ein wenn verfügbar -->
-                        <!-- <source src="assets/videos/havenis-demo.mp4" type="video/mp4"> -->
-                        <!-- <source src="assets/videos/havenis-demo.webm" type="video/webm"> -->
-                        <div class="video-placeholder" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: white;">
-                            <div class="play-button" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; margin-bottom: 1rem; cursor: pointer;">▶</div>
-                            <p style="font-size: 18px; font-weight: 600;">Demo-Video</p>
-                            <p style="font-size: 14px; opacity: 0.8; margin-top: 0.5rem;">WiFi-Sensing Technologie in Aktion</p>
-                        </div>
-                    </video>
-
-                    <!-- Video-Timeline mit Annotations -->
-                    <div class="video-timeline">
-                        <div class="timeline-marker" data-time="5">
-                            <span class="time">0:05</span>
-                            <span class="label">WiFi-Signale erfassen Raum</span>
-                        </div>
-                        <div class="timeline-marker" data-time="12">
-                            <span class="time">0:12</span>
-                            <span class="label">3D-Skelett wird rekonstruiert</span>
-                        </div>
-                        <div class="timeline-marker" data-time="20">
-                            <span class="time">0:20</span>
-                            <span class="label">Vitaldaten in Echtzeit</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Side-by-Side Vergleich -->
-                <div class="demo-comparison">
-                    <h3>Was HAVENIS sieht vs. Was Kameras sehen</h3>
-                    <div class="comparison-grid">
-                        <div class="comparison-item">
-                            <div class="comparison-placeholder havenis-view">
-                                <p>3D-Skelett<br>Ansicht</p>
-                            </div>
-                            <p><strong>HAVENIS:</strong> Anonymes 3D-Skelett</p>
-                            <span class="badge-privacy">✓ Privacy-konform</span>
-                        </div>
-                        <div class="comparison-item">
-                            <div class="comparison-placeholder camera-view">
-                                <p>Kamera<br>Ansicht</p>
-                            </div>
-                            <p><strong>Kamera:</strong> Vollständige visuelle Daten</p>
-                            <span class="badge-warning">✗ Invasiv</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tech-Details (expandable) -->
-            <details class="demo-tech-details">
-                <summary>🔬 Technische Details anzeigen</summary>
-                <div class="tech-specs-grid">
-                    <div class="spec">
-                        <strong>Sampling-Rate:</strong> 1000 Hz CSI-Stream
-                    </div>
-                    <div class="spec">
-                        <strong>Latenz:</strong> &lt;100ms (Edge-Processing)
-                    </div>
-                    <div class="spec">
-                        <strong>Genauigkeit:</strong> &lt;2cm Keypoint-Lokalisierung
-                    </div>
-                    <div class="spec">
-                        <strong>Reichweite:</strong> Bis 15m (optimale Zone: 5-10m)
-                    </div>
-                </div>
-            </details>
+            <!-- Weitere Team-Mitglieder können hier hinzugefügt werden -->
         </div>
     </section>
 
-    <!-- Drei Säulen - OPTIMIERT -->
-    <section id="pillars" class="pillars-section">
-        <div class="container">
-            <h2>Drei Säulen des HAVENIS Smart-Schilds</h2>
+    <!-- Milestones (Realistisch) -->
+    <section class="section">
+        <h2>🎯 Milestones 2025</h2>
 
-            <div class="pillars-grid">
-
-                <!-- Säule 1: Sicherheit -->
-                <div class="pillar-card" data-pillar="security">
-                    <div class="pillar-icon">🛡️</div>
-                    <h3>Prädiktive Sicherheit</h3>
-                    <p class="pillar-description">
-                        Erkennt ungewöhnliche Bewegungsmuster in Echtzeit –
-                        bevor ein Einbruch passiert
-                    </p>
-
-                    <!-- Validation Badge -->
-                    <div class="validation-badge">
-                        <span class="metric">&gt;95%</span>
-                        <span class="label">Pattern-Recognition-Accuracy</span>
-                    </div>
-
-                    <!-- Use Cases -->
-                    <div class="use-cases">
-                        <h4>Anwendungen:</h4>
-                        <ul>
-                            <li>Einbruchsprävention ohne Kameras</li>
-                            <li>Ungewöhnliche Aktivität bei Abwesenheit</li>
-                            <li>Stiller Alarm bei Anomalien</li>
-                        </ul>
-                    </div>
-
-                    <!-- Visualisierung -->
-                    <div class="pillar-visual">
-                        <div class="visual-placeholder">
-                            <p>Heatmap: Normal vs. Anomal</p>
-                        </div>
-                        <p class="visual-caption">
-                            Grün = Normale Bewegungsmuster | Rot = Anomalie erkannt
-                        </p>
-                    </div>
-
-                    <!-- CTA -->
-                    <button class="btn-learn-more">
-                        Mehr erfahren →
-                    </button>
-                </div>
-
-                <!-- Säule 2: Notfall -->
-                <div class="pillar-card pillar-highlight" data-pillar="emergency">
-                    <div class="pillar-icon">🚨</div>
-                    <h3>Notfallprävention</h3>
-                    <p class="pillar-description">
-                        Echtzeit-Sturzerkennung mit automatischer Alarmierung
-                    </p>
-
-                    <!-- Validation Badge (prominent) -->
-                    <div class="validation-badge validated">
-                        <span class="metric">98,7%</span>
-                        <span class="label">Sturzerkennung-Accuracy</span>
-                        <a href="#" class="study-link">
-                            📄 TU München Studie
-                        </a>
-                    </div>
-
-                    <div class="use-cases">
-                        <h4>Anwendungen:</h4>
-                        <ul>
-                            <li>Senioren-Schutz (24/7 Monitoring)</li>
-                            <li>Post-OP-Überwachung zu Hause</li>
-                            <li>Automatischer Notruf an Angehörige</li>
-                        </ul>
-                    </div>
-
-                    <div class="pillar-visual">
-                        <div class="visual-placeholder">
-                            <p>3D-Skelett bei Sturzerkennung</p>
-                        </div>
-                        <p class="visual-caption">
-                            WiFi-Signale rekonstruieren Körperhaltung – Sturz wird in &lt;100ms erkannt
-                        </p>
-                    </div>
-
-                    <!-- Testimonial -->
-                    <blockquote class="pillar-testimonial">
-                        "Hat den Sturz meines Vaters nachts erkannt – Rettungsdienst war in 8 Minuten da."
-                        <cite>– Beta-Tester K.M., München</cite>
-                    </blockquote>
-
-                    <button class="btn-learn-more">
-                        Mehr erfahren →
-                    </button>
-                </div>
-
-                <!-- Säule 3: Vitals -->
-                <div class="pillar-card" data-pillar="vitals">
-                    <div class="pillar-icon">💓</div>
-                    <h3>Vitalmonitoring</h3>
-                    <p class="pillar-description">
-                        Kontaktlose Überwachung von Herz- und Atemfrequenz –
-                        ohne Wearables
-                    </p>
-
-                    <div class="validation-badge">
-                        <span class="metric">±0,22 bpm</span>
-                        <span class="label">MAE Atemfrequenz</span>
-                        <a href="#" class="study-link">
-                            📄 ETH Zürich Studie
-                        </a>
-                    </div>
-
-                    <div class="use-cases">
-                        <h4>Anwendungen:</h4>
-                        <ul>
-                            <li>Nächtliches Schlaf-Monitoring</li>
-                            <li>Früherkennung von Atemwegs-Problemen</li>
-                            <li>Langzeit-Gesundheitstrends</li>
-                        </ul>
-                    </div>
-
-                    <div class="pillar-visual">
-                        <div class="visual-placeholder">
-                            <p>Vital-Verlauf über 8 Stunden</p>
-                        </div>
-                        <p class="visual-caption">
-                            Beispiel: 8h nächtliches Monitoring (Herz + Atem)
-                        </p>
-                    </div>
-
-                    <button class="btn-learn-more">
-                        Mehr erfahren →
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Markt Section - NEU -->
-    <section id="market" class="market-section">
-        <div class="container">
-            <div class="section-header centered">
-                <h2>Ein Markt im Umbruch</h2>
-                <p>Privacy-First wird vom Nischen-Feature zum Must-Have</p>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: rgba(26,31,58,0.6); padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #00D9FF;">
+                <h3 style="color: #00D9FF;">Q1 2025 ✅</h3>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li>✓ Patent-ANMELDUNG finalisiert (DE 2024-xxx-xxx)</li>
+                    <li>✓ 5 Beta-Kunden live (DACH)</li>
+                    <li>✓ TU München Validierungs-Studie abgeschlossen</li>
+                </ul>
             </div>
 
-            <div class="market-content">
+            <div style="background: rgba(26,31,58,0.6); padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #a8b3cf;">
+                <h3 style="color: #a8b3cf;">Q2 2025 🔄</h3>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li>→ CE-Zertifizierungs-Prozess GESTARTET</li>
+                    <li>→ 15 zahlende Installationen</li>
+                    <li>→ Series A Vorbereitung</li>
+                </ul>
+            </div>
 
-                <!-- TAM/SAM/SOM Funnel -->
-                <div class="market-visual">
-                    <div class="funnel">
-                        <div class="funnel-layer tam">
-                            <div class="funnel-content">
-                                <strong>$150 Mrd</strong>
-                                <span>TAM: Smart Security + Health Monitoring (Global, 2030)</span>
-                            </div>
-                        </div>
-                        <div class="funnel-layer sam">
-                            <div class="funnel-content">
-                                <strong>$15 Mrd</strong>
-                                <span>SAM: Privacy-First Solutions (10% of TAM)</span>
-                            </div>
-                        </div>
-                        <div class="funnel-layer som">
-                            <div class="funnel-content">
-                                <strong>$180 Mio</strong>
-                                <span>SOM: DACH HNWIs (Years 1–3)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="market-drivers">
-                        <h4>Markt-Treiber:</h4>
-                        <ul>
-                            <li>
-                                <strong>GDPR & Regulierung</strong>
-                                <br>EU-weites Privacy-Bewusstsein steigt
-                            </li>
-                            <li>
-                                <strong>HNWI-Wachstum</strong>
-                                <br>6,2% p.a. in DACH (Capgemini, 2024)
-                            </li>
-                            <li>
-                                <strong>Alternde Bevölkerung</strong>
-                                <br>28% über 65 Jahre bis 2030 (Destatis)
-                            </li>
-                            <li>
-                                <strong>Kamera-Ablehnung</strong>
-                                <br>73% der HNWIs lehnen Indoor-Kameras ab (INSEAD, 2023)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Wettbewerbs-Vergleich -->
-                <div class="competitive-landscape">
-                    <h3>Wettbewerbsvergleich</h3>
-                    <div class="comparison-table-wrapper">
-                        <table class="comparison-table">
-                            <thead>
-                                <tr>
-                                    <th>Feature</th>
-                                    <th>HAVENIS</th>
-                                    <th>Vayyar</th>
-                                    <th>Ring</th>
-                                    <th>Nest</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Keine Kameras</td>
-                                    <td class="check">✓</td>
-                                    <td class="check">✓</td>
-                                    <td class="cross">✗</td>
-                                    <td class="cross">✗</td>
-                                </tr>
-                                <tr>
-                                    <td>3D-Skelett-Tracking</td>
-                                    <td class="check">✓</td>
-                                    <td class="cross">✗</td>
-                                    <td class="cross">✗</td>
-                                    <td class="partial">⚠</td>
-                                </tr>
-                                <tr>
-                                    <td>Vitaldaten (Herz/Atem)</td>
-                                    <td class="check">✓</td>
-                                    <td class="check">✓</td>
-                                    <td class="cross">✗</td>
-                                    <td class="cross">✗</td>
-                                </tr>
-                                <tr>
-                                    <td>Medical-Grade Accuracy</td>
-                                    <td class="check">✓</td>
-                                    <td class="partial">⚠</td>
-                                    <td class="cross">✗</td>
-                                    <td class="cross">✗</td>
-                                </tr>
-                                <tr>
-                                    <td>HNWI White-Glove Service</td>
-                                    <td class="check">✓</td>
-                                    <td class="cross">✗</td>
-                                    <td class="cross">✗</td>
-                                    <td class="cross">✗</td>
-                                </tr>
-                                <tr class="highlight-row">
-                                    <td><strong>Preis</strong></td>
-                                    <td>€€€</td>
-                                    <td>€€</td>
-                                    <td>€</td>
-                                    <td>€</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <p class="comparison-note">
-                        HAVENIS positioniert sich im Premium-Segment mit einzigartiger Kombination:
-                        <strong>Privacy + Medical-Grade + White-Glove-Service</strong>
-                    </p>
-                </div>
-
+            <div style="background: rgba(26,31,58,0.6); padding: 30px; border-radius: 12px; border-left: 4px solid rgba(255,255,255,0.2);">
+                <h3>Q3-Q4 2025</h3>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li>→ 50+ Installationen</li>
+                    <li>→ B2B Partnerschaften (Pflegedienste)</li>
+                    <li>→ Patent-Genehmigung (erwartet Q4 2026)</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>HAVENIS AI</h4>
-                    <p>WiFi wird zu Ihrem unsichtbaren Schutzengel</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>info@havenis-ai.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Rechtliches</h4>
-                    <a href="/datenschutz">Datenschutz</a>
-                    <a href="/impressum">Impressum</a>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>HAVENIS AI GmbH</h4>
+                <p>Danilo Kuss<br>
+                Damaschkeweg 1<br>
+                15517 Fürstenwalde</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 HAVENIS AI. Alle Rechte vorbehalten.</p>
+
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <a href="tel:+493361747868">📞 +49 3361 747868</a>
+                <a href="tel:+4915510926776">📱 +49 15510 926776</a>
+                <a href="mailto:HAVENIS-AI@web.de">📧 HAVENIS-AI@web.de</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Rechtliches</h4>
+                <a href="/impressum.html">Impressum</a>
+                <a href="/datenschutz.html">Datenschutz</a>
+                <a href="/investors.html">Investor Relations</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Social</h4>
+                <a href="https://linkedin.com/company/havenis-ai" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/havenisai" target="_blank">Twitter/X</a>
             </div>
         </div>
+
+        <p style="text-align: center; margin-top: 40px; color: #a8b3cf; font-size: 14px;">
+            © 2025 HAVENIS AI GmbH. Alle Rechte vorbehalten.
+        </p>
     </footer>
 
-    <script src="script-optimized.js"></script>
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+
+        // Event Tracking
+        document.querySelectorAll('a[href="/investors.html"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                gtag('event', 'lead', {type: 'pitchdeck_interest'});
+            });
+        });
+
+        // Scroll Depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const percent = Math.round((window.scrollY / document.body.scrollHeight) * 100);
+            if (percent > maxScroll && percent % 25 === 0) {
+                maxScroll = percent;
+                gtag('event', 'scroll', {depth: percent});
+            }
+        });
+    </script>
 </body>
 </html>
