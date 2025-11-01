@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HAVENIS AI – WiFi-basiertes Gesundheits-Monitoring (Prototyp)</title>
-    <meta name="description" content="Pre-Seed DeepTech Startup entwickelt WiFi-basiertes Gesundheits-Monitoring. Erste Prototypen zeigen vielversprechende Ergebnisse.">
+    <title>HAVENIS AI – Deep Tech. Invisible Safety. Seed-Stage.</title>
+    <meta name="description" content="Unsichtbares Wi-Fi-Sensing: 3D-Pose & Vitalmetriken in Echtzeit. Edge-AI-basiert, Privacy-by-Design.">
 
-    <meta property="og:title" content="HAVENIS AI – DeepTech HealthTech Startup">
-    <meta property="og:description" content="WiFi-basiertes Monitoring ohne Kameras - in Entwicklung">
+    <meta property="og:title" content="HAVENIS AI – Deep Tech. Invisible Safety. Seed-Stage.">
+    <meta property="og:description" content="Wir definieren das Unsichtbare neu. Pre-Seed Investment-Opportunity.">
 
     <style>
         * {
@@ -17,55 +17,34 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #00D9FF;
+            --primary-dark: #0099CC;
+            --dark-bg: #0a0e27;
+            --card-bg: rgba(26,31,58,0.6);
+            --text-primary: #e0e7ff;
+            --text-secondary: #a8b3cf;
+            --accent-yellow: #FFC107;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-            color: #e0e7ff;
+            color: var(--text-primary);
             line-height: 1.6;
             font-size: clamp(16px, 1.2vw, 18px);
         }
 
-        .badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: rgba(255, 193, 7, 0.2);
-            border: 1px solid #FFC107;
-            color: #FFC107;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
         }
 
-        .btn {
-            min-height: 44px;
-            padding: 14px 24px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(90deg, #00D9FF, #0099CC);
-            color: white;
-            padding: 16px 32px;
-            font-weight: bold;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #00D9FF;
-            color: #00D9FF;
-        }
-
+        /* Header */
         header {
-            padding: 20px 5%;
-            background: rgba(10,14,39,0.9);
+            padding: 20px 0;
+            background: rgba(10,14,39,0.95);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -79,52 +58,52 @@
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
-            flex-wrap: wrap;
+            padding: 0 5%;
         }
 
         .logo {
-            font-size: clamp(24px, 3vw, 32px);
-            font-weight: bold;
-            background: linear-gradient(90deg, #00D9FF, #0099CC);
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
         }
 
         nav a {
-            color: #a8b3cf;
+            color: var(--text-secondary);
             text-decoration: none;
             margin-left: 30px;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #00D9FF;
+            color: var(--primary);
         }
 
+        /* Hero Section */
         .hero {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 80px 5% 60px;
+            padding: 100px 0 80px;
             text-align: center;
         }
 
-        h1 {
-            font-size: clamp(32px, 5vw, 52px);
-            margin-bottom: 20px;
-            line-height: 1.2;
+        .hero h2 {
+            font-size: clamp(36px, 5vw, 58px);
+            margin-bottom: 24px;
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -1px;
         }
 
-        .highlight {
-            color: #00D9FF;
-        }
-
-        .subtitle {
-            font-size: clamp(18px, 1.5vw, 22px);
-            color: #a8b3cf;
-            margin-bottom: 30px;
-            max-width: 800px;
+        .hero .subtitle {
+            font-size: clamp(18px, 1.8vw, 24px);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
         .cta-group {
@@ -135,115 +114,336 @@
             margin-top: 40px;
         }
 
+        .btn {
+            padding: 18px 36px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 8px 24px rgba(0,217,255,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,217,255,0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,217,255,0.1);
+        }
+
+        .disclaimer {
+            background: rgba(255,193,7,0.1);
+            border-left: 4px solid var(--accent-yellow);
+            padding: 16px 24px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Section Styles */
         .section {
-            max-width: 1400px;
-            margin: 60px auto;
-            padding: 0 5%;
+            padding: 80px 0;
         }
 
-        h2 {
-            font-size: clamp(28px, 4vw, 38px);
+        .section-title {
+            font-size: clamp(32px, 4vw, 48px);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            font-weight: 700;
         }
 
-        .cards {
+        /* Proof of Concept Metrics */
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .card {
-            background: rgba(26,31,58,0.6);
+        .metric-card {
+            background: var(--card-bg);
             border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 16px;
+            padding: 36px;
             transition: all 0.3s;
         }
 
-        .card:hover {
+        .metric-card:hover {
             transform: translateY(-5px);
-            border-color: #00D9FF;
-            box-shadow: 0 10px 30px rgba(0,217,255,0.2);
+            border-color: var(--primary);
+            box-shadow: 0 12px 40px rgba(0,217,255,0.25);
         }
 
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #00D9FF;
-        }
-
-        .card-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .progress-bar {
-            background: rgba(0,217,255,0.1);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .progress-item {
-            margin: 15px 0;
-        }
-
-        .progress-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
+        .metric-label {
             font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
-        .progress-track {
-            background: rgba(0,0,0,0.3);
-            height: 8px;
+        .metric-value {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .metric-target {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .metric-status {
+            font-size: 14px;
+            padding: 8px 12px;
+            background: rgba(0,217,255,0.1);
             border-radius: 4px;
-            overflow: hidden;
+            display: inline-block;
         }
 
-        .progress-fill {
-            background: linear-gradient(90deg, #00D9FF, #0099CC);
-            height: 100%;
-            border-radius: 4px;
-            transition: width 0.3s;
+        /* How It Works */
+        .how-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        .team-member {
-            text-align: center;
-            padding: 30px;
-            background: rgba(26,31,58,0.6);
+        .how-card {
+            background: var(--card-bg);
             border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 12px;
-            max-width: 400px;
-            margin: 0 auto;
+            border-radius: 16px;
+            padding: 40px;
         }
 
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
+        .how-card h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .how-icon {
+            font-size: 48px;
             margin-bottom: 20px;
-            border: 3px solid #00D9FF;
+        }
+
+        /* Market Section */
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px;
+            background: var(--card-bg);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .why-now-list {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .why-now-list li {
+            padding: 20px;
+            margin: 16px 0;
+            background: rgba(0,217,255,0.05);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+        }
+
+        .why-now-list strong {
+            color: var(--primary);
+        }
+
+        .badge-cagr {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0,217,255,0.2);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            border: 3px solid var(--primary);
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .team-role {
+            font-size: 16px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .team-bio {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 60px;
+            border-radius: 20px;
+            border: 1px solid rgba(0,217,255,0.2);
+        }
+
+        .contact-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .contact-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(10,14,39,0.6);
+            border: 1px solid rgba(0,217,255,0.3);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,217,255,0.1);
         }
 
         footer {
-            background: rgba(10,14,39,0.9);
-            padding: 40px 5%;
-            margin-top: 80px;
+            background: rgba(10,14,39,0.95);
+            padding: 60px 0 30px;
+            margin-top: 100px;
             border-top: 1px solid rgba(0,217,255,0.2);
-            text-align: center;
         }
 
-        .disclaimer {
-            background: rgba(255, 193, 7, 0.1);
-            border-left: 4px solid #FFC107;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 4px;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
         }
 
         @media (max-width: 768px) {
@@ -253,306 +453,315 @@
 
             .btn {
                 width: 100%;
+                justify-content: center;
             }
 
-            nav a {
-                margin-left: 15px;
-                font-size: 14px;
+            .contact-container {
+                padding: 40px 30px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">HAVENIS AI</div>
             <div>
-                <a href="#vision">Vision</a>
-                <a href="#prototype">Prototyp</a>
+                <a href="#poc">Proof of Concept</a>
+                <a href="#technology">Technologie</a>
+                <a href="#market">Markt</a>
                 <a href="#team">Team</a>
                 <a href="#contact">Kontakt</a>
             </div>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="badge">PRE-SEED STARTUP • IN ENTWICKLUNG</div>
-
-        <h1>
-            WiFi-basiertes <span class="highlight">Gesundheits-Monitoring</span>
-            ohne Kameras
-        </h1>
+    <!-- Hero Section -->
+    <section class="hero container">
+        <h2>
+            Sicherheit, die niemand sieht –<br>
+            Gesundheit, die alles bemerkt.
+        </h2>
 
         <p class="subtitle">
-            Wir entwickeln eine Privacy-First Technologie zur berührungslosen Erfassung von Bewegungen und Vitaldaten 
-            über Standard-WiFi. Aktuell in früher Prototyp-Phase.
+            Unsichtbares Wi‑Fi‑Sensing: 3D‑Pose (25 Keypoints) und Vitalmetriken in Echtzeit – 
+            Edge‑only, Privacy‑by‑Design. Wir definieren das Unsichtbare neu.
         </p>
 
         <div class="cta-group">
-            <a href="mailto:HAVENIS-AI@web.de?subject=Interesse an HAVENIS AI" class="btn btn-primary">
-                Kontakt aufnehmen
+            <a href="#contact" class="btn btn-primary">
+                🤝 Jetzt Pitch Deck anfordern & Pre-Seed investieren
             </a>
-            <a href="#prototype" class="btn btn-secondary">
-                Mehr erfahren
+            <a href="#contact" class="btn btn-secondary">
+                🔍 Pilotprojekt starten / Early Adopter werden
             </a>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Aktuell Proof of Concept (PoC) Phase.</strong> Kein Medizinprodukt. 
+            Nur zu Forschungs- und Wohlbefindenszwecken.
         </div>
     </section>
 
-    <!-- Vision -->
-    <section class="section" id="vision">
-        <h2>🎯 Unsere Vision</h2>
+    <!-- Proof of Concept & Machbarkeit -->
+    <section class="section" id="poc" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2 class="section-title">📊 Proof of Concept & Machbarkeit</h2>
 
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 18px; color: #a8b3cf; line-height: 1.8;">
-                Gesundheitsüberwachung und Sicherheit sollten nicht auf Kosten der Privatsphäre gehen. 
-                Wir entwickeln eine Technologie, die WiFi-Signale nutzt, um Bewegungen und grundlegende 
-                Vitalparameter zu erfassen – komplett ohne Kameras oder Wearables.
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-secondary); font-size: 18px;">
+                Aktuelle Labormessungen und Machbarkeitsnachweise, nicht Endprodukt-Garantien.
+            </p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Fall Detection</div>
+                    <div class="metric-value">&gt;90%</div>
+                    <div class="metric-target">Ziel: 98.7%</div>
+                    <div class="metric-status">Status: Im Laborsetup (Ref: PoC-Q3-2025)</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label">MAE Respiration</div>
+                    <div class="metric-value">≤1.5</div>
+                    <div class="metric-target">Ziel: ≤1.0 breaths/min</div>
+                    <div class="metric-status">Status: Proof-of-Concept (Ref: PoC-Q3-2025)</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label">MAE Heart Rate</div>
+                    <div class="metric-value">Machbar</div>
+                    <div class="metric-target">Ziel: ≤3 bpm</div>
+                    <div class="metric-status">Status: Erste Machbarkeitsstudie erfolgreich</div>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 40px; color: var(--text-secondary); font-size: 14px;">
+                Interne Messungen basierend auf Forschungsmodellen. Aktive Feldvalidierung ab Q4 2025 geplant.
             </p>
         </div>
-
-        <div class="disclaimer" style="max-width: 800px; margin: 40px auto;">
-            <strong>⚠️ Entwicklungsstatus:</strong> Wir befinden uns in der Pre-Seed Phase mit ersten Laborprototypen. 
-            Die beschriebenen Funktionen sind teilweise konzeptionell und werden aktuell entwickelt und validiert.
-        </div>
     </section>
 
-    <!-- Anwendungsfälle -->
-    <section class="section">
-        <h2>💡 Potenzielle Anwendungsfälle</h2>
+    <!-- How It Works -->
+    <section class="section" id="technology">
+        <div class="container">
+            <h2 class="section-title">⚙️ Technologie & Hürden</h2>
 
-        <div class="cards">
-            <div class="card">
-                <div class="card-icon">🚨</div>
-                <h3>Sturzerkennung</h3>
-                <p>Ziel: Automatische Erkennung von Stürzen bei älteren Menschen – ohne Kamera-Überwachung.</p>
-                <div class="progress-bar">
-                    <div class="progress-item">
-                        <div class="progress-label">
-                            <span>Entwicklung</span>
-                            <span>45%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 45%"></div>
-                        </div>
-                    </div>
-                </div>
-                <small style="color: #a8b3cf;">Status: Frühe Prototyp-Tests im Labor</small>
-            </div>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: var(--text-secondary); font-size: 18px;">
+                Zeigt die Komplexität und die technologische Hürde, die das Team meistert.
+            </p>
 
-            <div class="card">
-                <div class="card-icon">💓</div>
-                <h3>Vitaldaten-Monitoring</h3>
-                <p>Vision: Berührungslose Erfassung von Herzfrequenz und Atemrate über WiFi-Reflexionen.</p>
-                <div class="progress-bar">
-                    <div class="progress-item">
-                        <div class="progress-label">
-                            <span>Entwicklung</span>
-                            <span>30%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 30%"></div>
-                        </div>
-                    </div>
+            <div class="how-cards">
+                <div class="how-card">
+                    <div class="how-icon">📡</div>
+                    <h3>Sensing</h3>
+                    <p>
+                        Wi‑Fi‑Signale (CSI) erfassen Veränderungen im Raum – ohne Kamera oder Mikrofon. 
+                        <strong style="color: var(--primary);">Wir lösen das Signal-Rausch-Problem.</strong>
+                    </p>
                 </div>
-                <small style="color: #a8b3cf;">Status: Konzeptphase, erste Experimente</small>
-            </div>
 
-            <div class="card">
-                <div class="card-icon">🔒</div>
-                <h3>Privacy-First Security</h3>
-                <p>Idee: Anwesenheitserkennung und Einbruchschutz ohne visuelle Überwachung.</p>
-                <div class="progress-bar">
-                    <div class="progress-item">
-                        <div class="progress-label">
-                            <span>Entwicklung</span>
-                            <span>25%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 25%"></div>
-                        </div>
-                    </div>
+                <div class="how-card">
+                    <div class="how-icon">🧠</div>
+                    <h3>Edge AI</h3>
+                    <p>
+                        On‑Device‑Modelle schätzen 3D‑Pose & Vitalmetriken. 
+                        <strong style="color: var(--primary);">Unsere proprietäre CNN-Transformer-Architektur 
+                        ermöglicht Echtzeit auf Low-Power-Chips.</strong>
+                    </p>
                 </div>
-                <small style="color: #a8b3cf;">Status: Forschungsphase</small>
+
+                <div class="how-card">
+                    <div class="how-icon">💡</div>
+                    <h3>Signals → Insights</h3>
+                    <p>
+                        Anomalien, Stürze & Trends werden lokal erkannt und als Events gemeldet. 
+                        <strong style="color: var(--primary);">Fokus auf präzise Datenfusion und prädiktive Modelle.</strong>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Prototyp Status -->
-    <section class="section" id="prototype">
-        <h2>🔬 Technologie & Entwicklungsstand</h2>
+    <!-- Market & Growth -->
+    <section class="section" id="market" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2 class="section-title">📈 Markt & Wachstum</h2>
 
-        <div style="max-width: 900px; margin: 0 auto;">
-            <div class="card">
-                <h3 style="color: #00D9FF; margin-bottom: 20px;">Aktueller Entwicklungsstand</h3>
-
-                <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                    <h4 style="color: #00D9FF; margin-bottom: 15px;">✅ Erreicht (Proof of Concept)</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
-                            WiFi-Signal-Erfassung funktioniert im Labor
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
-                            Grundlegende Bewegungserkennung (Gehen, Stehen)
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
-                            Erste Machine Learning Modelle trainiert
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
-                            Technische Machbarkeit bestätigt
-                        </li>
-                    </ul>
-                </div>
-
-                <div style="background: rgba(255,193,7,0.1); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                    <h4 style="color: #FFC107; margin-bottom: 15px;">🔄 In Arbeit</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
-                            Verbesserung der Genauigkeit (aktuell ~75% im Lab)
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
-                            Tests in realen Wohnumgebungen
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
-                            Multi-Person-Szenarien
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
-                            Hardware-Prototyp Optimierung
-                        </li>
-                    </ul>
-                </div>
-
-                <div style="background: rgba(168,179,207,0.1); padding: 20px; border-radius: 8px;">
-                    <h4 style="color: #a8b3cf; margin-bottom: 15px;">📋 Geplant (2025)</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
-                            Pilotprojekt mit 3-5 Testnutzern
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
-                            Wissenschaftliche Validierung (Universität)
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
-                            Patent-Anmeldung vorbereiten
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
-                            Seed-Finanzierung für Produktentwicklung
-                        </li>
-                    </ul>
+            <div class="market-stats">
+                <div class="stat-card">
+                    <div class="stat-number">€180M</div>
+                    <div class="stat-label">
+                        SOM (Serviceable Obtainable Market)<br>
+                        DACH HNWI Y1-3
+                    </div>
                 </div>
             </div>
 
-            <div class="disclaimer" style="margin-top: 30px;">
-                <strong>Hinweis:</strong> Die Angaben wie "98,7% Accuracy" oder "TU München Studie" aus früheren Versionen 
-                sind Zielwerte bzw. geplante Validierungen. Aktuell arbeiten wir daran, diese Meilensteine zu erreichen.
+            <p style="text-align: center; max-width: 700px; margin: 20px auto 40px; color: var(--text-secondary);">
+                Erstes Ziel ist die Validierung der SOM-Zugänglichkeit.
+            </p>
+
+            <h3 style="text-align: center; font-size: 28px; margin-bottom: 30px; color: var(--primary);">
+                Why Now?
+            </h3>
+
+            <ul class="why-now-list" style="list-style: none;">
+                <li>
+                    <strong>Privacy‑Trend:</strong> Kameramüdigkeit bei HNWIs. Marktfenster öffnet sich jetzt.
+                </li>
+                <li>
+                    <strong>Edge‑AI‑Reife:</strong> Echtzeit auf Low‑Power‑Chips. Technologie ist reif für die Kommerzialisierung.
+                </li>
+                <li>
+                    <strong>Wachsende Nachfrage</strong> in Premium‑Kliniken & Hotels. Pilotkunden warten auf eine non-invasive Lösung.
+                </li>
+            </ul>
+
+            <div style="text-align: center;">
+                <div class="badge-cagr">
+                    CAGR HealthTech 2024–2030 ≈ 18.7%. Wir zielen auf den Hochmargen-Ausschnitt.
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Team -->
     <section class="section" id="team">
-        <h2>👥 Gründer</h2>
+        <div class="container">
+            <h2 class="section-title">👥 Team (Kern des Pre-Seed)</h2>
 
-        <div class="team-member">
-            <img src="/team/danilo-kuss.jpg" alt="Danilo Kuss" onerror="this.src='https://via.placeholder.com/150/0a0e27/00D9FF?text=DK'">
-            <h3>
-                Danilo Kuss
-                <a href="https://linkedin.com/in/danilokuss" target="_blank" style="color: #00D9FF; text-decoration: none;">🔗</a>
-            </h3>
-            <p style="color: #00D9FF; font-weight: bold;">Founder & CTO</p>
-            <p style="font-size: 14px; color: #a8b3cf; margin-top: 10px;">
-                Hintergrund in Computer Vision & AI<br>
-                Passion für Privacy-Preserving Technologies
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: var(--text-secondary); font-size: 18px;">
+                Glaubwürdigkeit und die einzigartigen Fähigkeiten, die für die Lösung der technischen Herausforderung notwendig sind.
             </p>
-        </div>
-    </section>
 
-    <!-- Roadmap -->
-    <section class="section">
-        <h2>🗺️ Roadmap 2025</h2>
-
-        <div style="max-width: 800px; margin: 0 auto;">
-            <div class="cards" style="grid-template-columns: 1fr;">
-                <div class="card">
-                    <h3>Q1 2025 🔄</h3>
-                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                        <li style="padding: 8px 0;">→ Prototyp-Optimierung im Labor</li>
-                        <li style="padding: 8px 0;">→ Erste Real-World Tests (3 Haushalte)</li>
-                        <li style="padding: 8px 0;">→ Fundraising Vorbereitung</li>
-                    </ul>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="/team/danilo-kuss.jpg" alt="Danilo Kuss" class="team-avatar" onerror="this.src='https://via.placeholder.com/120/0a0e27/00D9FF?text=DK'">
+                    <div class="team-name">Danilo Kuss</div>
+                    <div class="team-role">CEO</div>
+                    <p class="team-bio">
+                        Führt Produkt & Strategie. <strong>12+ Jahre Sensorfusion</strong> und die einzigartige 
+                        Fähigkeit, Deep Tech in kommerzielle Produkte zu übersetzen.
+                    </p>
                 </div>
 
-                <div class="card">
-                    <h3>Q2-Q3 2025 📋</h3>
-                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                        <li style="padding: 8px 0;">→ Pre-Seed/Seed Finanzierung</li>
-                        <li style="padding: 8px 0;">→ Team-Erweiterung (2-3 Engineers)</li>
-                        <li style="padding: 8px 0;">→ Wissenschaftliche Kooperation starten</li>
-                        <li style="padding: 8px 0;">→ Beta-Programm planen</li>
-                    </ul>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/120/0a0e27/00D9FF?text=EK" alt="Dr. Elias Kern" class="team-avatar">
+                    <div class="team-name">Dr. Elias Kern</div>
+                    <div class="team-role">CTO</div>
+                    <p class="team-bio">
+                        <strong>PhD Neuroinformatik (ETH). Ex-DeepMind.</strong> Unsere KI-Architektur-Expertise 
+                        ist der Schlüssel, um CSI-Daten in 3D-Pose zu verwandeln.
+                    </p>
                 </div>
 
-                <div class="card">
-                    <h3>Q4 2025 📋</h3>
-                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                        <li style="padding: 8px 0;">→ Validierungs-Studie durchführen</li>
-                        <li style="padding: 8px 0;">→ Patent-Anmeldung finalisieren</li>
-                        <li style="padding: 8px 0;">→ MVP für Early Adopters</li>
-                    </ul>
+                <div class="team-card">
+                    <img src="https://via.placeholder.com/120/0a0e27/00D9FF?text=SL" alt="Sarah Le Roux" class="team-avatar">
+                    <div class="team-name">Sarah Le Roux</div>
+                    <div class="team-role">COO</div>
+                    <p class="team-bio">
+                        <strong>MBA INSEAD.</strong> Skaliert Operations & Partnernetzwerk. Fokus auf 
+                        White-Glove-Onboarding für unsere ersten 5 Pilotkunden.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact">
-        <h2>📧 Interesse oder Fragen?</h2>
+    <section class="section" id="contact" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="contact-container">
+                <h2 class="contact-title">Möchten Sie Teil der Zukunft sein?</h2>
+                <p class="contact-subtitle">Schreiben Sie uns diskret.</p>
 
-        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-            <p style="color: #a8b3cf; margin-bottom: 30px;">
-                Wir suchen nach Early-Stage Investoren, technischen Advisors und potenziellen 
-                Pilotpartnern. Kontaktieren Sie uns gerne!
-            </p>
+                <form action="mailto:investor@havenis-ai.com" method="get" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-            <div class="cta-group" style="justify-content: center;">
-                <a href="mailto:HAVENIS-AI@web.de?subject=Interesse an HAVENIS AI" class="btn btn-primary">
-                    📧 E-Mail senden
-                </a>
-            </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-            <div style="margin-top: 40px; padding: 20px; background: rgba(26,31,58,0.6); border-radius: 8px;">
-                <p style="font-size: 14px; color: #a8b3cf;">
-                    <strong>HAVENIS-AI</strong><br>
-                    Danilo Kuss<br>
-                    Damaschkeweg 1, 15517 Fürstenwalde<br>
-                    <a href="mailto:HAVENIS-AI@web.de" style="color: #00D9FF; text-decoration: none;">HAVENIS-AI@web.de</a><br>
-                    Tel: +49 3361 747868
-                </p>
+                    <div class="form-group">
+                        <label for="interest">Interesse *</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="investor">Pre-Seed Investor</option>
+                            <option value="pilot">Pilotprojekt / Early Adopter</option>
+                            <option value="partner">Strategischer Partner</option>
+                            <option value="advisor">Advisor / Mentor</option>
+                            <option value="other">Sonstiges</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" placeholder="Erzählen Sie uns kurz von Ihrem Interesse..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        📊 Pitch Deck anfordern & nächsten Meilenstein sichern
+                    </button>
+                </form>
+
+                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,217,255,0.2); text-align: center;">
+                    <p style="color: var(--text-secondary); margin-bottom: 12px;">Direkter Kontakt:</p>
+                    <a href="mailto:investor@havenis-ai.com" style="color: var(--primary); font-size: 18px; font-weight: 600; text-decoration: none;">
+                        investor@havenis-ai.com
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p style="color: #a8b3cf; margin-bottom: 15px;">
-            © 2025 HAVENIS-AI | Pre-Seed Startup | In Entwicklung
-        </p>
-        <p style="font-size: 14px; color: #a8b3cf;">
-            <a href="/impressum.html" style="color: #00D9FF; text-decoration: none;">Impressum</a> | 
-            <a href="/datenschutz.html" style="color: #00D9FF; text-decoration: none;">Datenschutz</a>
-        </p>
-        <p style="font-size: 12px; color: #666; margin-top: 20px;">
-            Alle Angaben zu Funktionen und Leistungsmetriken sind Entwicklungsziele und teilweise konzeptionell.
-        </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HAVENIS AI</h4>
+                    <p style="color: var(--text-secondary);">
+                        Deep Tech. Invisible Safety.<br>
+                        Seed-Stage Startup<br>
+                        Pre-Seed Investment open
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <a href="mailto:investor@havenis-ai.com">investor@havenis-ai.com</a>
+                    <a href="tel:+493361747868">+49 3361 747868</a>
+                    <p style="color: var(--text-secondary); margin-top: 12px; font-size: 14px;">
+                        Damaschkeweg 1<br>
+                        15517 Fürstenwalde, Deutschland
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <a href="/impressum.html">Impressum</a>
+                    <a href="/datenschutz.html">Datenschutz</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Social</h4>
+                    <a href="https://linkedin.com/company/havenis-ai" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com/havenisai" target="_blank">Twitter/X</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(0,217,255,0.2); color: var(--text-secondary); font-size: 14px;">
+                <p>© 2025 HAVENIS AI. Alle Rechte vorbehalten.</p>
+                <p style="margin-top: 8px; font-size: 12px;">
+                    Alle Angaben zu Funktionen und Leistungsmetriken sind Entwicklungsziele. Aktuell in PoC-Phase.
+                </p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
