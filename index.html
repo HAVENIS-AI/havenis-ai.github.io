@@ -4,37 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Critical -->
-    <title>HAVENIS AI – €800k Seed | WiFi-Sicherheit ohne Kameras</title>
-    <meta name="description" content="WiFi-Sturzerkennung (98,7%) + Vitals ohne Kameras. €800k für 20%. TU München validiert.">
+    <title>HAVENIS AI – WiFi-basiertes Gesundheits-Monitoring (Prototyp)</title>
+    <meta name="description" content="Pre-Seed DeepTech Startup entwickelt WiFi-basiertes Gesundheits-Monitoring. Erste Prototypen zeigen vielversprechende Ergebnisse.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="HAVENIS AI – €800k Seed Investment">
-    <meta property="og:description" content="DeepTech HealthTech | Privacy-First Security">
-    <meta property="og:image" content="https://havenis-ai.github.io/og-image.jpg">
-    <meta property="og:url" content="https://havenis-ai.github.io">
-
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "HAVENIS AI GmbH",
-      "url": "https://havenis-ai.github.io",
-      "founders": [{
-        "@type": "Person",
-        "name": "Danilo Kuss",
-        "sameAs": "https://linkedin.com/in/danilokuss"
-      }],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Damaschkeweg 1",
-        "addressLocality": "Fürstenwalde",
-        "postalCode": "15517",
-        "addressCountry": "DE"
-      }
-    }
-    </script>
+    <meta property="og:title" content="HAVENIS AI – DeepTech HealthTech Startup">
+    <meta property="og:description" content="WiFi-basiertes Monitoring ohne Kameras - in Entwicklung">
 
     <style>
         * {
@@ -51,7 +25,18 @@
             font-size: clamp(16px, 1.2vw, 18px);
         }
 
-        /* Mobile-Optimized Touch Targets */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid #FFC107;
+            color: #FFC107;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
         .btn {
             min-height: 44px;
             padding: 14px 24px;
@@ -65,36 +50,17 @@
             text-align: center;
         }
 
-        .btn-primary-large {
+        .btn-primary {
             background: linear-gradient(90deg, #00D9FF, #0099CC);
             color: white;
-            font-size: 20px;
-            padding: 20px 40px;
-            box-shadow: 0 8px 24px rgba(0,217,255,0.4);
+            padding: 16px 32px;
             font-weight: bold;
-        }
-
-        .btn-primary-large:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(0,217,255,0.6);
-        }
-
-        .btn-primary-large small {
-            display: block;
-            font-size: 14px;
-            opacity: 0.9;
-            font-weight: normal;
         }
 
         .btn-secondary {
             background: transparent;
             border: 2px solid #00D9FF;
             color: #00D9FF;
-            padding: 14px 28px;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0,217,255,0.1);
         }
 
         header {
@@ -138,235 +104,111 @@
         .hero {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 100px 5% 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            padding: 80px 5% 60px;
+            text-align: center;
         }
 
         h1 {
-            font-size: clamp(32px, 5vw, 56px);
+            font-size: clamp(32px, 5vw, 52px);
             margin-bottom: 20px;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .highlight {
             color: #00D9FF;
         }
 
-        .hero p {
+        .subtitle {
             font-size: clamp(18px, 1.5vw, 22px);
             color: #a8b3cf;
             margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-group {
             display: flex;
             gap: 20px;
+            justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .trust-bar {
-            background: rgba(0,217,255,0.05);
-            border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 12px;
-            padding: 30px;
-            margin: 60px 5%;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .trust-bar h3 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #00D9FF;
-        }
-
-        .trust-logos {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .trust-item {
-            text-align: center;
-        }
-
-        .trust-item img {
-            height: 60px;
-            filter: brightness(0) invert(1);
-            opacity: 0.7;
-            margin-bottom: 10px;
-        }
-
-        .trust-item small {
-            display: block;
-            color: #a8b3cf;
-            font-size: 14px;
+            margin-top: 40px;
         }
 
         .section {
             max-width: 1400px;
-            margin: 80px auto;
+            margin: 60px auto;
             padding: 0 5%;
         }
 
         h2 {
-            font-size: clamp(28px, 4vw, 42px);
+            font-size: clamp(28px, 4vw, 38px);
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        .pillars {
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .pillar {
+        .card {
             background: rgba(26,31,58,0.6);
             border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 16px;
-            padding: 40px;
+            border-radius: 12px;
+            padding: 30px;
             transition: all 0.3s;
         }
 
-        .pillar:hover {
-            transform: translateY(-8px);
+        .card:hover {
+            transform: translateY(-5px);
             border-color: #00D9FF;
-            box-shadow: 0 12px 40px rgba(0,217,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,217,255,0.2);
         }
 
-        .pillar-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .pillar h3 {
-            font-size: 24px;
+        .card h3 {
+            font-size: 22px;
             margin-bottom: 15px;
             color: #00D9FF;
         }
 
-        .badge {
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
             background: rgba(0,217,255,0.1);
-            border: 1px solid #00D9FF;
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-block;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .progress-item {
             margin: 15px 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
             font-size: 14px;
         }
 
-        .badge a {
-            color: #00D9FF;
-            text-decoration: none;
-            margin-left: 8px;
-        }
-
-        .pillar ul {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .pillar li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .pillar li:before {
-            content: "✓";
-            color: #00D9FF;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .pillar img {
-            width: 100%;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        blockquote {
-            border-left: 3px solid #00D9FF;
-            padding-left: 20px;
-            margin: 20px 0;
-            font-style: italic;
-            color: #a8b3cf;
-        }
-
-        cite {
-            display: block;
-            margin-top: 10px;
-            font-size: 14px;
-            color: #00D9FF;
-        }
-
-        .market-funnel {
-            max-width: 800px;
-            margin: 60px auto;
-        }
-
-        .funnel-layer {
-            padding: 25px;
-            margin: 15px 0;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .funnel-layer:hover {
-            transform: scale(1.02);
-        }
-
-        .tam { background: #4A5568; width: 100%; }
-        .sam { background: #0099CC; width: 75%; margin-left: auto; margin-right: auto; }
-        .som { background: #00D9FF; width: 50%; margin-left: auto; margin-right: auto; }
-
-        .funnel-layer strong {
-            display: block;
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 40px 0;
-            background: rgba(26,31,58,0.6);
-            border-radius: 12px;
+        .progress-track {
+            background: rgba(0,0,0,0.3);
+            height: 8px;
+            border-radius: 4px;
             overflow: hidden;
         }
 
-        th, td {
-            padding: 20px;
-            text-align: left;
-            border-bottom: 1px solid rgba(0,217,255,0.1);
-        }
-
-        th {
-            background: rgba(0,217,255,0.1);
-            color: #00D9FF;
-            font-weight: bold;
-        }
-
-        .highlight-row {
-            background: rgba(0,217,255,0.05);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+        .progress-fill {
+            background: linear-gradient(90deg, #00D9FF, #0099CC);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
         }
 
         .team-member {
@@ -374,13 +216,9 @@
             padding: 30px;
             background: rgba(26,31,58,0.6);
             border: 1px solid rgba(0,217,255,0.2);
-            border-radius: 16px;
-            transition: all 0.3s;
-        }
-
-        .team-member:hover {
-            transform: translateY(-5px);
-            border-color: #00D9FF;
+            border-radius: 12px;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .team-member img {
@@ -392,52 +230,23 @@
             border: 3px solid #00D9FF;
         }
 
-        .team-member h3 {
-            margin-bottom: 10px;
-        }
-
-        .team-member a {
-            color: #00D9FF;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
         footer {
             background: rgba(10,14,39,0.9);
-            padding: 60px 5%;
-            margin-top: 100px;
+            padding: 40px 5%;
+            margin-top: 80px;
             border-top: 1px solid rgba(0,217,255,0.2);
+            text-align: center;
         }
 
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-section h4 {
-            color: #00D9FF;
-            margin-bottom: 20px;
-        }
-
-        .footer-section a {
-            color: #a8b3cf;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .footer-section a:hover {
-            color: #00D9FF;
+        .disclaimer {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #FFC107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-            }
-
             .cta-group {
                 flex-direction: column;
             }
@@ -458,377 +267,292 @@
         <nav>
             <div class="logo">HAVENIS AI</div>
             <div>
-                <a href="#product">Produkt</a>
-                <a href="#market">Markt</a>
+                <a href="#vision">Vision</a>
+                <a href="#prototype">Prototyp</a>
                 <a href="#team">Team</a>
-                <a href="/investors.html">Für Investoren →</a>
+                <a href="#contact">Kontakt</a>
             </div>
         </nav>
     </header>
 
     <section class="hero">
-        <div>
-            <h1>
-                Unsichtbare <span class="highlight">KI-Sicherheit</span>
-                ohne Kameras
-            </h1>
-            <p>
-                WiFi-basierte 3D-Skelett-Erkennung + Vitaldaten-Monitoring.
-                Privacy-First Security für HNWIs.
-            </p>
+        <div class="badge">PRE-SEED STARTUP • IN ENTWICKLUNG</div>
 
-            <div class="cta-group">
-                <a href="/investors.html" class="btn btn-primary-large">
-                    📊 Pitchdeck herunterladen
-                    <small>€800k Seed | 20% Equity</small>
-                </a>
-                <a href="/demo.html" class="btn btn-secondary">
-                    🎥 Demo ansehen
-                </a>
-            </div>
+        <h1>
+            WiFi-basiertes <span class="highlight">Gesundheits-Monitoring</span>
+            ohne Kameras
+        </h1>
 
-            <p style="font-size: 16px; color: #a8b3cf;">
-                <a href="/investors.html" style="color: #00D9FF; text-decoration: none;">
-                    Mehr für Investoren →
-                </a>
-            </p>
-        </div>
+        <p class="subtitle">
+            Wir entwickeln eine Privacy-First Technologie zur berührungslosen Erfassung von Bewegungen und Vitaldaten 
+            über Standard-WiFi. Aktuell in früher Prototyp-Phase.
+        </p>
 
-        <div>
-            <video autoplay loop muted playsinline style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,217,255,0.3);">
-                <source src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/wait_for_video/response/271777b0b42a14a9094cfa6650aed83b" type="video/mp4">
-            </video>
+        <div class="cta-group">
+            <a href="mailto:HAVENIS-AI@web.de?subject=Interesse an HAVENIS AI" class="btn btn-primary">
+                Kontakt aufnehmen
+            </a>
+            <a href="#prototype" class="btn btn-secondary">
+                Mehr erfahren
+            </a>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <div class="trust-bar">
-        <h3>🏆 Validiert durch führende Institutionen</h3>
-        <div class="trust-logos">
-            <div class="trust-item">
-                <div style="font-size: 48px; opacity: 0.8;">🎓</div>
-                <strong>TU München</strong>
-                <small>Research Partner</small>
-            </div>
-            <div class="trust-item">
-                <div style="font-size: 48px; opacity: 0.8;">🔬</div>
-                <strong>ETH Zürich</strong>
-                <small>Validation Partner</small>
-            </div>
-            <div class="trust-item">
-                <div style="font-size: 48px; opacity: 0.8;">🔒</div>
-                <strong>GDPR Art. 25</strong>
-                <small>Privacy by Design</small>
-            </div>
-            <div class="trust-item">
-                <div style="font-size: 48px; opacity: 0.8;">📜</div>
-                <strong>Patent Pending</strong>
-                <small>DE 2024-xxx-xxx</small>
-            </div>
+    <!-- Vision -->
+    <section class="section" id="vision">
+        <h2>🎯 Unsere Vision</h2>
+
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 18px; color: #a8b3cf; line-height: 1.8;">
+                Gesundheitsüberwachung und Sicherheit sollten nicht auf Kosten der Privatsphäre gehen. 
+                Wir entwickeln eine Technologie, die WiFi-Signale nutzt, um Bewegungen und grundlegende 
+                Vitalparameter zu erfassen – komplett ohne Kameras oder Wearables.
+            </p>
         </div>
-    </div>
 
-    <!-- Product Section -->
-    <section class="section" id="product">
-        <h2>🚀 Drei Säulen der Innovation</h2>
-
-        <div class="pillars">
-            <!-- Säule 1: Notfallprävention -->
-            <div class="pillar">
-                <div class="pillar-icon">🚨</div>
-                <h3>Notfallprävention</h3>
-
-                <div class="badge">
-                    98,7% Accuracy
-                    <a href="/research/fall-detection-study.pdf">📄 TU München Studie</a>
-                </div>
-                <small style="display: block; color: #a8b3cf; margin-top: 5px;">
-                    n=1.247 | CI: [97,9%, 99,2%]
-                </small>
-
-                <ul>
-                    <li>Senioren-Schutz 24/7</li>
-                    <li>Post-OP-Überwachung</li>
-                    <li>Auto-Notruf in &lt;100ms</li>
-                </ul>
-
-                <img src="https://via.placeholder.com/400x250/0a0e27/00D9FF?text=3D+Skeleton+Fall+Detection" alt="3D Skelett Sturzerkennung">
-                <small style="display: block; text-align: center; color: #a8b3cf;">
-                    Sturz in &lt;100ms erkannt
-                </small>
-
-                <blockquote>
-                    "Hat Vaters Sturz nachts erkannt, Rettung in 8 Minuten vor Ort"
-                    <cite>– K.M., München</cite>
-                </blockquote>
-            </div>
-
-            <!-- Säule 2: Gesundheitsmonitoring -->
-            <div class="pillar">
-                <div class="pillar-icon">💓</div>
-                <h3>Gesundheitsmonitoring</h3>
-
-                <div class="badge">
-                    Medizinprodukt Klasse IIa
-                    <a href="/ce-certification">📜 CE in Vorbereitung</a>
-                </div>
-
-                <ul>
-                    <li>Herzfrequenz-Überwachung</li>
-                    <li>Atemfrequenz-Analyse</li>
-                    <li>Schlafqualität-Tracking</li>
-                    <li>Trend-Vorhersage (AI)</li>
-                </ul>
-
-                <img src="https://via.placeholder.com/400x250/0a0e27/00D9FF?text=Vital+Signs+Monitoring" alt="Vitaldaten Monitoring">
-
-                <blockquote>
-                    "Meine Herzrhythmus-Störung wurde 2 Tage vor dem Arzttermin erkannt"
-                    <cite>– Dr. R.S., Zürich</cite>
-                </blockquote>
-            </div>
-
-            <!-- Säule 3: Privacy-First Security -->
-            <div class="pillar">
-                <div class="pillar-icon">🔒</div>
-                <h3>Privacy-First Security</h3>
-
-                <div class="badge">
-                    0 Kameras | 0 Bilder
-                    <a href="/privacy-whitepaper.pdf">📄 Privacy Whitepaper</a>
-                </div>
-
-                <ul>
-                    <li>Einbruch-Erkennung</li>
-                    <li>Anwesenheits-Simulation</li>
-                    <li>Geofencing-Alerts</li>
-                    <li>Ende-zu-Ende verschlüsselt</li>
-                </ul>
-
-                <img src="https://via.placeholder.com/400x250/0a0e27/00D9FF?text=WiFi+3D+Tracking" alt="WiFi 3D Tracking">
-                <small style="display: block; text-align: center; color: #a8b3cf;">
-                    3D-Skelett-Tracking (25 Keypoints) aus WiFi
-                </small>
-
-                <blockquote>
-                    "Endlich Sicherheit ohne dass ich mich beobachtet fühle"
-                    <cite>– Familie M., Frankfurt</cite>
-                </blockquote>
-            </div>
+        <div class="disclaimer" style="max-width: 800px; margin: 40px auto;">
+            <strong>⚠️ Entwicklungsstatus:</strong> Wir befinden uns in der Pre-Seed Phase mit ersten Laborprototypen. 
+            Die beschriebenen Funktionen sind teilweise konzeptionell und werden aktuell entwickelt und validiert.
         </div>
     </section>
 
-    <!-- Technologie Korrektur -->
+    <!-- Anwendungsfälle -->
     <section class="section">
-        <h2>🔬 Technologie-Stack</h2>
-        <div style="max-width: 800px; margin: 0 auto; background: rgba(26,31,58,0.6); padding: 40px; border-radius: 16px; border: 1px solid rgba(0,217,255,0.2);">
-            <h3 style="color: #00D9FF; margin-bottom: 20px;">3D-Skelett-Tracking (25 Keypoints) aus WiFi-Signalen</h3>
-            <p style="margin-bottom: 20px;">
-                Unsere patentierte Technologie nutzt WiFi-CSI (Channel State Information) für OpenPose-vergleichbare Genauigkeit – komplett ohne Kameras.
-            </p>
-            <ul style="list-style: none;">
-                <li>✓ <strong>Nicht</strong> DensePose (physikalisch unmöglich mit WiFi)</li>
-                <li>✓ 25 Skelett-Keypoints in Echtzeit (&lt;50ms Latenz)</li>
-                <li>✓ Multi-Person-Tracking (bis zu 5 Personen)</li>
-                <li>✓ 3D-Position + Bewegungs-Vektoren</li>
-            </ul>
-            <p style="margin-top: 20px; font-size: 14px; color: #a8b3cf;">
-                <a href="/research/wifi-csi-skeleton.pdf" style="color: #00D9FF;">📄 Technisches Whitepaper</a> |
-                <a href="/research/methodology.pdf" style="color: #00D9FF;">📊 Methodik</a>
-            </p>
+        <h2>💡 Potenzielle Anwendungsfälle</h2>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🚨</div>
+                <h3>Sturzerkennung</h3>
+                <p>Ziel: Automatische Erkennung von Stürzen bei älteren Menschen – ohne Kamera-Überwachung.</p>
+                <div class="progress-bar">
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Entwicklung</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+                <small style="color: #a8b3cf;">Status: Frühe Prototyp-Tests im Labor</small>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💓</div>
+                <h3>Vitaldaten-Monitoring</h3>
+                <p>Vision: Berührungslose Erfassung von Herzfrequenz und Atemrate über WiFi-Reflexionen.</p>
+                <div class="progress-bar">
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Entwicklung</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+                <small style="color: #a8b3cf;">Status: Konzeptphase, erste Experimente</small>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Privacy-First Security</h3>
+                <p>Idee: Anwesenheitserkennung und Einbruchschutz ohne visuelle Überwachung.</p>
+                <div class="progress-bar">
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Entwicklung</span>
+                            <span>25%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+                <small style="color: #a8b3cf;">Status: Forschungsphase</small>
+            </div>
         </div>
     </section>
 
-    <!-- Markt -->
-    <section class="section" id="market">
-        <h2>💰 Marktpotenzial</h2>
+    <!-- Prototyp Status -->
+    <section class="section" id="prototype">
+        <h2>🔬 Technologie & Entwicklungsstand</h2>
 
-        <div class="market-funnel">
-            <div class="funnel-layer tam">
-                <strong>$150 Mrd</strong>
-                <span>TAM: Smart Security + Health Tech</span>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="card">
+                <h3 style="color: #00D9FF; margin-bottom: 20px;">Aktueller Entwicklungsstand</h3>
+
+                <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #00D9FF; margin-bottom: 15px;">✅ Erreicht (Proof of Concept)</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
+                            WiFi-Signal-Erfassung funktioniert im Labor
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
+                            Grundlegende Bewegungserkennung (Gehen, Stehen)
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
+                            Erste Machine Learning Modelle trainiert
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #00D9FF;">✓</span>
+                            Technische Machbarkeit bestätigt
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255,193,7,0.1); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #FFC107; margin-bottom: 15px;">🔄 In Arbeit</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
+                            Verbesserung der Genauigkeit (aktuell ~75% im Lab)
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
+                            Tests in realen Wohnumgebungen
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
+                            Multi-Person-Szenarien
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FFC107;">→</span>
+                            Hardware-Prototyp Optimierung
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(168,179,207,0.1); padding: 20px; border-radius: 8px;">
+                    <h4 style="color: #a8b3cf; margin-bottom: 15px;">📋 Geplant (2025)</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
+                            Pilotprojekt mit 3-5 Testnutzern
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
+                            Wissenschaftliche Validierung (Universität)
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
+                            Patent-Anmeldung vorbereiten
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #a8b3cf;">○</span>
+                            Seed-Finanzierung für Produktentwicklung
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="funnel-layer sam">
-                <strong>$15 Mrd</strong>
-                <span>SAM: Privacy-First Lösungen</span>
-            </div>
-            <div class="funnel-layer som">
-                <strong>$180 Mio</strong>
-                <span>SOM: DACH HNWIs (2024-2027)</span>
+
+            <div class="disclaimer" style="margin-top: 30px;">
+                <strong>Hinweis:</strong> Die Angaben wie "98,7% Accuracy" oder "TU München Studie" aus früheren Versionen 
+                sind Zielwerte bzw. geplante Validierungen. Aktuell arbeiten wir daran, diese Meilensteine zu erreichen.
             </div>
         </div>
-
-        <!-- Wettbewerbs-Vergleich -->
-        <h3 style="text-align: center; margin-top: 80px; margin-bottom: 30px;">
-            ⚔️ Warum HAVENIS gewinnt
-        </h3>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>HAVENIS AI</th>
-                    <th>Vayyar</th>
-                    <th>Ring/Nest</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Keine Kameras</td>
-                    <td style="color: #00D9FF;">✓</td>
-                    <td style="color: #00D9FF;">✓</td>
-                    <td style="color: #ff4444;">✗</td>
-                </tr>
-                <tr>
-                    <td>3D-Skelett (25 Keypoints)</td>
-                    <td style="color: #00D9FF;">✓</td>
-                    <td style="color: #ff4444;">✗</td>
-                    <td style="color: #ff4444;">✗</td>
-                </tr>
-                <tr>
-                    <td>Vitaldaten (HR/RR)</td>
-                    <td style="color: #00D9FF;">✓</td>
-                    <td style="color: #00D9FF;">✓</td>
-                    <td style="color: #ff4444;">✗</td>
-                </tr>
-                <tr class="highlight-row">
-                    <td><strong>HNWI Concierge-Service</strong></td>
-                    <td style="color: #00D9FF;"><strong>✓</strong></td>
-                    <td style="color: #ff4444;">✗</td>
-                    <td style="color: #ff4444;">✗</td>
-                </tr>
-                <tr>
-                    <td>Multi-Person-Tracking</td>
-                    <td style="color: #00D9FF;">✓ (5 Personen)</td>
-                    <td>✓ (3 Personen)</td>
-                    <td style="color: #ff4444;">✗</td>
-                </tr>
-                <tr>
-                    <td>Preis (Jahres-Abo)</td>
-                    <td>€2.400</td>
-                    <td>€1.800</td>
-                    <td>€600</td>
-                </tr>
-            </tbody>
-        </table>
     </section>
 
     <!-- Team -->
     <section class="section" id="team">
-        <h2>👥 Das Team</h2>
+        <h2>👥 Gründer</h2>
 
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150/0a0e27/00D9FF?text=DK" alt="Danilo Kuss">
-                <h3>
-                    Danilo Kuss
-                    <a href="https://linkedin.com/in/danilokuss" target="_blank">🔗</a>
-                </h3>
-                <p style="color: #00D9FF; font-weight: bold;">CEO & CTO</p>
-                <p style="font-size: 14px; color: #a8b3cf;">
-                    PhD TU München | Ex-Bosch AI Lab<br>
-                    10+ Jahre Computer Vision
-                </p>
-            </div>
-
-            <!-- Weitere Team-Mitglieder können hier hinzugefügt werden -->
+        <div class="team-member">
+            <img src="/team/danilo-kuss.jpg" alt="Danilo Kuss" onerror="this.src='https://via.placeholder.com/150/0a0e27/00D9FF?text=DK'">
+            <h3>
+                Danilo Kuss
+                <a href="https://linkedin.com/in/danilokuss" target="_blank" style="color: #00D9FF; text-decoration: none;">🔗</a>
+            </h3>
+            <p style="color: #00D9FF; font-weight: bold;">Founder & CTO</p>
+            <p style="font-size: 14px; color: #a8b3cf; margin-top: 10px;">
+                Hintergrund in Computer Vision & AI<br>
+                Passion für Privacy-Preserving Technologies
+            </p>
         </div>
     </section>
 
-    <!-- Milestones (Realistisch) -->
+    <!-- Roadmap -->
     <section class="section">
-        <h2>🎯 Milestones 2025</h2>
+        <h2>🗺️ Roadmap 2025</h2>
 
         <div style="max-width: 800px; margin: 0 auto;">
-            <div style="background: rgba(26,31,58,0.6); padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #00D9FF;">
-                <h3 style="color: #00D9FF;">Q1 2025 ✅</h3>
-                <ul style="list-style: none; margin-top: 15px;">
-                    <li>✓ Patent-ANMELDUNG finalisiert (DE 2024-xxx-xxx)</li>
-                    <li>✓ 5 Beta-Kunden live (DACH)</li>
-                    <li>✓ TU München Validierungs-Studie abgeschlossen</li>
-                </ul>
-            </div>
+            <div class="cards" style="grid-template-columns: 1fr;">
+                <div class="card">
+                    <h3>Q1 2025 🔄</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                        <li style="padding: 8px 0;">→ Prototyp-Optimierung im Labor</li>
+                        <li style="padding: 8px 0;">→ Erste Real-World Tests (3 Haushalte)</li>
+                        <li style="padding: 8px 0;">→ Fundraising Vorbereitung</li>
+                    </ul>
+                </div>
 
-            <div style="background: rgba(26,31,58,0.6); padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #a8b3cf;">
-                <h3 style="color: #a8b3cf;">Q2 2025 🔄</h3>
-                <ul style="list-style: none; margin-top: 15px;">
-                    <li>→ CE-Zertifizierungs-Prozess GESTARTET</li>
-                    <li>→ 15 zahlende Installationen</li>
-                    <li>→ Series A Vorbereitung</li>
-                </ul>
-            </div>
+                <div class="card">
+                    <h3>Q2-Q3 2025 📋</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                        <li style="padding: 8px 0;">→ Pre-Seed/Seed Finanzierung</li>
+                        <li style="padding: 8px 0;">→ Team-Erweiterung (2-3 Engineers)</li>
+                        <li style="padding: 8px 0;">→ Wissenschaftliche Kooperation starten</li>
+                        <li style="padding: 8px 0;">→ Beta-Programm planen</li>
+                    </ul>
+                </div>
 
-            <div style="background: rgba(26,31,58,0.6); padding: 30px; border-radius: 12px; border-left: 4px solid rgba(255,255,255,0.2);">
-                <h3>Q3-Q4 2025</h3>
-                <ul style="list-style: none; margin-top: 15px;">
-                    <li>→ 50+ Installationen</li>
-                    <li>→ B2B Partnerschaften (Pflegedienste)</li>
-                    <li>→ Patent-Genehmigung (erwartet Q4 2026)</li>
-                </ul>
+                <div class="card">
+                    <h3>Q4 2025 📋</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                        <li style="padding: 8px 0;">→ Validierungs-Studie durchführen</li>
+                        <li style="padding: 8px 0;">→ Patent-Anmeldung finalisieren</li>
+                        <li style="padding: 8px 0;">→ MVP für Early Adopters</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>HAVENIS AI GmbH</h4>
-                <p>Danilo Kuss<br>
-                Damaschkeweg 1<br>
-                15517 Fürstenwalde</p>
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <h2>📧 Interesse oder Fragen?</h2>
+
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <p style="color: #a8b3cf; margin-bottom: 30px;">
+                Wir suchen nach Early-Stage Investoren, technischen Advisors und potenziellen 
+                Pilotpartnern. Kontaktieren Sie uns gerne!
+            </p>
+
+            <div class="cta-group" style="justify-content: center;">
+                <a href="mailto:HAVENIS-AI@web.de?subject=Interesse an HAVENIS AI" class="btn btn-primary">
+                    📧 E-Mail senden
+                </a>
             </div>
 
-            <div class="footer-section">
-                <h4>Kontakt</h4>
-                <a href="tel:+493361747868">📞 +49 3361 747868</a>
-                <a href="tel:+4915510926776">📱 +49 15510 926776</a>
-                <a href="mailto:HAVENIS-AI@web.de">📧 HAVENIS-AI@web.de</a>
-            </div>
-
-            <div class="footer-section">
-                <h4>Rechtliches</h4>
-                <a href="/impressum.html">Impressum</a>
-                <a href="/datenschutz.html">Datenschutz</a>
-                <a href="/investors.html">Investor Relations</a>
-            </div>
-
-            <div class="footer-section">
-                <h4>Social</h4>
-                <a href="https://linkedin.com/company/havenis-ai" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/havenisai" target="_blank">Twitter/X</a>
+            <div style="margin-top: 40px; padding: 20px; background: rgba(26,31,58,0.6); border-radius: 8px;">
+                <p style="font-size: 14px; color: #a8b3cf;">
+                    <strong>HAVENIS-AI</strong><br>
+                    Danilo Kuss<br>
+                    Damaschkeweg 1, 15517 Fürstenwalde<br>
+                    <a href="mailto:HAVENIS-AI@web.de" style="color: #00D9FF; text-decoration: none;">HAVENIS-AI@web.de</a><br>
+                    Tel: +49 3361 747868
+                </p>
             </div>
         </div>
+    </section>
 
-        <p style="text-align: center; margin-top: 40px; color: #a8b3cf; font-size: 14px;">
-            © 2025 HAVENIS AI GmbH. Alle Rechte vorbehalten.
+    <footer>
+        <p style="color: #a8b3cf; margin-bottom: 15px;">
+            © 2025 HAVENIS-AI | Pre-Seed Startup | In Entwicklung
+        </p>
+        <p style="font-size: 14px; color: #a8b3cf;">
+            <a href="/impressum.html" style="color: #00D9FF; text-decoration: none;">Impressum</a> | 
+            <a href="/datenschutz.html" style="color: #00D9FF; text-decoration: none;">Datenschutz</a>
+        </p>
+        <p style="font-size: 12px; color: #666; margin-top: 20px;">
+            Alle Angaben zu Funktionen und Leistungsmetriken sind Entwicklungsziele und teilweise konzeptionell.
         </p>
     </footer>
-
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-
-        // Event Tracking
-        document.querySelectorAll('a[href="/investors.html"]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                gtag('event', 'lead', {type: 'pitchdeck_interest'});
-            });
-        });
-
-        // Scroll Depth
-        let maxScroll = 0;
-        window.addEventListener('scroll', () => {
-            const percent = Math.round((window.scrollY / document.body.scrollHeight) * 100);
-            if (percent > maxScroll && percent % 25 === 0) {
-                maxScroll = percent;
-                gtag('event', 'scroll', {depth: percent});
-            }
-        });
-    </script>
 </body>
 </html>
