@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Video - HAVENIS-AI</title>
+    <style>
+        * {{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .video-section {
+            padding: 60px 40px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            background: #000;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .description {
+            max-width: 800px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+        .description h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        .feature-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: #f8f9ff;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .video-details {
+            background: #e8ebff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .video-details p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .video-details strong {
+            color: #667eea;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .video-section {
+                padding: 40px 20px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 HAVENIS-AI Demo Video</h1>
+            <p>Entdecken Sie die Zukunft der KI-Entwicklung</p>
+        </div>
+
+        <div class="video-section">
+            <div class="video-wrapper">
+                <video controls autoplay muted loop playsinline>
+                    <source src="https://pub-b70cb36a6853407fa468c5d6dec16633.r2.dev/186209/gemini/wait_for_video/response/271777b0b42a14a9094cfa6650aed83b" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+            </div>
+
+            <div class="video-details">
+                <p>❨️ <strong>Generiert mit Google Veo 3.0</strong> – Dem neuesten KI-Videogenerator</p>
+                <p>⚡️ <strong>Professionelle Qualität</strong> – Ultra-high resolution, cinematic lighting</p>
+                <p>🚀 <strong>KI-gesteuerte Visualisierungen</strong> – Neuronale Netzwerke, Daten Flows</p>
+            </div>
+
+            <div class="description">
+                <h2>Künstliche Intelligenz, die begeistert</h2>
+                <p>
+                    Erleben Sie, wie HAVENIS-AI modernste KI-Technologie entwickelt und implementiert. 
+                    Von neuronalen Netzwerken bis zu automatisierten Workflows – wir bringen Innovation 
+                    in Ihr Unternehmen.
+                </p>
+                <p>
+                    Unser professionelles Team entwickelt maßgeschneiderte KI-Lösungen, die Ihre 
+                    Geschäftsprozesse transformieren und optimieren.
+                </p>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">🤂</div>
+                    <h3>KI-Entwicklung</h3>
+                    <p>Modernste Machine Learning Modelle und neuronale Netzwerke für Ihre Anwendungen</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Automation</h3>
+                    <p>Intelligente Workflow-Automatisierung zur Steigerung Ihrer Effizienz</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Analytics</h3>
+                    <p>Predictive Analytics und datengetriebene Entscheidungsfindung</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">💬</div>
+                    <h3>Chatbots & NLP</h3>
+                    <p>Intelligente Konversations-KI und Natural Language Processing</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #667eea; margin-bottom: 20px;">Bereit für Ihre KI-Transformation?</h2>
+            <a href="mailto:HAVENIS-AI@web.de" class="cta-button">📧 Kontakt aufnehmen</a>
+            <a href="https://www.HAVENIS-AI.netlify.app" class="cta-button">🌐 Zur Hauptseite</a>
+            <br>
+            <a href="https://www.HAVENIS-AI.netlify.app" class="back-link">← Zurück zur Hauptseite</a>
+        </div>
+    </div>
+</body>
+</html>
